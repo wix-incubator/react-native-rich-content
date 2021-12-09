@@ -3,51 +3,25 @@ export interface Size {
   width: number;
 }
 
-export type CreatePluginEntity = (data: any) => object;
+export type EditorRef = any; // TODO
+export type ToolbarConfig = any; // TODO
 
-export interface EditorPluginProps<Insert> {
-  createEntityWithAsyncUploads?: CreateEntityWithAsyncUploads;
+export type CreatePluginEntity<RequiredEntityData, Entity> = (data: RequiredEntityData) => Entity;
+
+export interface EditorPluginProps {
   toolbarIcon: number;
-  getToolbarConfig: ({
-    entity,
-    updateEntity,
-    deleteEntity,
-    primaryColor,
-    entityType,
-    isPluginSpoilerAlertEnabled,
-  }: {
-    entity: any;
-    updateEntity: (data: any) => void;
-    deleteEntity: () => void;
-    primaryColor: string;
-    entityType: string;
-    isPluginSpoilerAlertEnabled: boolean;
-  }) => any;
-  ctaText: string;
-  config?: any;
-  onPress: (insert: Insert, insertAsync?: InsertAsync) => void;
+  getToolbarConfig: (editorRef: EditorRef) => ToolbarConfig;
+  name: string;
+  onInsert: (editorRef: EditorRef) => void;
+  onInsertAsync: (editorRef: EditorRef) => void;
 }
 
-export interface DefaultEditorPluginProps {
-  pluginId: string;
-}
-
-export type AtomicPlugin = {
+export type AtomicPlugin<RequiredEntityData, Entity> = {
   id: string;
-  ctaText: string;
-  pluginId: string;
+  name: string;
   toolbarIcon: number;
-  onPress: Function;
-  config: Object;
-  createEntityWithAsyncUploads?: any;
-  getToolbarConfig: Function;
-  draftEntityTypes: Array<string>;
-  createPluginEntity: Function;
-  buttonId?: string;
+  onInsert: (editorRef: EditorRef) => void;
+  onInsertAsync: (editorRef: EditorRef) => void;
+  getToolbarConfig: (editorRef: EditorRef) => ToolbarConfig;
+  createPluginEntity: CreatePluginEntity<RequiredEntityData, Entity>;
 };
-
-export type InsertAsync = (
-  placeholderData: object,
-  asyncUpdateIds: Array<string>,
-  metadata?: object
-) => void;
