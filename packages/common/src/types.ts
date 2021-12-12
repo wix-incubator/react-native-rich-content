@@ -11,14 +11,14 @@ export type CreatePluginEntity<RequiredEntityData, Entity> = (data: RequiredEnti
 export interface EditorPluginProps {
   toolbarIcon: number;
   getToolbarConfig: (editorRef: EditorRef) => ToolbarConfig;
-  name: string;
+  displayName: string;
   onInsert: (editorRef: EditorRef) => void;
   onInsertAsync: (editorRef: EditorRef) => void;
 }
 
 export type AtomicPlugin<RequiredEntityData, Entity> = {
   id: string;
-  name: string;
+  displayName: string;
   toolbarIcon: number;
   onInsert: (editorRef: EditorRef) => void;
   onInsertAsync: (editorRef: EditorRef) => void;
