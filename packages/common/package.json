@@ -1,0 +1,13 @@
+{
+  "name": "react-native-rich-content-common",
+  "version": "1.0.0",
+  "main": "./src/index.ts",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@types/react": "~17.0.21",
+    "typescript": "~4.3.5"
+  },
+  "private": true
+}
