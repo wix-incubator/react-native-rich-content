@@ -1,92 +1,80 @@
-import React, {FC, useCallback, useMemo} from 'react';
-import {Image, View, TouchableOpacity, ImageProps, TouchableOpacityProps} from 'react-native-ui-lib';
-import {Dimensions, ViewStyle} from 'react-native';
-import {getImageSize} from '../utils/image';
-import {getUrlWithProtocol, openUrl} from '../utils/url';
-import {InlineSpoilerText} from './InlineSpoilerText';
-import {computeBlurForSize} from '../utils/spoiler-alert';
+import React, {useCallback, useMemo, useRef, MutableRefObject, Component} from 'react';
+import {TextStyle, ImageSourcePropType, ImageProps, TouchableOpacityProps, ViewProps, Dimensions, View, TouchableOpacity, Image} from 'react-native';
+import {ImageData} from '../types';
+import {getImageSize} from '../utils/size-utils';
+import {getImageCaption, shouldEnableImageExpand, isImageLoading} from '../utils/draft-utils';
+import {defaultSourceTransformer} from '../utils/source-transformer';
+import {InlineSpoilerText, computeBlurForSize} from '../../../spoiler';
 
-type ImageViewerProps = {
-  style: ViewStyle;
-  theme: Record<string, any>;
-  image: string | {
-    src: Object;
-    config?: {
-      link?: {
-        url?: string
-      };
-    };
-    loading?: boolean
-  };
-  withPreview: boolean;
-  blur: boolean;
-  LoaderComponent: FC<{height: number; width: number}>,
-  expandHandler: () => void,
-  onLinkOpened: () => void,
-  imageProps: ImageProps;
-  containerProps: TouchableOpacityProps;
-  caption?: string;
+export interface ImageViewerProps {
+  containerStyle?: TouchableOpacityProps['style'] & ViewProps['style'];
+  captionStyle?: TextStyle;
+  imageStyle?: ImageProps['style'];
+  image: ImageData;
+  blur?: boolean;
+  LoaderComponent: typeof Component;
+  onPress: (containerRef?: MutableRefObject<null | typeof TouchableOpacity>['current'], imageRef?: MutableRefObject<null | typeof Image>['current']) => void;
+  sourceTransformer?: (image: ImageData) => ImageSourcePropType;
+  accessibilityLabel?: string;
+  testID?: string;
 }
 
 const screenSize = Dimensions.get('window');
 
-export default (props: ImageViewerProps) => {
-  const {image, withPreview, onLinkOpened, expandHandler, theme, LoaderComponent, caption, imageProps, containerProps, blur} = props;
-  const getImageLink = () => {
-    const config = image.config;
-    if (!config) {
-      return null;
-    }
-    const url = config.link?.url || '';
-    return getUrlWithProtocol(url);
-  }
-
-  const imageOnPress = useCallback(async () => {
-    if (withPreview) {
-      const linkUrl = getImageLink();
-      if (linkUrl) {
-        await openUrl(linkUrl);
-        if (onLinkOpened) {
-          onLinkOpened();
-        }
-      } else {
-        expandHandler();
-      }
-    }
-  }, [withPreview, onLinkOpened, expandHandler]);
+export const ImageViewer = ({
+  image,
+  onPress,
+  containerStyle,
+  captionStyle,
+  imageStyle,
+  LoaderComponent = View,
+  sourceTransformer = defaultSourceTransformer,
+  blur,
+  accessibilityLabel,
+  testID,
+}: ImageViewerProps) => {
+  const imageRef = useRef(null);
+  const containerRef = useRef(null);
 
   const imageSize = getImageSize(image.src || null, screenSize.width);
-  const imageStyle = useMemo(() => ([
-    {width: null, height: imageSize.height},
-    theme.image
-  ]), [image, theme, imageSize.height]);
 
-    const ContainerComponent = image.disableExpand ? View : TouchableOpacity;
-    const isLoading = image.loading;
+  const imageStyleWithSize = useMemo(() => ([
+    imageStyle, {width: undefined, height: imageSize.height},
+  ]), [imageStyle, imageSize.height]);
 
-    return (isLoading && LoaderComponent) ? (
+  const reffedOnPress = useCallback(() => onPress(containerRef.current, imageRef.current), [onPress, containerRef, imageRef]);
+
+  const source = useMemo(() => sourceTransformer(image), [image, sourceTransformer]);
+
+  const caption = getImageCaption(image);
+  const ContainerComponent = (shouldEnableImageExpand(image) ? TouchableOpacity : View) as typeof TouchableOpacity;
+  const isLoading = isImageLoading(image);
+
+  return (isLoading && LoaderComponent) ? (
     <LoaderComponent
-      height={imageSize.height}
-      width={imageSize.width}
+      style={imageSize}
     />
-    ) : (
+  ) : (
     <ContainerComponent
-      style={theme.root}
+      style={containerStyle}
+      onPress={reffedOnPress}
       activeOpacity={0.85}
-      {...containerProps}
-      onPress={imageOnPress}
+      ref={containerRef}
+      accessibilityLabel={accessibilityLabel}
+      testID={testID}
     >
       <Image
-        style={imageStyle}
+        style={imageStyleWithSize}
         resizeMode="cover"
-        {...imageProps}
         blurRadius={blur ? computeBlurForSize(imageSize) : 0}
+        ref={imageRef}
+        source={source}
       />
       {!!caption && (
-        <InlineSpoilerText style={theme.caption} shouldHide={blur}>
+        <InlineSpoilerText style={captionStyle} shouldHide={!!blur}>
           {caption}
         </InlineSpoilerText>
       )}
     </ContainerComponent>
   );
-}
+};
