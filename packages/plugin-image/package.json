@@ -8,7 +8,9 @@
     "react-native": "0.64.3",
     "react-native-web": "0.17.1",
     "lodash": "4.17.20",
-    "linkify-it": "2.2.0"
+    "linkify-it": "2.2.0",
+    "react-native-rich-content-spoiler": "1.0.0",
+    "react-native-rich-content-common": "1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

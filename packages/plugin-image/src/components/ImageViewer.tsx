@@ -4,7 +4,7 @@ import {ImageData} from '../types';
 import {getImageSize} from '../utils/size-utils';
 import {getImageCaption, shouldEnableImageExpand, isImageLoading} from '../utils/draft-utils';
 import {defaultSourceTransformer} from '../utils/source-transformer';
-import {InlineSpoilerText, computeBlurForSize} from '../../../spoiler';
+import {InlineSpoilerText, computeBlurForSize} from 'react-native-rich-content-spoiler';
 
 export interface ImageViewerProps {
   containerStyle?: TouchableOpacityProps['style'] & ViewProps['style'];

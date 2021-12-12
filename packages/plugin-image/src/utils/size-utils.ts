@@ -1,7 +1,7 @@
 import {Dimensions} from 'react-native';
 import {isObject} from 'lodash';
 import {ImageData} from '../types';
-import {Size} from '../../../common';
+import {Size} from 'react-native-rich-content-common';
 
 export const getFallbackImageSize = () => {
   const screenSize = Dimensions.get('window');
