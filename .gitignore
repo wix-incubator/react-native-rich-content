@@ -13,6 +13,7 @@ demo/*.key
 demo/*.mobileprovision
 demo/*.orig.*
 demo/web-build/
+demo/package-lock.json
 
 # macOS
 demo/.DS_Store
