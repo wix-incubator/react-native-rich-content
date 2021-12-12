@@ -1,19 +1,2 @@
 node_modules/
 .history/
-
-# Demo
-demo/node_modules/
-demo/.expo/
-demo/dist/
-demo/npm-debug.*
-demo/*.jks
-demo/*.p8
-demo/*.p12
-demo/*.key
-demo/*.mobileprovision
-demo/*.orig.*
-demo/web-build/
-demo/package-lock.json
-
-# macOS
-demo/.DS_Store
