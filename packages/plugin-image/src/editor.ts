@@ -1,8 +1,8 @@
 import {editorPluginCreator} from '../../common';
 import {ENTITY_TYPE, PLUGIN_ID} from './constants';
-import {CreateImageEntityProps, InsertImage} from './types';
+import {CreateImageEntityProps, ImageEntity} from './types';
 
-export const createPluginEntity = ({image, alignment = 'center'}: CreateImageEntityProps) => {
+const createPluginEntity = ({image, alignment = 'center'}: CreateImageEntityProps): ImageEntity => {
   return {
     pluginType: ENTITY_TYPE,
     data: {
@@ -19,4 +19,4 @@ export const createPluginEntity = ({image, alignment = 'center'}: CreateImageEnt
   };
 };
 
-export default editorPluginCreator<InsertImage>(createPluginEntity, [ENTITY_TYPE], {pluginId: PLUGIN_ID});
+export const createImagePlugin = editorPluginCreator<CreateImageEntityProps, ImageEntity>(createPluginEntity, PLUGIN_ID);

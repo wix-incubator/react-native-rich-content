@@ -9,6 +9,7 @@ export type ImageConfig = {
     url: string;
   };
   width?: number;
+  key?: string;
 }
 
 export type ImageSrcObject = {
@@ -32,8 +33,12 @@ export interface ImageData {
 }
 
 export type CreateImageEntityProps = {
-  image: ImageData['src'];
+  image: ImageData['src'] | string;
   alignment?: string;
 }
 
-export type InsertImage = (props: CreateImageEntityProps) => void
+export type ImageEntity = {
+  data: ImageData,
+  pluginType: 'wix-draft-plugin-image', 
+}
+
