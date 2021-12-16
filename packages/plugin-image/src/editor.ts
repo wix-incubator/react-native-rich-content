@@ -1,4 +1,4 @@
-import {editorPluginCreator} from '../../common';
+import {editorPluginCreator} from 'react-native-rich-content-common';
 import {ENTITY_TYPE, PLUGIN_ID} from './constants';
 import {CreateImageEntityProps, ImageEntity} from './types';
 
