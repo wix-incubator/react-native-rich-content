@@ -1266,6 +1266,14 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
+"@types/jest@^27.0.3":
+  version "27.0.3"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/jest/-/jest-27.0.3.tgz#0cf9dfe9009e467f70a342f0f94ead19842a783a"
+  integrity sha1-DPnf6QCeRn9wo0Lw+U6tGYQqeDo=
+  dependencies:
+    jest-diff "^27.0.0"
+    pretty-format "^27.0.0"
+
 "@types/json-schema@^7.0.3":
   version "7.0.9"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/json-schema/-/json-schema-7.0.9.tgz#97edc9037ea0c38585320b28964dde3b39e4660d"
@@ -1285,6 +1293,46 @@
   version "2.4.2"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/prettier/-/prettier-2.4.2.tgz#4c62fae93eb479660c3bd93f9d24d561597a8281"
   integrity sha1-TGL66T60eWYMO9k/nSTVYVl6goE=
+
+"@types/prop-types@*":
+  version "15.7.4"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
+  integrity sha1-/PcgXCXf95Xuea8eMNosl5CAjxE=
+
+"@types/react-dom@^17.0.11":
+  version "17.0.11"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/react-dom/-/react-dom-17.0.11.tgz#e1eadc3c5e86bdb5f7684e00274ae228e7bcc466"
+  integrity sha1-4ercPF6GvbX3aE4AJ0riKOe8xGY=
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-native@^0.66.9":
+  version "0.66.9"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/react-native/-/react-native-0.66.9.tgz#a051d1f1f3cd03df4b4870e91e416b71377a8b7a"
+  integrity sha1-oFHR8fPNA99LSHDpHkFrcTd6i3o=
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-test-renderer@^17.0.1":
+  version "17.0.1"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/react-test-renderer/-/react-test-renderer-17.0.1.tgz#3120f7d1c157fba9df0118dae20cb0297ee0e06b"
+  integrity sha1-MSD30cFX+6nfARja4gywKX7g4Gs=
+  dependencies:
+    "@types/react" "*"
+
+"@types/react@*", "@types/react@^17.0.37":
+  version "17.0.37"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/react/-/react-17.0.37.tgz#6884d0aa402605935c397ae689deed115caad959"
+  integrity sha1-aITQqkAmBZNcOXrmid7tEVyq2Vk=
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/scheduler@*":
+  version "0.16.2"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
+  integrity sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=
 
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
@@ -1489,6 +1537,11 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   integrity sha1-7dgDYornHATIWuegkG7a00tkiTc=
   dependencies:
     color-convert "^2.0.1"
+
+ansi-styles@^5.0.0:
+  version "5.2.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/ansi-styles/-/ansi-styles-5.2.0.tgz#07449690ad45777d1924ac2abb2fc8895dba836b"
+  integrity sha1-B0SWkK1Fd30ZJKwquy/IiV26g2s=
 
 anymatch@^2.0.0:
   version "2.0.0"
@@ -2207,6 +2260,11 @@ cssstyle@^2.3.0:
   dependencies:
     cssom "~0.3.6"
 
+csstype@^3.0.2:
+  version "3.0.10"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/csstype/-/csstype-3.0.10.tgz#2ad3a7bed70f35b965707c092e5f30b327c290e5"
+  integrity sha1-KtOnvtcPNbllcHwJLl8wsyfCkOU=
+
 data-urls@^2.0.0:
   version "2.0.0"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/data-urls/-/data-urls-2.0.0.tgz#156485a72963a970f5d5821aaf642bef2bf2db9b"
@@ -2330,6 +2388,11 @@ diff-sequences@^26.6.2:
   version "26.6.2"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/diff-sequences/-/diff-sequences-26.6.2.tgz#48ba99157de1923412eed41db6b6d4aa9ca7c0b1"
   integrity sha1-SLqZFX3hkjQS7tQdtrbUqpynwLE=
+
+diff-sequences@^27.4.0:
+  version "27.4.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/diff-sequences/-/diff-sequences-27.4.0.tgz#d783920ad8d06ec718a060d00196dfef25b132a5"
+  integrity sha1-14OSCtjQbscYoGDQAZbf7yWxMqU=
 
 doctrine@^2.1.0:
   version "2.1.0"
@@ -3668,6 +3731,16 @@ jest-diff@^26.6.2:
     jest-get-type "^26.3.0"
     pretty-format "^26.6.2"
 
+jest-diff@^27.0.0:
+  version "27.4.2"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-diff/-/jest-diff-27.4.2.tgz#786b2a5211d854f848e2dcc1e324448e9481f36f"
+  integrity sha1-eGsqUhHYVPhI4tzB4yREjpSB828=
+  dependencies:
+    chalk "^4.0.0"
+    diff-sequences "^27.4.0"
+    jest-get-type "^27.4.0"
+    pretty-format "^27.4.2"
+
 jest-docblock@^26.0.0:
   version "26.0.0"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-docblock/-/jest-docblock-26.0.0.tgz#3e2fa20899fc928cb13bd0ff68bd3711a36889b5"
@@ -3715,6 +3788,11 @@ jest-get-type@^26.3.0:
   version "26.3.0"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-get-type/-/jest-get-type-26.3.0.tgz#e97dc3c3f53c2b406ca7afaed4493b1d099199e0"
   integrity sha1-6X3Dw/U8K0Bsp6+u1Ek7HQmRmeA=
+
+jest-get-type@^27.4.0:
+  version "27.4.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-get-type/-/jest-get-type-27.4.0.tgz#7503d2663fffa431638337b3998d39c5e928e9b5"
+  integrity sha1-dQPSZj//pDFjgzezmY05xeko6bU=
 
 jest-haste-map@^26.5.2, jest-haste-map@^26.6.2:
   version "26.6.2"
@@ -5151,6 +5229,16 @@ pretty-format@^26.5.2, pretty-format@^26.6.2:
     ansi-styles "^4.0.0"
     react-is "^17.0.1"
 
+pretty-format@^27.0.0, pretty-format@^27.4.2:
+  version "27.4.2"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/pretty-format/-/pretty-format-27.4.2.tgz#e4ce92ad66c3888423d332b40477c87d1dac1fb8"
+  integrity sha1-5M6SrWbDiIQj0zK0BHfIfR2sH7g=
+  dependencies:
+    "@jest/types" "^27.4.2"
+    ansi-regex "^5.0.1"
+    ansi-styles "^5.0.0"
+    react-is "^17.0.1"
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
@@ -6223,6 +6311,11 @@ typedarray-to-buffer@^3.1.5:
   integrity sha1-qX7nqf9CaRufeD/xvFES/j/KkIA=
   dependencies:
     is-typedarray "^1.0.0"
+
+typescript@^4.5.4:
+  version "4.5.4"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
+  integrity sha1-oX06AmO/XIcjucUvQ8UITt8Twug=
 
 uglify-es@^3.1.9:
   version "3.3.9"

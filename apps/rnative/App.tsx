@@ -21,7 +21,7 @@ import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
 
 import {Editor} from '@react-native-rich-content/editor';
 
-const Section = ({children, title}) => {
+const Section = ({children, title}: any) => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>

@@ -1,0 +1,31 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "display": "rnative",
+    "compilerOptions": {
+      "composite": false,
+      "declaration": true,
+      "declarationMap": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "incremental": true,
+      "inlineSources": false,
+      "isolatedModules": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "preserveWatchOutput": true,
+      "strict": true,
+      "target": "esnext",
+      "module": "commonjs",
+      "lib": ["es2017"],
+      "allowJs": true,
+      "jsx": "react-native",
+      "noEmit": true,
+      "moduleResolution": "node",
+        
+      "allowSyntheticDefaultImports": true,
+  
+      "skipLibCheck": true,
+      "resolveJsonModule": true
+    },
+    "exclude": ["node_modules","babel.config.js", "metro.config.js", "jest.config.js"]
+  }

@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import {View, Text} from 'react-native';
 import {WebView} from 'react-native-webview';
 
-export const Editor = (props) => {
+export const Editor = (props: any) => {
     return (
         <View>
             <Text>Hello to Yuval</Text>
