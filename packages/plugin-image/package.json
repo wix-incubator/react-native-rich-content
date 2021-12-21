@@ -1,0 +1,23 @@
+{
+  "name": "@react-native-rich-content/plugin-image",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "sideEffects": false,
+  "dependencies": {
+    "@react-native-rich-content/common": "1.0.0",
+    "@react-native-rich-content/spoiler": "1.0.0",
+    "lodash": "^4.12.0",
+    "linkify-it": "2.2.0"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-native": "^0.66.9",
+    "typescript": "^4.5.4"
+  }
+}
