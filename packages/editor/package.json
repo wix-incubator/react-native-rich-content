@@ -1,0 +1,14 @@
+{
+    "name": "@react-native-rich-content/editor",
+    "version": "0.0.0",
+    "private": true,
+    "main": "src",
+    "peerDependencies": {
+      "react": "*",
+      "react-native": "*",
+      "react-native-webview": "*"
+    },
+    "devDependencies": {
+      "react-native-webview": "11.0.2"
+    }
+  }

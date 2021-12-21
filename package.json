@@ -1,0 +1,21 @@
+{
+    "name": "react-native-rich-content",
+    "version": "0.0.1",
+    "private": true,
+    "workspaces": {
+      "packages": ["packages/*", "apps/*"],
+      "nohoist": [
+        "**/react",
+        "**/react-dom",
+        "**/react-native",
+        "**/react-native/**",
+        "**/react-native-webview",
+        "**/react-native-webview/**"
+      ]
+    },
+    "scripts": {
+      "ios:pods": "yarn workspace @react-native-rich-content/rnative pods",
+      "ios:start": "yarn workspace @react-native-rich-content/rnative ios",
+      "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock"
+    }
+  }
