@@ -1,7 +1,5 @@
-import React from 'react';
-
 export type ToolbarItem = {
-    component: React.Component;
+    component: any; // TODO declare better
     isSticky?: boolean;
     isRight?: boolean;
 }

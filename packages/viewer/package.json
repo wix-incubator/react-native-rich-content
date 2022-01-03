@@ -5,7 +5,7 @@
   "main": "./src/index.ts",
   "sideEffects": false,
   "dependencies": {
-    "@react-native-rich-content/common": "1.0.0"
+    "wix-redraft": "^1.1.6"
   },
   "peerDependencies": {
     "react": "*",
@@ -15,6 +15,7 @@
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@types/react-native": "^0.66.9",
+    "@react-native-rich-content/common": "*",
     "typescript": "^4.5.4"
   }
 }

@@ -39,6 +39,6 @@ export type CreateImageEntityProps = {
 
 export type ImageEntity = {
   data: ImageData,
-  pluginType: 'wix-draft-plugin-image', 
+  pluginType: string, 
 }
 

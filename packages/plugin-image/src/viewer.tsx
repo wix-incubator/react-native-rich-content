@@ -1,3 +1,4 @@
+import React from 'react';
 import { ViewerPluginCreator } from "@react-native-rich-content/common";
 import { ImageViewer, ImageViewerProps } from "./components/ImageViewer";
 import { ImageData } from "./types";
@@ -15,7 +16,6 @@ type ImageViewerPluginConfig = {
     testID?: ImageViewerProps['testID'];
     entityType?: string;
 }
-
 
 export const createImageViewerPlugin: ViewerPluginCreator<ImageViewerPluginConfig, ImageData> = ({
     imageStyle,

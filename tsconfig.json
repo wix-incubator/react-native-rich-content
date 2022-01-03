@@ -1,0 +1,6 @@
+{
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "extends": "./node_modules/@wix/shono/src/moduleTsconfig.json",
+}

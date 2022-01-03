@@ -1,97 +1,57 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
-import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
-
-import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
-
+import React, {useRef, useState, useEffect} from 'react';
+import {StyleSheet, Text, ScrollView} from 'react-native';
 import {Editor} from '@react-native-rich-content/editor';
+import {Viewer} from '@react-native-rich-content/viewer';
+import {
+  Content,
+  EditorRef,
+  AtomicPlugin,
+} from '@react-native-rich-content/common';
+import {imageViewerPlugin} from './src/plugins/image/viewer-plugin';
+import {createEditorPlugins} from './src/plugins/create-editor-plugins';
 
-const Section = ({children, title}: any) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+const viewerPlugins = [imageViewerPlugin];
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  const editorRef = useRef<EditorRef>(null);
+  const [plugins, setPlugins] = useState<AtomicPlugin[]>([]);
+  const [content, setContent] = useState<Content>({blocks: [], entityMap: {}});
+  useEffect(() => {
+    if (editorRef.current) {
+      setPlugins(createEditorPlugins(editorRef.current));
+    }
+  }, []);
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Editor />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
+    <ScrollView style={styles.root}>
+      <Text>Editor:</Text>
+      <Editor
+        ref={editorRef}
+        plugins={plugins}
+        content={content}
+        style={styles.editor}
+        onContentChange={setContent}
+      />
+      <Text>Viewer:</Text>
+      <Viewer plugins={viewerPlugins} content={content} style={styles.viewer} />
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+  root: {
+    height: 500,
+    width: 500,
+    paddingTop: 100,
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
+  viewer: {
+    marginBottom: 60,
+    height: 500,
+    width: '100%',
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  editor: {
+    height: 500,
+    width: '100%',
   },
 });
 

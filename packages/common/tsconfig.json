@@ -1,5 +1,5 @@
 {
-    "display": "editor",
+    "display": "common",
     "compilerOptions": {
       "composite": false,
       "declaration": true,

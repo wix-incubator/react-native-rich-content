@@ -5,27 +5,20 @@ export interface Size {
   width: number;
 }
 
-export type EditorRef = any; // TODO
+export type EditorRef = {
+  insert: (entity: any) => void;
+};
+
 export type ToolbarConfig = any; // TODO
 
-export type CreatePluginEntity<RequiredEntityData, Entity> = (data: RequiredEntityData) => Entity;
+export type CreatePluginEntity<RequiredEntityData, EntityType> = (data: RequiredEntityData) => EntityType;
 
-export interface EditorPluginProps {
-  toolbarIcon: number;
-  getToolbarConfig: (editorRef: EditorRef) => ToolbarConfig;
-  displayName: string;
-  onInsert: (editorRef: EditorRef) => void;
-  onInsertAsync: (editorRef: EditorRef) => void;
-}
-
-export type AtomicPlugin<RequiredEntityData, Entity> = {
+export type AtomicPlugin = {
   id: string;
-  displayName: string;
+  ctaText: string;
   toolbarIcon: number;
-  onInsert: (editorRef: EditorRef) => void;
-  onInsertAsync: (editorRef: EditorRef) => void;
-  getToolbarConfig: (editorRef: EditorRef) => ToolbarConfig;
-  createPluginEntity: CreatePluginEntity<RequiredEntityData, Entity>;
+  onPress: () => void;
+  getToolbarConfig?: () => void;
 };
 
 interface ViewerPluginComponentProps<DataType> {
@@ -38,5 +31,10 @@ export type ViewerPlugin<DataType> = {
     component: FC<ViewerPluginComponentProps<DataType>>;
     entityType: string;
 };
+
+export interface Content {
+  blocks: Object;
+  entityMap: Object;
+}
 
 export type ViewerPluginCreator<ConfigType, DataType> = (config: ConfigType) => ViewerPlugin<DataType>;

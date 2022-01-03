@@ -1,8 +1,8 @@
 import React from 'react';
 import {View, ViewProps} from 'react-native';
-import redraft from 'redraft';
+import redraft from 'wix-redraft';
+import {ViewerPlugin} from '@react-native-rich-content/common';
 import { createRenderers } from './draft-utils/createRenderers';
-import {ViewerPlugin} from '../../types';
 
 export interface ViewerProps {
     plugins: ViewerPlugin<any>[]; // TODO declare it better
@@ -22,4 +22,4 @@ export const Viewer = ({plugins, content, style}: ViewerProps) => {
             {redraft(content, renderers)}
         </View>
     )
-}
+};

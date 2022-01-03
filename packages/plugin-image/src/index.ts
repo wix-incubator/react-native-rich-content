@@ -1,6 +1,4 @@
 export * from './types';
-export * from './utils/draft-utils';
+import * as imageServices from './utils/draft-utils';
 export * from './viewer';
-export * from './editor';
-
-
+export {imageServices};

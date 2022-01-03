@@ -1,6 +1,5 @@
 import React, {useCallback, useMemo, useRef, MutableRefObject, Component} from 'react';
-import {TextStyle, ImageSourcePropType, ImageProps, TouchableOpacityProps, ViewProps, Dimensions, View, TouchableOpacity, Image} from 'react-native';
-import {InlineSpoilerText, computeBlurForSize} from '@react-native-rich-content/spoiler';
+import {Text, TextStyle, ImageSourcePropType, ImageProps, TouchableOpacityProps, ViewProps, Dimensions, View, TouchableOpacity, Image} from 'react-native';
 import {ImageData} from '../types';
 import {getImageSize} from '../utils/size-utils';
 import {getImageCaption, shouldEnableImageExpand, isImageLoading} from '../utils/draft-utils';
@@ -11,7 +10,6 @@ export interface ImageViewerProps {
   captionStyle?: TextStyle;
   imageStyle?: ImageProps['style'];
   data: ImageData;
-  blur?: boolean;
   LoaderComponent?: typeof Component;
   onPress?: (data: ImageData, containerRef?: MutableRefObject<null | typeof TouchableOpacity>['current'], imageRef?: MutableRefObject<null | typeof Image>['current']) => void;
   sourceTransformer?: (image: ImageData) => ImageSourcePropType;
@@ -29,7 +27,6 @@ export const ImageViewer = ({
   imageStyle,
   LoaderComponent = View,
   sourceTransformer = defaultSourceTransformer,
-  blur,
   accessibilityLabel,
   testID,
 }: ImageViewerProps) => {
@@ -59,8 +56,7 @@ export const ImageViewer = ({
       style={imageSize}
     />
   ) : (
-    <ContainerComponent
-      style={containerStyle}
+    <ContainerComponent style={containerStyle}
       onPress={reffedOnPress}
       activeOpacity={0.85}
       ref={containerRef}
@@ -70,14 +66,14 @@ export const ImageViewer = ({
       <Image
         style={imageStyleWithSize}
         resizeMode="cover"
-        blurRadius={blur ? computeBlurForSize(imageSize) : 0}
+
         ref={imageRef}
         source={source}
       />
       {!!caption && (
-        <InlineSpoilerText style={captionStyle} shouldHide={!!blur}>
+        <Text style={captionStyle}>
           {caption}
-        </InlineSpoilerText>
+        </Text>
       )}
     </ContainerComponent>
   );

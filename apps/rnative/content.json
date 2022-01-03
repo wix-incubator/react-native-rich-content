@@ -1,0 +1,68 @@
+{
+    "blocks": [
+      {
+        "key": "bj02f",
+        "text": " ",
+        "type": "atomic",
+        "depth": 0,
+        "inlineStyleRanges": [],
+        "entityRanges": [
+          {
+            "offset": 0,
+            "length": 1,
+            "key": 0
+          }
+        ],
+        "data": {}
+      },
+      {
+        "key": "a7ee3",
+        "text": " ",
+        "type": "atomic",
+        "depth": 0,
+        "inlineStyleRanges": [],
+        "entityRanges": [
+          {
+            "offset": 0,
+            "length": 1,
+            "key": 1
+          }
+        ],
+        "data": {}
+      }
+    ],
+    "entityMap": {
+      "0": {
+        "type": "image",
+        "mutability": "IMMUTABLE",
+        "data": {
+          "config": {
+            "alignment": "center",
+            "size": "content",
+            "showTitle": true,
+            "showDescription": true
+          },
+          "src": "https://media.istockphoto.com/photos/london-city-downtown-financial-district-skyscrapers-square-mile-uk-picture-id186758453"
+        }
+      },
+      "1": {
+        "type": "image",
+        "mutability": "IMMUTABLE",
+        "data": {
+          "config": {
+            "alignment": "center",
+            "size": "content",
+            "showTitle": true,
+            "showDescription": true
+          },
+          "metadata": {
+            "caption": "Tralalala"
+          },
+          "src": "https://media.istockphoto.com/photos/the-city-of-london-skyline-at-night-united-kingdom-picture-id1312550959"
+        }
+      }
+    },
+    "VERSION": "6.0.0"
+  }
+  
+  
