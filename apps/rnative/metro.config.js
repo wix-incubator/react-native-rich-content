@@ -18,7 +18,11 @@ Object.keys(appJson.devDependencies).forEach(dep => {
 module.exports = {
   projectRoot: path.resolve(rootPath, 'apps/rnative'),
 
-  watchFolders: [path.resolve(__dirname, 'node_modules'), ...workspaces],
+  watchFolders: [
+    path.resolve(__dirname, 'node_modules'),
+    path.resolve(rootPath, 'node_modules'),
+    ...workspaces,
+  ],
 
   resolver: {
     blacklistRE: exclusionList(

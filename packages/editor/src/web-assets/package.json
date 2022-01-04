@@ -1,0 +1,39 @@
+{
+  "name": "@react-native-rich-content/editor-web-assets",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "sideEffects": false,
+  "devDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-native": "^0.66.9",
+    "babel-loader": "^8.1.0",
+    "classnames": "2.2.6",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "lodash": "4.17.20",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "ricos-editor": "8.65.7",
+    "sass-loader": "^10.0.1",
+    "style-loader": "^0.23.1",
+    "ts-loader": "8.x",
+    "typescript": "^4.5.4",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9",
+    "wix-rich-content-common": "8.65.7",
+    "wix-rich-content-editor-common": "8.65.7",
+    "wix-rich-content-plugin-commons": "8.65.7",
+    "wix-rich-content-plugin-image": "8.65.7"
+  },
+  "scripts": {
+    "build-rce-web-adapter": "webpack --mode=production",
+    "build": "node ./scripts/prepare-build && npm run build-rce-web-adapter && node ./scripts/bundle-web-assets.js"
+  }
+}

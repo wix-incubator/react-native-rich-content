@@ -1,0 +1,25 @@
+{
+  "name": "@react-native-rich-content/plugin-image",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "sideEffects": false,
+  "dependencies": {
+    "@react-native-rich-content/common": "*",
+    "wix-rich-content-plugin-image": "8.65.7",
+    "linkify-it": "^3.0.3",
+    "lodash": "^4.17.21"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/linkify-it": "^3.0.2",
+    "@types/lodash": "^4.14.178",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-native": "^0.66.9",
+    "typescript": "^4.5.4"
+  }
+}

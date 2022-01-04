@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "@react-native-rich-content/editor": "*",
-    "react": "17.0.2",
+    "@react-native-rich-content/viewer": "*",
+    "@react-native-rich-content/plugin-image": "*",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
     "react-native": "0.66.4",
     "react-native-webview": "11.0.2"
   },
