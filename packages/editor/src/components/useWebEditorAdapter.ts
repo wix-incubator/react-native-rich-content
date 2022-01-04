@@ -1,5 +1,5 @@
 import {useRef, useCallback} from 'react'; 
-import {EDITOR_EVENTS} from '@react-native-rich-content/editor-web-assets';
+import {EDITOR_EVENTS} from '../web-assets';
 import { getOriginWhiteList, getSource, getScriptToEvaluate } from '../utils/web-editor-adapter-utils';
 import { WebEditorAdapterProps } from '../types';
 

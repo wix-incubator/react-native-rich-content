@@ -3,7 +3,7 @@ import {View, StyleSheet, ViewProps, LayoutChangeEvent} from 'react-native';
 import {WebEditorAdapter, WebEditorAdapterRef} from './WebEditorAdapter';
 import {Toolbar} from '../toolbar/Toolbar';
 import {prepareStringForInjection} from '../utils/stringify';
-import {EDITOR_METHODS} from '@react-native-rich-content/editor-web-assets';
+import {EDITOR_METHODS} from '../web-assets';
 import {AtomicPlugin, Content, EditorRef} from '@react-native-rich-content/common';
 
 export interface EditorProps {

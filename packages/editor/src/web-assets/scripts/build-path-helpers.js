@@ -7,6 +7,7 @@ const getJsAssetDistPath = () => join(distPath, `rce-web.js`);
 
 module.exports = {
   intermediatesPath,
+  distPath,
   getHtmlAssetDistPath,
   getJsAssetDistPath,
 };

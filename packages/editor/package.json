@@ -11,18 +11,13 @@
     "react-native-webview": "*"
   },
   "devDependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.10.4",
-    "@babel/preset-env": "^7.11.0",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@types/react-native": "^0.66.9",
     "@react-native-rich-content/common": "*"
   },
-  "dependencies": {
-    "@react-native-rich-content/editor-web-assets": "*"
-  },
   "scripts": {
-    "build-rce-web-adapter": "webpack --mode=production",
-    "build": "node ./scripts/prepare-build && npm run build-rce-web-adapter && node ./scripts/bundle-web-assets.js"
+    "preinstall": "yarn --cwd src/web-assets install",
+    "build": "cd ./src/web-assets && npm run build"
   }
 }

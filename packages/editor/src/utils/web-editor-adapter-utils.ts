@@ -1,6 +1,5 @@
-import {getHtmlAsset, getJsAsset, EDITOR_EVENTS} from '@react-native-rich-content/editor-web-assets';
+import {getHtmlAsset, getJsAsset, WebEditorProps} from '../web-assets';
 import {Image} from 'react-native';
-import { WebEditorProps } from '@react-native-rich-content/editor-web-assets';
 
 const getUriOrigin = (uri?: string) => {
     if (uri) {

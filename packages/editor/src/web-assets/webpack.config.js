@@ -6,13 +6,7 @@ const webpack = require('webpack');
 const DIST_DIR = path.join(__dirname, 'src', 'intermediates');
 const DEV_PORT = 33500;
 
-const initHtmlPlugin = () => new HtmlWebpackPlugin({
-  templateParameters: {
-    content: JSON.stringify(require('../../../wix-react-native-rich-content/rich-content-playground/example-content/all-plugins.json')),
-  },
-  template: '../../../wix-react-native-rich-content/demo/rce-web-adapter/index.ejs',
-  inject: 'head',
-});
+const initHtmlPlugin = () => new HtmlWebpackPlugin();
 
 module.exports = (_env, argv) => {
   const isDevMode = argv.mode !== 'production';

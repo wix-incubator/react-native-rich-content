@@ -1,4 +1,4 @@
-import { WebEditorProps } from '@react-native-rich-content/editor-web-assets';
+import { WebEditorProps } from './web-assets';
 import {ViewStyle} from 'react-native';
 
 export interface WebEditorAdapterProps{

@@ -23,6 +23,6 @@
     "ios:start": "yarn workspace @react-native-rich-content/rnative ios",
     "android:start": "yarn workspace @react-native-rich-content/rnative ios",
     "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock",
-    "build": "yarn workspace @react-native-rich-content/editor-web-assets build"
+    "build": "yarn workspace @react-native-rich-content/editor build"
   }
 }
