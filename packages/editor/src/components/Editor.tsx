@@ -13,11 +13,12 @@ export interface EditorProps {
     plugins: AtomicPlugin[];
     toolbarStyle?: ViewProps['style'];
     onToolbarLayout?: (event: LayoutChangeEvent) => void;
+    showActionSheet?: boolean;
 };
 
 export const Editor = React.forwardRef((props: EditorProps, ref) => {
 
-    const {content, style, onContentChange, onToolbarLayout, plugins, toolbarStyle} = props;
+    const {content, style, onContentChange, onToolbarLayout, plugins, toolbarStyle, showActionSheet} = props;
 
     const webEditorAdapterRef = useRef<WebEditorAdapterRef>(null);
 
@@ -43,6 +44,7 @@ export const Editor = React.forwardRef((props: EditorProps, ref) => {
             style={toolbarStyle}
             onLayout={onToolbarLayout}
             plugins={plugins}
+            shouldShowActionSheet={showActionSheet}
         />
         </View>
     );
