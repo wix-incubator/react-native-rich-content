@@ -1,7 +1,7 @@
 import React, {useRef, useImperativeHandle, useCallback} from 'react';
 import {View, StyleSheet, ViewProps, LayoutChangeEvent} from 'react-native';
 import {WebEditorAdapter, WebEditorAdapterRef} from './WebEditorAdapter';
-import {Toolbar} from '../toolbar/Toolbar';
+import {DefaultToolbar, ToolbarProps} from '../toolbar/DefaultToolbar';
 import {prepareStringForInjection} from '../utils/stringify';
 import {EDITOR_METHODS} from '../web-assets';
 import {AtomicPlugin, Content, EditorRef} from '@react-native-rich-content/common';
@@ -13,11 +13,13 @@ export interface EditorProps {
     plugins: AtomicPlugin[];
     toolbarStyle?: ViewProps['style'];
     onToolbarLayout?: (event: LayoutChangeEvent) => void;
+    showActionSheet?: boolean;
+    ToolbarComponent?: (props: ToolbarProps) => JSX.Element;
 };
 
 export const Editor = React.forwardRef((props: EditorProps, ref) => {
 
-    const {content, style, onContentChange, onToolbarLayout, plugins, toolbarStyle} = props;
+    const {content, style, onContentChange, onToolbarLayout, plugins, toolbarStyle, showActionSheet, ToolbarComponent = DefaultToolbar} = props;
 
     const webEditorAdapterRef = useRef<WebEditorAdapterRef>(null);
 
@@ -39,10 +41,11 @@ export const Editor = React.forwardRef((props: EditorProps, ref) => {
             ref={webEditorAdapterRef}
             onRceStateChange={onRceStateChange}
         />
-        <Toolbar
+        <ToolbarComponent
             style={toolbarStyle}
             onLayout={onToolbarLayout}
             plugins={plugins}
+            shouldShowActionSheet={showActionSheet}
         />
         </View>
     );

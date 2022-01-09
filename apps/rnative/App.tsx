@@ -31,6 +31,7 @@ const App = () => {
         content={content}
         style={styles.editor}
         onContentChange={setContent}
+        showActionSheet={true}
       />
       <Text>Viewer:</Text>
       <Viewer plugins={viewerPlugins} content={content} style={styles.viewer} />

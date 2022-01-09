@@ -1,15 +1,15 @@
 import React from 'react';
 import {Image, TouchableOpacity, StyleSheet} from 'react-native';
-import {AtomicPlugin} from '@react-native-rich-content/common';
+import {ToolbarItem} from './types';
 
-interface ToolbarPluginButtonProps {
-    plugin: AtomicPlugin;
+interface ToolbarPluginButton {
+  toolbarItem: ToolbarItem;
 }
 
-export const ToolbarPluginButton = ({plugin}: ToolbarPluginButtonProps) => {
+export const ToolbarButton = ({toolbarItem: {icon, onPress}}: ToolbarPluginButton) => {
   return (
-    <TouchableOpacity style={styles.root} onPress={plugin.onPress}>
-      <Image style={styles.image} source={plugin.toolbarIcon} />
+    <TouchableOpacity style={styles.root} onPress={onPress}>
+      <Image style={styles.image} source={icon} />
     </TouchableOpacity>
   );
 };
