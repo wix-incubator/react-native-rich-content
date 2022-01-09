@@ -14,7 +14,7 @@ export interface ToolbarProps {
     shouldShowActionSheet?: boolean;
 }
 
-export const Toolbar = ({style, onLayout, plugins, shouldShowActionSheet}: ToolbarProps) => {
+export const DefaultToolbar = ({style, onLayout, plugins, shouldShowActionSheet}: ToolbarProps) => {
 
     const [isActionSheetVisible, setIsActionSheetVisible] = useState(false);
     const openActionSheet = useCallback(() => setIsActionSheetVisible(true), []);
