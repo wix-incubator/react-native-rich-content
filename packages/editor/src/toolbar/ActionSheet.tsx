@@ -1,5 +1,6 @@
 import React, {useCallback} from 'react';
 import {Modal, TouchableOpacity, TouchableWithoutFeedback, View, StyleSheet, FlatList, Text, Dimensions} from 'react-native';
+import { ActionSheetButton } from './ActionSheetButton';
 import { AtomicPlugin } from '@react-native-rich-content/common';
 
 export interface ActionSheetProps {
@@ -11,18 +12,9 @@ export interface ActionSheetProps {
 export const ActionSheet = ({visible, onClose, plugins}: ActionSheetProps) => {
 
     const keyExtractor = useCallback((_item, index) => index.toString(), []);
-    const renderPluginSelector = useCallback(({item}: {item: AtomicPlugin}) => {
-        const {ctaText, onPress} = item;
-        const onPluginPress = () => {
-            onPress();
-            onClose();
-        };
-        return (
-            <TouchableOpacity onPress={onPluginPress} style={styles.flatListItem}>
-                <Text style={styles.ctaText}>{ctaText}</Text>
-            </TouchableOpacity>
-        );
-    }, [onClose]);
+    const renderPluginSelector = useCallback(({item}: {item: AtomicPlugin}) => (
+        <ActionSheetButton onClose={onClose} plugin={item}/>
+    ), [onClose]);
     const renderSeparator = useCallback(() => <View style={styles.separator}/>, []);
 
     return (
@@ -32,7 +24,6 @@ export const ActionSheet = ({visible, onClose, plugins}: ActionSheetProps) => {
             visible={visible}
             onRequestClose={onClose}
         >
-            <View style={{height: '100%', width: '100%'}}>
                 <View style={styles.root}>
                     <TouchableWithoutFeedback style={styles.fullWidth} onPress={onClose}>
                         <View style={styles.fullWidth}/>
@@ -53,7 +44,6 @@ export const ActionSheet = ({visible, onClose, plugins}: ActionSheetProps) => {
                 />
                     </View>
                 </View>
-            </View>
         </Modal>
     )
 }
@@ -62,25 +52,20 @@ const styles = StyleSheet.create({
     root: {
         flex: 1,
         backgroundColor: '#000000AA',
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
+        width: '100%',
+        height: '100%'
     },
     fullWidth: {
         flex: 1,
         width: '100%',
     },
+
     flatList: {
         marginBottom: 20,
     },
     flatListContainer: {
         paddingBottom: 40,
-    },
-    flatListItem: {
-        flex: 1,
-        height: 50,
-        alignItems: 'center'
-    },
-    ctaText: {
-        fontSize: 18
     },
     separator: {
         opacity: 0.1,
