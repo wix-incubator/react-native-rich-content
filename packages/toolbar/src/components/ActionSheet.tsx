@@ -1,5 +1,5 @@
 import React, {useCallback} from 'react';
-import {Modal, TouchableOpacity, TouchableWithoutFeedback, View, StyleSheet, FlatList, Text, Dimensions} from 'react-native';
+import {Modal, TouchableWithoutFeedback, View, StyleSheet, FlatList, Text, Dimensions} from 'react-native';
 import { ActionSheetButton } from './ActionSheetButton';
 import { AtomicPlugin } from '@react-native-rich-content/common';
 

@@ -1,4 +1,5 @@
 import React, {useImperativeHandle} from 'react';
+import { StyleSheet } from 'react-native';
 import {WebView} from 'react-native-webview';
 import { WebEditorAdapterProps } from '../types';
 import { useWebEditorAdapter } from './useWebEditorAdapter';
@@ -18,7 +19,7 @@ export const  WebEditorAdapter = React.forwardRef((props: WebEditorAdapterProps,
 
   return (
     <WebView
-      style={style}
+      style={[styles.webview, style]}
       ref={webviewRef}
       originWhitelist={originWhiteList}
       injectedJavaScript={scriptToEvaluate}
@@ -29,4 +30,13 @@ export const  WebEditorAdapter = React.forwardRef((props: WebEditorAdapterProps,
       applicationNameForUserAgent={'WixOneAppRichContent/1.0.0'}
     />
   );
+});
+
+const styles = StyleSheet.create({
+  webview: {
+      flex: 1,
+      backgroundColor: 'transparent',
+      height: 200,
+      width: '100%'
+  },
 });

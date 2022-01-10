@@ -1,5 +1,5 @@
 {
-  "name": "@react-native-rich-content/editor",
+  "name": "@react-native-rich-content/toolbar",
   "version": "0.0.0",
   "private": true,
   "main": "./src/index.ts",
@@ -16,9 +16,5 @@
     "@types/react-native": "^0.66.9",
     "@react-native-rich-content/common": "*",
     "typescript": "^4.5.4"
-  },
-  "scripts": {
-    "preinstall": "yarn --cwd src/web-assets install",
-    "build": "cd ./src/web-assets && npm run build"
   }
 }
