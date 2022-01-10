@@ -1328,9 +1328,9 @@
   integrity sha1-7nceK6Sz3Fs3KTXVSf2WF780W4w=
 
 "@types/node@*":
-  version "17.0.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/node/-/node-17.0.7.tgz#4a53d8332bb65a45470a2f9e2611f1ced637a5cb"
-  integrity sha1-SlPYMyu2WkVHCi+eJhHxztY3pcs=
+  version "17.0.8"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/node/-/node-17.0.8.tgz#50d680c8a8a78fe30abe6906453b21ad8ab0ad7b"
+  integrity sha1-UNaAyKinj+MKvmkGRTshrYqwrXs=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1372,9 +1372,9 @@
     "@types/prosemirror-view" "*"
 
 "@types/prosemirror-model@*", "@types/prosemirror-model@^1.13.2":
-  version "1.13.2"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/prosemirror-model/-/prosemirror-model-1.13.2.tgz#2adad3ec478f83204f155d7fb94c9dfde2fc3296"
-  integrity sha1-KtrT7EePgyBPFV1/uUyd/eL8MpY=
+  version "1.16.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/prosemirror-model/-/prosemirror-model-1.16.0.tgz#8b22c7431a4c93f7f550fc89c4b0e2d44d42c8b6"
+  integrity sha1-iyLHQxpMk/f1UPyJxLDi1E1CyLY=
   dependencies:
     "@types/orderedmap" "*"
 
@@ -2208,9 +2208,9 @@ camelcase@^6.0.0:
   integrity sha1-VoW5XrIJrJwMF3Rnd4ychN9Yupo=
 
 caniuse-lite@^1.0.30001286:
-  version "1.0.30001296"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/caniuse-lite/-/caniuse-lite-1.0.30001296.tgz#d99f0f3bee66544800b93d261c4be55a35f1cec8"
-  integrity sha1-2Z8PO+5mVEgAuT0mHEvlWjXxzsg=
+  version "1.0.30001298"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/caniuse-lite/-/caniuse-lite-1.0.30001298.tgz#0e690039f62e91c3ea581673d716890512e7ec52"
+  integrity sha1-DmkAOfYukcPqWBZz1xaJBRLn7FI=
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -2381,9 +2381,9 @@ colorette@^1.0.7:
   integrity sha1-UZD7uHJ2JZqGrXAL/yxtb6o/ykA=
 
 colors@^1.1.2:
-  version "1.4.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/colors/-/colors-1.4.0.tgz#c50491479d4c1bdaed2c9ced32cf7c7dc2360f78"
-  integrity sha1-xQSRR51MG9rtLJztMs98fcI2D3g=
+  version "1.4.2"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/colors/-/colors-1.4.2.tgz#cd4fe227412ca2c75bb6f5683ec2e5e68de4f317"
+  integrity sha1-zU/iJ0EsosdbtvVoPsLl5o3k8xc=
 
 combined-stream@^1.0.8:
   version "1.0.8"
@@ -2793,9 +2793,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.4.17:
-  version "1.4.34"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/electron-to-chromium/-/electron-to-chromium-1.4.34.tgz#7d87dc0e95c2c65cbd0687ae23146a662506d1ef"
-  integrity sha1-fYfcDpXCxly9BoeuIxRqZiUG0e8=
+  version "1.4.38"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/electron-to-chromium/-/electron-to-chromium-1.4.38.tgz#10ea58d73d36b13e78d5024f3b74a352d3958d01"
+  integrity sha1-EOpY1z02sT541QJPO3SjUtOVjQE=
 
 emittery@^0.7.1:
   version "0.7.2"
@@ -3394,9 +3394,9 @@ flatten@^1.0.2:
   integrity sha1-wSg6yfJ7Noq8HjbR/3sEUBowNWs=
 
 flow-parser@0.*:
-  version "0.168.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/flow-parser/-/flow-parser-0.168.0.tgz#e9c385499145828b42fd754d3528f4cb7d5c6edf"
-  integrity sha1-6cOFSZFFgotC/XVNNSj0y31cbt8=
+  version "0.169.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/flow-parser/-/flow-parser-0.169.0.tgz#4f77d61dd4241f8063f734ef1f71c684ec03ab52"
+  integrity sha1-T3fWHdQkH4Bj9zTvH3HGhOwDq1I=
 
 flow-parser@^0.121.0:
   version "0.121.0"
@@ -3435,9 +3435,9 @@ format@^0.2.0:
   integrity sha1-1hcBB+nv3E7TDJ3DkBbflCtctYs=
 
 fp-ts@^2.11.0:
-  version "2.11.5"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/fp-ts/-/fp-ts-2.11.5.tgz#97cceb26655b1452d7088d6fb0864f84cceffbe4"
-  integrity sha1-l8zrJmVbFFLXCI1vsIZPhMzv++Q=
+  version "2.11.7"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/fp-ts/-/fp-ts-2.11.7.tgz#ac05ac9a682bcbde669d34c5d5a16d19bb7a4ab8"
+  integrity sha1-rAWsmmgry95mnTTF1aFtGbt6Srg=
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -3643,9 +3643,9 @@ got@^9.6.0:
     url-parse-lax "^3.0.0"
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9, graceful-fs@^4.2.0, graceful-fs@^4.2.4:
-  version "4.2.8"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/graceful-fs/-/graceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"
-  integrity sha1-5BK40z9eAGWTy9PO5t+fLOu+gCo=
+  version "4.2.9"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
+  integrity sha1-BBsF30V1Xlh6JJQiebnRExRuHJY=
 
 growly@^1.3.0:
   version "1.3.0"
@@ -3962,9 +3962,9 @@ import-lazy@^2.1.0:
   integrity sha1-BWmOPUXIjo1+nZLLBYTnfwlvPkM=
 
 import-local@^3.0.2:
-  version "3.0.3"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/import-local/-/import-local-3.0.3.tgz#4d51c2c495ca9393da259ec66b62e022920211e0"
-  integrity sha1-TVHCxJXKk5PaJZ7Ga2LgIpICEeA=
+  version "3.1.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/import-local/-/import-local-3.1.0.tgz#b4479df8a5fd44f6cdce24070675676063c95cb4"
+  integrity sha1-tEed+KX9RPbNziQHBnVnYGPJXLQ=
   dependencies:
     pkg-dir "^4.2.0"
     resolve-cwd "^3.0.0"
@@ -4088,9 +4088,9 @@ is-ci@^2.0.0:
     ci-info "^2.0.0"
 
 is-core-module@^2.2.0, is-core-module@^2.8.0:
-  version "2.8.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/is-core-module/-/is-core-module-2.8.0.tgz#0321336c3d0925e497fd97f5d95cb114a5ccd548"
-  integrity sha1-AyEzbD0JJeSX/Zf12VyxFKXM1Ug=
+  version "2.8.1"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/is-core-module/-/is-core-module-2.8.1.tgz#f59fdfca701d5879d0a6b100a40aa1560ce27211"
+  integrity sha1-9Z/fynAdWHnQprEApAqhVgzichE=
   dependencies:
     has "^1.0.3"
 
@@ -4509,14 +4509,14 @@ jest-diff@^26.6.2:
     pretty-format "^26.6.2"
 
 jest-diff@^27.0.0:
-  version "27.4.2"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-diff/-/jest-diff-27.4.2.tgz#786b2a5211d854f848e2dcc1e324448e9481f36f"
-  integrity sha1-eGsqUhHYVPhI4tzB4yREjpSB828=
+  version "27.4.6"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-diff/-/jest-diff-27.4.6.tgz#93815774d2012a2cbb6cf23f84d48c7a2618f98d"
+  integrity sha1-k4FXdNIBKiy7bPI/hNSMeiYY+Y0=
   dependencies:
     chalk "^4.0.0"
     diff-sequences "^27.4.0"
     jest-get-type "^27.4.0"
-    pretty-format "^27.4.2"
+    pretty-format "^27.4.6"
 
 jest-docblock@^26.0.0:
   version "26.0.0"
@@ -6324,12 +6324,11 @@ pretty-format@^26.5.2, pretty-format@^26.6.2:
     ansi-styles "^4.0.0"
     react-is "^17.0.1"
 
-pretty-format@^27.0.0, pretty-format@^27.4.2:
-  version "27.4.2"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/pretty-format/-/pretty-format-27.4.2.tgz#e4ce92ad66c3888423d332b40477c87d1dac1fb8"
-  integrity sha1-5M6SrWbDiIQj0zK0BHfIfR2sH7g=
+pretty-format@^27.0.0, pretty-format@^27.4.6:
+  version "27.4.6"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/pretty-format/-/pretty-format-27.4.6.tgz#1b784d2f53c68db31797b2348fa39b49e31846b7"
+  integrity sha1-G3hNL1PGjbMXl7I0j6ObSeMYRrc=
   dependencies:
-    "@jest/types" "^27.4.2"
     ansi-regex "^5.0.1"
     ansi-styles "^5.0.0"
     react-is "^17.0.1"
@@ -6372,9 +6371,9 @@ prompts@^2.0.1, prompts@^2.4.0:
     sisteransi "^1.0.5"
 
 prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2:
-  version "15.8.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/prop-types/-/prop-types-15.8.0.tgz#d237e624c45a9846e469f5f31117f970017ff588"
-  integrity sha1-0jfmJMRamEbkafXzERf5cAF/9Yg=
+  version "15.8.1"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
+  integrity sha1-Z9h78aaU9IQ1zzMsJK8QIUoxQLU=
   dependencies:
     loose-envify "^1.4.0"
     object-assign "^4.1.1"

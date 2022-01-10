@@ -2,6 +2,7 @@ import React, {useRef, useState, useEffect} from 'react';
 import {StyleSheet, Text, ScrollView} from 'react-native';
 import {Editor} from '@react-native-rich-content/editor';
 import {Viewer} from '@react-native-rich-content/viewer';
+import {Toolbar} from '@react-native-rich-content/toolbar';
 import {
   Content,
   EditorRef,
@@ -33,6 +34,7 @@ const App = () => {
         onContentChange={setContent}
         showActionSheet={true}
       />
+      <Toolbar plugins={plugins} shouldShowActionSheet />
       <Text>Viewer:</Text>
       <Viewer plugins={viewerPlugins} content={content} style={styles.viewer} />
     </ScrollView>
