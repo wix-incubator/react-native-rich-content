@@ -1,18 +1,17 @@
-import {useRef, useCallback, useEffect} from 'react';
+import {useRef, useCallback, useEffect, useMemo} from 'react';
 import mergeWith from 'lodash/mergeWith';
 import {RicosEditorType} from 'ricos-editor';
+import {EditorPlugin} from 'wix-rich-content-common'
 import {customMergeArrays} from '../utils/merge-arrays';
 import { useConstructor } from './useConstructor';
 import {EDITOR_EVENTS, EDITOR_METHODS} from '../constants';
-import {getPlugins} from '../utils/get-plugins';
 import { getToolbarSettings } from '../utils/get-toolbar-settings';
 import { postWebviewMessage, setRceApi, setPrimaryColor } from '../utils/global-utils';
 import { RceApi } from '../types';
 
 const toolbarSettings = {getToolbarSettings};
-const plugins = getPlugins();
 
-export const useWebEditor = (primaryColor?: string) => {
+export const useWebEditor = (pluginCreators: {createPlugin: () => EditorPlugin}[], primaryColor?: string) => {
     const editorRef = useRef<RicosEditorType>(null);
     useConstructor(() => {
         setPrimaryColor(primaryColor);
@@ -89,11 +88,13 @@ export const useWebEditor = (primaryColor?: string) => {
         });
     }, []);
 
+    const plugins = useMemo(() => pluginCreators.map((creator) => creator.createPlugin()),[])
+
     return {
         toolbarSettings,
         editorRef,
-        plugins,
         handleChange,
         onAtomicBlockFocus: updateEntityFocusData,
+        plugins
     }
 };

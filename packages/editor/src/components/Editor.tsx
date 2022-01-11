@@ -35,6 +35,7 @@ export const Editor = React.forwardRef((props: EditorProps, ref) => {
             style={style}
             ref={webEditorAdapterRef}
             onRceStateChange={onRceStateChange}
+            plugins={plugins}
         />
         </View>
     );

@@ -1,4 +1,7 @@
-import {imageServices} from '@react-native-rich-content/plugin-image';
+import {
+  imageServices,
+  createEditorImagePlugin,
+} from '@react-native-rich-content/plugin-image';
 import {AtomicPlugin, EditorRef} from '@react-native-rich-content/common';
 import {ENTITY_TYPE, CTA_TEXT} from './constants';
 
@@ -9,16 +12,18 @@ const SECOND_IMAGE =
 
 const cameraIcon = require('../../../assets/camera-icon.jpeg');
 
-export const createImageEditorPlugin = (editorRef: EditorRef): AtomicPlugin => {
+export const createImageEditorPluginWithEditorRef = (
+  editorRef: EditorRef,
+): AtomicPlugin => {
   let imageToAdd = FIRST_IMAGE;
   const addNewImage = () => {
     imageServices.insertImageToEditor(imageToAdd, editorRef);
     imageToAdd = imageToAdd === FIRST_IMAGE ? SECOND_IMAGE : FIRST_IMAGE;
   };
-  return {
+  return createEditorImagePlugin({
     id: ENTITY_TYPE,
     toolbarIcon: cameraIcon,
     ctaText: CTA_TEXT,
     onPress: addNewImage,
-  };
+  });
 };
