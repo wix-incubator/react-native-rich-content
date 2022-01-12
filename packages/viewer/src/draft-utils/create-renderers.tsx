@@ -1,11 +1,27 @@
-import React, {ReactNode, ReactElement, Children} from 'react';
+import React, {ReactNode, ReactElement} from 'react';
 import {Text} from 'react-native';
 import { ViewerPlugin } from "@react-native-rich-content/common";
+import {createStylesRenderer} from 'wix-redraft';
 
 type Renderers = {
     blocks: Record<string, (children: ReactNode) => ReactElement>
     entities: Record<string, (children: ReactNode, data: any, {key}: {key:string}) => ReactElement>;
+    styles: 'any'
 };
+
+const inlineStylesMap = {
+    BOLD: {
+      fontWeight: 'bold',
+    },
+    ITALIC: {
+      fontStyle: 'italic',
+    },
+    UNDERLINE: {
+      textDecoration: 'underline',
+    },
+};
+
+const InlineWrapper = ({ children, style, key }: any) => <Text key={key} style={style}>{children}</Text>
 
 export const createRenderers = (plugins: ViewerPlugin<any>[]): Renderers => {
     const entities: Renderers['entities'] = {};
@@ -31,5 +47,6 @@ export const createRenderers = (plugins: ViewerPlugin<any>[]): Renderers => {
     return {
         blocks,
         entities,
-    }
+        styles: createStylesRenderer(InlineWrapper, inlineStylesMap)
+    };
 };

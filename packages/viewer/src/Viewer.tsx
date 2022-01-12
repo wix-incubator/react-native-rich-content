@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, ViewProps} from 'react-native';
+import {View, ViewProps, TextStyle} from 'react-native';
 import redraft from 'wix-redraft';
 import {ViewerPlugin} from '@react-native-rich-content/common';
 import { createRenderers } from './draft-utils/create-renderers';
