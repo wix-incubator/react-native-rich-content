@@ -21,7 +21,11 @@ export type AtomicPlugin = {
   toolbarIcon: number;
   onPress: () => void;
   getToolbarConfig?: () => void;
+  scriptString: string;
+  scriptWindowEntry: string;
 };
+
+export type AtomicPluginConfig = Omit<AtomicPlugin, 'scriptString' | 'scriptWindowEntry'>;
 
 interface ViewerPluginComponentProps<DataType> {
     data: DataType;

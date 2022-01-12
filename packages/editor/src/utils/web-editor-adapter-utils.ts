@@ -1,5 +1,6 @@
 import {getHtmlAsset, getJsAsset, WebEditorProps} from '../web-assets';
 import {Image} from 'react-native';
+import { AtomicPlugin } from '@react-native-rich-content/common';
 
 const getUriOrigin = (uri?: string) => {
     if (uri) {
@@ -23,7 +24,19 @@ export const getSource = (): {html: string} =>{
     return {html: jsAsset.html.toString()};
 };
 
-export const getScriptToEvaluate = (content: WebEditorProps['content'], primaryColor: WebEditorProps['primaryColor'], extraProps: WebEditorProps['extraProps']): string => {
+const createGetPluginsFunctionString = (plugins: AtomicPlugin[]) => {
+  const pluginsCreatorArray = plugins.map((plugin) => `
+    {
+      createPlugin: function() {
+        ${plugin.scriptString};
+        return window.${plugin.scriptWindowEntry}();
+      }
+    }
+  `);
+  return `[${pluginsCreatorArray.join(',')}]`;
+};
+
+export const getScriptToEvaluate = (content: WebEditorProps['content'], primaryColor: WebEditorProps['primaryColor'], plugins: AtomicPlugin[], extraProps: WebEditorProps['extraProps']): string => {
     const contentString = content ? `JSON.parse(${JSON.stringify(JSON.stringify(content))})` : 'undefined';
     return `try {
       window.__EDITOR_CONTENT__ = ${contentString}
@@ -31,6 +44,7 @@ export const getScriptToEvaluate = (content: WebEditorProps['content'], primaryC
         content: __EDITOR_CONTENT__,
         extraProps: ${JSON.stringify(extraProps)},
         primaryColor: \`${primaryColor}\`,
+        pluginsCreators: ${createGetPluginsFunctionString(plugins)}
       };
       window.WebRce.renderEditor(document.getElementById('root'), props);
     } catch (e) {

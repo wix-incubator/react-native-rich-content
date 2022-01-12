@@ -7,7 +7,7 @@ const originWhiteList = getOriginWhiteList();
 const source = getSource();
 
 export const useWebEditorAdapter = (props: Omit<WebEditorAdapterProps, 'style'>) => {
-    const {content, primaryColor, extraProps, onDraftEntityFocusChange, onRceStateChange, onWebEditorDidMount} = props;
+    const {content, primaryColor, extraProps, onDraftEntityFocusChange, onRceStateChange, onWebEditorDidMount, plugins} = props;
     const webviewRef = useRef<{injectJavaScript: (str: string) => void}>(null);
     const handleMessage = useCallback((event: {nativeEvent: {data: string}}) => {
         try {
@@ -33,7 +33,7 @@ export const useWebEditorAdapter = (props: Omit<WebEditorAdapterProps, 'style'>)
         webviewRef,
         originWhiteList,
         source,
-        scriptToEvaluate: getScriptToEvaluate(content, primaryColor, extraProps),
+        scriptToEvaluate: getScriptToEvaluate(content, primaryColor, plugins, extraProps),
         handleMessage
     }
 }
