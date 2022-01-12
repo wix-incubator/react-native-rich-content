@@ -8,6 +8,7 @@ export interface Size {
 
 export type EditorRef = {
   insert: (entity: any) => void;
+  deletePluginEntity: (blockKey: string) => void;
   toggleInlineStyle: (inlineStyle: InlineStyle) => void
 };
 
@@ -15,17 +16,16 @@ export type ToolbarConfig = any; // TODO
 
 export type CreatePluginEntity<RequiredEntityData, EntityType> = (data: RequiredEntityData) => EntityType;
 
-export type AtomicPlugin = {
-  id: string;
-  ctaText: string;
-  toolbarIcon: number;
-  onPress: () => void;
-  getToolbarConfig?: () => void;
+export interface AtomicPlugin extends AtomicPluginConfig {
   scriptString: string;
   scriptWindowEntry: string;
 };
 
-export type AtomicPluginConfig = Omit<AtomicPlugin, 'scriptString' | 'scriptWindowEntry'>;
+export interface AtomicPluginConfig {
+  id: string;
+  onEntityFocus?: (data: any) => void;
+  onEntityBlur?: () => void;
+}
 
 interface ViewerPluginComponentProps<DataType> {
     data: DataType;

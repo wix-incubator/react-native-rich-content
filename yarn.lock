@@ -2793,9 +2793,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.4.17:
-  version "1.4.42"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/electron-to-chromium/-/electron-to-chromium-1.4.42.tgz#fe3ee7c71f0b5302da12e730cd9cd395609625df"
-  integrity sha1-/j7nxx8LUwLaEucwzZzTlWCWJd8=
+  version "1.4.43"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/electron-to-chromium/-/electron-to-chromium-1.4.43.tgz#665c0cd8d5e7cce0ba78d90a514c8c813ca3bdbe"
+  integrity sha1-ZlwM2NXnzOC6eNkKUUyMgTyjvb4=
 
 emittery@^0.7.1:
   version "0.7.2"

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, TouchableOpacity, StyleSheet} from 'react-native';
-import {ToolbarItem} from './types';
+import {ToolbarItem} from '../types';
 
 interface ToolbarPluginButton {
   toolbarItem: ToolbarItem;

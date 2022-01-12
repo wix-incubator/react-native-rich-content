@@ -1,6 +1,6 @@
 import { WebEditorProps } from './web-assets';
 import {ViewStyle} from 'react-native';
-import { AtomicPlugin } from '@react-native-rich-content/common';
+import { AtomicPlugin, Content } from '@react-native-rich-content/common';
 
 export interface WebEditorAdapterProps{
   content: WebEditorProps['content'];
@@ -12,3 +12,10 @@ export interface WebEditorAdapterProps{
   onDraftEntityFocusChange?: (data: any) => void;
   onWebEditorDidMount?: () => void;
 }
+
+export interface EditorProps {
+  content?: Content,
+  style?: ViewStyle;
+  onContentChange: (content: Content) => void;
+  plugins: AtomicPlugin[];
+};
