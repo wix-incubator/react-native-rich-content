@@ -1,29 +1,29 @@
-import {
-  imageServices,
-  createEditorImagePlugin,
-} from '@react-native-rich-content/plugin-image';
+import {createEditorImagePlugin} from '@react-native-rich-content/plugin-image';
 import {AtomicPlugin, EditorRef} from '@react-native-rich-content/common';
-import {ENTITY_TYPE, CTA_TEXT} from './constants';
+import {ToolbarItem} from '@react-native-rich-content/toolbar';
+import {ENTITY_TYPE} from './constants';
 
-const FIRST_IMAGE =
-  'https://media.istockphoto.com/photos/london-city-downtown-financial-district-skyscrapers-square-mile-uk-picture-id186758453';
-const SECOND_IMAGE =
-  'https://media.istockphoto.com/photos/the-city-of-london-skyline-at-night-united-kingdom-picture-id1312550959';
+const trashIcon = require('../../../assets/trash-icon.jpeg');
 
-const cameraIcon = require('../../../assets/camera-icon.jpeg');
+const getToolbarItemsForFocusedImage = (
+  editorRef: EditorRef,
+  blockKey: string,
+): ToolbarItem[] => [
+  {
+    icon: trashIcon,
+    onPress: () => editorRef.deletePluginEntity(blockKey),
+  },
+];
 
 export const createImageEditorPluginWithEditorRef = (
   editorRef: EditorRef,
+  setToolbarItems: (toolbarItems: ToolbarItem[]) => void,
+  setDefaultToolbarItems: () => void,
 ): AtomicPlugin => {
-  let imageToAdd = FIRST_IMAGE;
-  const addNewImage = () => {
-    imageServices.insertImageToEditor(imageToAdd, editorRef);
-    imageToAdd = imageToAdd === FIRST_IMAGE ? SECOND_IMAGE : FIRST_IMAGE;
-  };
   return createEditorImagePlugin({
     id: ENTITY_TYPE,
-    toolbarIcon: cameraIcon,
-    ctaText: CTA_TEXT,
-    onPress: addNewImage,
+    onEntityFocus: data =>
+      setToolbarItems(getToolbarItemsForFocusedImage(editorRef, data.blockKey)),
+    onEntityBlur: () => setDefaultToolbarItems(),
   });
 };

@@ -1,21 +1,15 @@
-import React, {useState, useCallback, useMemo} from 'react';
-import {ViewProps, View, StyleSheet, LayoutChangeEvent} from 'react-native';
-import { AtomicPlugin } from '@react-native-rich-content/common';
-import { ActionSheet } from './ActionSheet';
-import { useToolbar } from './useToolbar';
+import React from 'react';
+import {ViewStyle, View, StyleSheet, LayoutChangeEvent} from 'react-native';
 import {ToolbarButton} from './ToolbarButton';
-import { ToolbarItem } from './types';
+import { ToolbarItem } from '../types';
 
 export interface ToolbarProps {
-    plugins: AtomicPlugin[];
-    style?: ViewProps['style'];
+    items: ToolbarItem[];
+    style?: ViewStyle;
     onLayout?: (event: LayoutChangeEvent) => void;
-    shouldShowActionSheet?: boolean;
 }
 
-export const Toolbar = ({style, onLayout, plugins, shouldShowActionSheet}: ToolbarProps) => {
-
-    const {toolbarItems, closeActionSheet, isActionSheetVisible} = useToolbar(plugins, shouldShowActionSheet);
+export const Toolbar = ({style, onLayout, items}: ToolbarProps) => {
 
     const renderToolbarItems = (_toolbarItems: ToolbarItem[]) => _toolbarItems.map((item, index) => (
         <ToolbarButton key={index} toolbarItem={item}/>
@@ -23,8 +17,7 @@ export const Toolbar = ({style, onLayout, plugins, shouldShowActionSheet}: Toolb
 
     return (
         <View style={[styles.toolbar, style]} onLayout={onLayout}>
-            {renderToolbarItems(toolbarItems)}
-            <ActionSheet visible={isActionSheetVisible} onClose={closeActionSheet} plugins={plugins}/>
+            {renderToolbarItems(items)}
         </View>
     );
 }
