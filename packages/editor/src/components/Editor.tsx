@@ -24,6 +24,7 @@ export const Editor = React.forwardRef((props: EditorProps, ref) => {
 
     useImperativeHandle(ref, (): EditorRef => ({
         insert: (entity) => invokeEditorMethod(EDITOR_METHODS.INSERT_PLUGIN_ENTITY, entity),
+        toggleInlineStyle: (inlineStyle) => invokeEditorMethod(EDITOR_METHODS.TOGGLE_INLINE_STYLE, inlineStyle)
     }));
 
     const onRceStateChange = useCallback((rceState: {content: Content}) => onContentChange(rceState.content), [onContentChange]);

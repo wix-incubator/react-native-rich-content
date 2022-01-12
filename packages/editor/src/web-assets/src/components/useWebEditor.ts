@@ -1,7 +1,9 @@
 import {useRef, useCallback, useEffect} from 'react';
 import mergeWith from 'lodash/mergeWith';
 import {RicosEditorType} from 'ricos-editor';
+import { InlineStyle } from 'wix-rich-content-common';
 import {customMergeArrays} from '../utils/merge-arrays';
+import { isValidInlineStyle } from '../utils/inline-styles';
 import { useConstructor } from './useConstructor';
 import {EDITOR_EVENTS, EDITOR_METHODS} from '../constants';
 import {getPlugins} from '../utils/get-plugins';
@@ -60,6 +62,13 @@ export const useWebEditor = (primaryColor?: string) => {
                 console.log('RCE ERROR: updatePluginEntity', e);
               }
             },
+            [EDITOR_METHODS.TOGGLE_INLINE_STYLE]: (inlineStyle: string) => {
+              const parsedInlineStyle = JSON.parse(inlineStyle);
+              if (editorRef.current && isValidInlineStyle(parsedInlineStyle)) {
+                editorRef.current.getEditorCommands().toggleInlineStyle(parsedInlineStyle as InlineStyle);
+                handleChange();
+              }
+            }
           };
           setRceApi(api);
         }

@@ -32,7 +32,6 @@ const App = () => {
         content={content}
         style={styles.editor}
         onContentChange={setContent}
-        showActionSheet={true}
       />
       <Toolbar plugins={plugins} shouldShowActionSheet />
       <Text>Viewer:</Text>
