@@ -695,9 +695,9 @@
     "@babel/plugin-transform-typescript" "^7.16.7"
 
 "@babel/register@^7.0.0":
-  version "7.16.8"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/register/-/register-7.16.8.tgz#bb688b9dc127d98bb54e37e1d817aed1165833b8"
-  integrity sha1-u2iLncEn2Yu1Tjfh2Beu0RZYM7g=
+  version "7.16.9"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/register/-/register-7.16.9.tgz#fcfb23cfdd9ad95c9771e58183de83b513857806"
+  integrity sha1-/Psjz92a2VyXceWBg96DtROFeAY=
   dependencies:
     clone-deep "^4.0.1"
     find-cache-dir "^2.0.0"
@@ -1343,9 +1343,9 @@
   integrity sha1-gHRVoZK7pSy7tFFwRLyCvb+oxZY=
 
 "@types/prettier@^2.0.0":
-  version "2.4.2"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/prettier/-/prettier-2.4.2.tgz#4c62fae93eb479660c3bd93f9d24d561597a8281"
-  integrity sha1-TGL66T60eWYMO9k/nSTVYVl6goE=
+  version "2.4.3"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/prettier/-/prettier-2.4.3.tgz#a3c65525b91fca7da00ab1a3ac2b5a2a4afbffbf"
+  integrity sha1-o8ZVJbkfyn2gCrGjrCtaKkr7/78=
 
 "@types/prop-types@*":
   version "15.7.4"
@@ -2208,9 +2208,9 @@ camelcase@^6.0.0:
   integrity sha1-VoW5XrIJrJwMF3Rnd4ychN9Yupo=
 
 caniuse-lite@^1.0.30001286:
-  version "1.0.30001298"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/caniuse-lite/-/caniuse-lite-1.0.30001298.tgz#0e690039f62e91c3ea581673d716890512e7ec52"
-  integrity sha1-DmkAOfYukcPqWBZz1xaJBRLn7FI=
+  version "1.0.30001299"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/caniuse-lite/-/caniuse-lite-1.0.30001299.tgz#d753bf6444ed401eb503cbbe17aa3e1451b5a68c"
+  integrity sha1-11O/ZETtQB61A8u+F6o+FFG1pow=
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -2793,9 +2793,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.4.17:
-  version "1.4.40"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/electron-to-chromium/-/electron-to-chromium-1.4.40.tgz#f5dbced7bfbc7072e5e7ca5487f8f9a42c8bc768"
-  integrity sha1-9dvO17+8cHLl58pUh/j5pCyLx2g=
+  version "1.4.42"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/electron-to-chromium/-/electron-to-chromium-1.4.42.tgz#fe3ee7c71f0b5302da12e730cd9cd395609625df"
+  integrity sha1-/j7nxx8LUwLaEucwzZzTlWCWJd8=
 
 emittery@^0.7.1:
   version "0.7.2"

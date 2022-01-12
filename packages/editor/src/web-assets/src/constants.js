@@ -11,6 +11,7 @@ export const EDITOR_METHODS = {
     UPDATE_DATA_WITH_ASYNC_UPDATE_ID: 'updateDataWithAsyncUpdateId',
     DELETE_DATA_ASYNC_UPDATE_ID: 'deleteDataWithAsyncUpdateId',
     FINALIZE_EDITING: 'finalizeEditing',
+    TOGGLE_INLINE_STYLE: 'toggleInlineStyle'
 };
 
 export const EDITOR_EVENTS = {
