@@ -62,9 +62,10 @@ export const useWebEditor = (primaryColor?: string) => {
                 console.log('RCE ERROR: updatePluginEntity', e);
               }
             },
-            [EDITOR_METHODS.TOGGLE_TEXT_PLUGIN]: (inlineStyle: string) => {
-              if (editorRef.current && isValidInlineStyle(inlineStyle)) {
-                editorRef.current.getEditorCommands().toggleInlineStyle(inlineStyle as InlineStyle);
+            [EDITOR_METHODS.TOGGLE_INLINE_STYLE]: (inlineStyle: string) => {
+              const parsedInlineStyle = JSON.parse(inlineStyle);
+              if (editorRef.current && isValidInlineStyle(parsedInlineStyle)) {
+                editorRef.current.getEditorCommands().toggleInlineStyle(parsedInlineStyle as InlineStyle);
                 handleChange();
               }
             }

@@ -1,4 +1,5 @@
 import {FC, ReactNode} from 'react';
+import { InlineStyle } from 'wix-rich-content-common';
 
 export interface Size {
   height: number;
@@ -7,6 +8,7 @@ export interface Size {
 
 export type EditorRef = {
   insert: (entity: any) => void;
+  toggleInlineStyle: (inlineStyle: InlineStyle) => void
 };
 
 export type ToolbarConfig = any; // TODO
