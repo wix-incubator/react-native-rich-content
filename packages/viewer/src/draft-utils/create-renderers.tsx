@@ -1,5 +1,5 @@
 import React, {ReactNode, ReactElement} from 'react';
-import {Text} from 'react-native';
+import {Text, View} from 'react-native';
 import { ViewerPlugin } from "@react-native-rich-content/common";
 import {createStylesRenderer} from 'wix-redraft';
 
@@ -26,7 +26,7 @@ const InlineWrapper = ({ children, style, key }: any) => <Text key={key} style={
 export const createRenderers = (plugins: ViewerPlugin<any>[]): Renderers => {
     const entities: Renderers['entities'] = {};
     const blocks: Renderers['blocks'] = {
-        unstyled: (children) => <Text>{children}</Text>
+        unstyled: (children) => children.map(child => <View><Text>{child}</Text></View>),
     };
     plugins.forEach((plugin) => {
         const Component = plugin.component;
