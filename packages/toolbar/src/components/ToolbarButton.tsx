@@ -16,7 +16,7 @@ export const ToolbarButton = ({toolbarItem: {icon, onPress}}: ToolbarPluginButto
 
 const styles = StyleSheet.create({
   root: {
-    width: 30,
+    width: 40,
     height: '100%',
     borderColor: 'grey',
     borderLeftWidth: 1,
@@ -27,5 +27,6 @@ const styles = StyleSheet.create({
   image: {
     height: '100%',
     resizeMode: 'contain',
+    width: '100%'
   },
 });
