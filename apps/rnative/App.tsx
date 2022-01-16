@@ -8,6 +8,7 @@ import {
   EditorRef,
   AtomicPlugin,
 } from '@react-native-rich-content/common';
+import {InlineStyle} from 'wix-rich-content-common';
 import {imageViewerPlugin} from './src/plugins/image/viewer-plugin';
 import {createEditorPlugins} from './src/plugins/create-editor-plugins';
 import {getToolbarItems} from './src/get-toolbar-items';
@@ -18,7 +19,12 @@ const App = () => {
   const editorRef = useRef<EditorRef>(null);
   const [plugins, setPlugins] = useState<AtomicPlugin[]>([]);
   const [toolbarItems, setToolbarItems] = useState<ToolbarItem[]>([]);
+  const [isAtomicPluginFocused, setIsAtomicPluginFocused] =
+    useState<boolean>(false);
   const [content, setContent] = useState<Content>({blocks: [], entityMap: {}});
+  const [activeInlineStyles, setActiveInlineStyles] = useState<InlineStyle[]>(
+    [],
+  );
 
   useEffect(() => {
     if (editorRef.current) {
@@ -26,11 +32,23 @@ const App = () => {
     }
   }, []);
 
-  const setDefaultToolbarItems = useCallback(() => {
+  const setIsAtomicPluginFocusedToTrue = useCallback(
+    () => setIsAtomicPluginFocused(true),
+    [],
+  );
+
+  const onNonAtomicFocus = useCallback(() => {
     if (editorRef.current) {
-      setToolbarItems(getToolbarItems(editorRef.current));
+      setToolbarItems(getToolbarItems(editorRef.current, activeInlineStyles));
+      setIsAtomicPluginFocused(false);
     }
-  }, []);
+  }, [activeInlineStyles]);
+
+  useEffect(() => {
+    if (editorRef.current && !isAtomicPluginFocused) {
+      setToolbarItems(getToolbarItems(editorRef.current, activeInlineStyles));
+    }
+  }, [activeInlineStyles, isAtomicPluginFocused]);
 
   return (
     <ScrollView style={styles.root}>
@@ -41,7 +59,9 @@ const App = () => {
         content={content}
         style={styles.editor}
         onContentChange={setContent}
-        onNonAtomicFocus={setDefaultToolbarItems}
+        onNonAtomicFocus={onNonAtomicFocus}
+        onAtomicFocus={setIsAtomicPluginFocusedToTrue}
+        onInlineStylesChange={setActiveInlineStyles}
       />
       <Toolbar items={toolbarItems} />
       <Text>Viewer:</Text>

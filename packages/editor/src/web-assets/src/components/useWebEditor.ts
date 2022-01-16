@@ -1,7 +1,7 @@
 import {useRef, useCallback, useEffect, useMemo} from 'react';
 import {RicosEditorType} from 'ricos-editor';
 import { InlineStyle, EditorPlugin } from 'wix-rich-content-common';
-import { isValidInlineStyle } from '../utils/inline-styles';
+import { isValidInlineStyle, getActiveInlineStyles } from '../utils/inline-styles';
 import { useConstructor } from './useConstructor';
 import {EDITOR_EVENTS, EDITOR_METHODS} from '../constants';
 import { getToolbarSettings } from '../utils/get-toolbar-settings';
@@ -55,6 +55,7 @@ export const useWebEditor = (pluginCreators: {createPlugin: () => EditorPlugin}[
             postWebviewMessage({
                 type: EDITOR_EVENTS.RCE_STATE_CHANGED,
                 data: {
+                  activeInlineStyles: getActiveInlineStyles(editorRef.current),
                   content,
                 },
             });

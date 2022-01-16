@@ -6,9 +6,10 @@ interface ToolbarPluginButton {
   toolbarItem: ToolbarItem;
 }
 
-export const ToolbarButton = ({toolbarItem: {icon, onPress}}: ToolbarPluginButton) => {
+export const ToolbarButton = ({toolbarItem: {icon, onPress, isPressed}}: ToolbarPluginButton) => {
+  
   return (
-    <TouchableOpacity style={styles.root} onPress={onPress}>
+    <TouchableOpacity style={[styles.root, isPressed && styles.pressedButton]} onPress={onPress}>
       <Image style={styles.image} source={icon} />
     </TouchableOpacity>
   );
@@ -29,4 +30,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     width: '100%'
   },
+  pressedButton: {
+    backgroundColor: '#dbdbdb'
+  }
 });

@@ -9,7 +9,7 @@ export interface Size {
 export type EditorRef = {
   insert: (entity: any) => void;
   deletePluginEntity: (blockKey: string) => void;
-  toggleInlineStyle: (inlineStyle: InlineStyle) => void
+  toggleInlineStyle: (inlineStyle: InlineStyle) => void;
 };
 
 export type ToolbarConfig = any; // TODO
