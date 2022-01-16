@@ -1,4 +1,4 @@
-import {useRef, useState, useCallback} from 'react';
+import {useRef, useCallback} from 'react';
 import {WebEditorAdapterRef} from './WebEditorAdapter';
 import { EditorProps } from '../types';
 import {prepareStringForInjection} from '../utils/stringify';
