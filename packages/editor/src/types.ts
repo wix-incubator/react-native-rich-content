@@ -18,4 +18,5 @@ export interface EditorProps {
   style?: ViewStyle;
   onContentChange: (content: Content) => void;
   plugins: AtomicPlugin[];
+  onNonAtomicFocus: () => void;
 };

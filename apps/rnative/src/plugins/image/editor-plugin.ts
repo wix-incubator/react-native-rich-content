@@ -18,12 +18,10 @@ const getToolbarItemsForFocusedImage = (
 export const createImageEditorPluginWithEditorRef = (
   editorRef: EditorRef,
   setToolbarItems: (toolbarItems: ToolbarItem[]) => void,
-  setDefaultToolbarItems: () => void,
 ): AtomicPlugin => {
   return createEditorImagePlugin({
     id: ENTITY_TYPE,
     onEntityFocus: data =>
       setToolbarItems(getToolbarItemsForFocusedImage(editorRef, data.blockKey)),
-    onEntityBlur: () => setDefaultToolbarItems(),
   });
 };

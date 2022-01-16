@@ -5,10 +5,10 @@ import {prepareStringForInjection} from '../utils/stringify';
 import {EDITOR_METHODS} from '../web-assets';
 import {Content, EditorRef} from '@react-native-rich-content/common';
 
+const TEXT_DATA_TYPE = 'text';
 
 export const useEditor = (props: Omit<EditorProps, 'style' | 'content'>) => {
-    const {onContentChange, plugins} = props;
-    const [selectedEntityType, setSelectedEntityType] = useState<string | undefined>();
+    const {onContentChange, plugins, onNonAtomicFocus} = props;
 
     const getPluginThatMatchesEntityType = (entityType: string) => plugins.find((plugin) => plugin.id === entityType);
 
@@ -27,26 +27,15 @@ export const useEditor = (props: Omit<EditorProps, 'style' | 'content'>) => {
     const onRceStateChange = useCallback((rceState: {content: Content}) => onContentChange(rceState.content), [onContentChange]);
     
     const onDraftEntityFocusChange = useCallback((data: {blockKey?: string, type?: string, data?: any}) => {
-        const isDataValid = !!data.type;
-        if (isDataValid) {
-            if (selectedEntityType) {
-                const blurredPlugin = getPluginThatMatchesEntityType(selectedEntityType);
-                const blurCallback = blurredPlugin?.onEntityBlur;
-                if (blurCallback) {
-                    blurCallback();
-                }
+        if (data.type) {
+            if (data.type === TEXT_DATA_TYPE) {
+                onNonAtomicFocus?.();
+            } else {
+                const focusedPlugin = getPluginThatMatchesEntityType(data.type);
+                focusedPlugin?.onEntityFocus?.(data);
             }
-            const newSelectedEntityType = data.type;
-            if (newSelectedEntityType) {
-                const focusedPlugin = getPluginThatMatchesEntityType(newSelectedEntityType);
-                const focusCallback = focusedPlugin?.onEntityFocus;
-                if (focusCallback) {
-                    focusCallback(data);
-                }
-            }
-            setSelectedEntityType(newSelectedEntityType);
         }
-    }, [plugins, selectedEntityType]);
+    }, [plugins]);
 
     return {
         webEditorAdapterRef,

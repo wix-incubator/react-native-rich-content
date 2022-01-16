@@ -1,4 +1,4 @@
-import React, {useRef, useState, useEffect} from 'react';
+import React, {useRef, useState, useEffect, useCallback} from 'react';
 import {StyleSheet, Text, ScrollView} from 'react-native';
 import {Editor} from '@react-native-rich-content/editor';
 import {Viewer} from '@react-native-rich-content/viewer';
@@ -19,18 +19,16 @@ const App = () => {
   const [plugins, setPlugins] = useState<AtomicPlugin[]>([]);
   const [toolbarItems, setToolbarItems] = useState<ToolbarItem[]>([]);
   const [content, setContent] = useState<Content>({blocks: [], entityMap: {}});
+
   useEffect(() => {
     if (editorRef.current) {
-      const setDefaultToolbarItems = () =>
-        setToolbarItems(getToolbarItems(editorRef.current));
-      setDefaultToolbarItems();
-      setPlugins(
-        createEditorPlugins(
-          editorRef.current,
-          setToolbarItems,
-          setDefaultToolbarItems,
-        ),
-      );
+      setPlugins(createEditorPlugins(editorRef.current, setToolbarItems));
+    }
+  }, []);
+
+  const setDefaultToolbarItems = useCallback(() => {
+    if (editorRef.current) {
+      setToolbarItems(getToolbarItems(editorRef.current));
     }
   }, []);
 
@@ -43,6 +41,7 @@ const App = () => {
         content={content}
         style={styles.editor}
         onContentChange={setContent}
+        onNonAtomicFocus={setDefaultToolbarItems}
       />
       <Toolbar items={toolbarItems} />
       <Text>Viewer:</Text>

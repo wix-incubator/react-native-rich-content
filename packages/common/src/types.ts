@@ -24,7 +24,6 @@ export interface AtomicPlugin extends AtomicPluginConfig {
 export interface AtomicPluginConfig {
   id: string;
   onEntityFocus?: (data: any) => void;
-  onEntityBlur?: () => void;
 }
 
 interface ViewerPluginComponentProps<DataType> {
