@@ -26,7 +26,6 @@ describe('useWebEditor', () => {
             }),
         }
     ];
-
     beforeEach(() => {
         jest.resetAllMocks();
         jest.mock('../utils/global-utils.ts', () => ({
@@ -63,6 +62,11 @@ describe('useWebEditor', () => {
         renderHook(() => useWebEditorMock([], TEST_PRIMARY_COLOR));
         expect(globalUtilsMock.setPrimaryColor).toBeCalledWith(TEST_PRIMARY_COLOR);
     });
+
+    it('should set rceApi', () => {
+        renderHook(() => useWebEditorMock([]));
+        expect(globalUtilsMock.setRceApi).toBeCalled();
+    })
 
     it('handleChange should post webview message', () => {
         const {result} = renderHook(() => useWebEditorMock([]));
