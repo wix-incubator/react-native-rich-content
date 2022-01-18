@@ -1,16 +1,16 @@
 import {useRef, useCallback, useEffect, useMemo} from 'react';
 import {RicosEditorType} from 'ricos-editor';
-import { InlineStyle, EditorPlugin } from 'wix-rich-content-common';
+import { InlineStyle } from 'wix-rich-content-common';
 import { isValidInlineStyle, getActiveInlineStyles } from '../utils/inline-styles';
 import { useConstructor } from './useConstructor';
 import {EDITOR_EVENTS, EDITOR_METHODS} from '../constants';
 import { getToolbarSettings } from '../utils/get-toolbar-settings';
 import { postWebviewMessage, setRceApi, setPrimaryColor } from '../utils/global-utils';
-import { RceApi } from '../types';
+import { RceApi, PluginCreator } from '../types';
 
 const toolbarSettings = {getToolbarSettings};
 
-export const useWebEditor = (pluginCreators: {createPlugin: () => EditorPlugin}[], primaryColor?: string) => {
+export const useWebEditor = (pluginCreators: PluginCreator[], primaryColor?: string) => {
     const editorRef = useRef<RicosEditorType>(null);
     useConstructor(() => {
         setPrimaryColor(primaryColor);
@@ -51,15 +51,13 @@ export const useWebEditor = (pluginCreators: {createPlugin: () => EditorPlugin}[
     useEffect(() => postWebviewMessage({type: EDITOR_EVENTS.WEB_EDITOR_DID_MOUNT}),[]);
 
     const handleChange = useCallback((content?) => {
-        if (editorRef.current) {
-            postWebviewMessage({
-                type: EDITOR_EVENTS.RCE_STATE_CHANGED,
-                data: {
-                  activeInlineStyles: getActiveInlineStyles(editorRef.current),
-                  content,
-                },
-            });
-        }
+          postWebviewMessage({
+              type: EDITOR_EVENTS.RCE_STATE_CHANGED,
+              data: {
+                activeInlineStyles: getActiveInlineStyles(editorRef.current),
+                content,
+              },
+          });
     }, []);
 
     const updateEntityFocusData = useCallback(({blockKey, type, data}) => {
