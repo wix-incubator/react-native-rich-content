@@ -1,4 +1,4 @@
-import { InlineStyle } from '@react-native-rich-content/common/node_modules/wix-rich-content-common';
+import { InlineStyle } from 'wix-rich-content-common';
 import React from 'react';
 import { RicosEditorType } from 'ricos-editor';
 import { EDITOR_METHODS } from "../constants";
