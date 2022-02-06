@@ -18,6 +18,9 @@
       "**/ricos-*"
     ]
   },
+  "dependencies": {
+    "react": "16.13.1"
+  },
   "scripts": {
     "ios:pods": "yarn workspace @react-native-rich-content/rnative pods",
     "ios:start": "yarn workspace @react-native-rich-content/rnative ios",
