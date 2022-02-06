@@ -8,18 +8,15 @@
       "apps/*"
     ],
     "nohoist": [
-      "**/react",
-      "**/react-dom",
       "**/react-native",
       "**/react-native/**",
       "**/react-native-webview",
-      "**/react-native-webview/**",
-      "**/wix-*",
-      "**/ricos-*"
+      "**/react-native-webview/**"
     ]
   },
   "dependencies": {
-    "react": "16.13.1"
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   },
   "scripts": {
     "ios:pods": "yarn workspace @react-native-rich-content/rnative pods",
