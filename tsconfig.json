@@ -1,6 +1,28 @@
 {
+  "display": "react-native-rich-content",
   "compilerOptions": {
-    "jsx": "react"
+    "composite": false,
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "strict": true,
+    "incremental": false,
+    "target": "esnext",
+    "module": "commonjs",
+    "lib": ["es2017", "DOM"],
+    "allowJs": true,
+    "jsx": "react-native",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noEmit": true
   },
-  "extends": "./node_modules/@wix/shono/src/moduleTsconfig.json",
+  "exclude": ["node_modules"],
 }
