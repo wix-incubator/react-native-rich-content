@@ -2,6 +2,13 @@
 # yarn lockfile v1
 
 
+"@ampproject/remapping@^2.0.0":
+  version "2.1.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@ampproject/remapping/-/remapping-2.1.0.tgz#72becdf17ee44b2d1ac5651fb12f1952c336fe23"
+  integrity sha1-cr7N8X7kSy0axWUfsS8ZUsM2/iM=
+  dependencies:
+    "@jridgewell/trace-mapping" "^0.3.0"
+
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.16.7":
   version "7.16.7"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/code-frame/-/code-frame-7.16.7.tgz#44416b6bd7624b998f5b1af5d470856c40138789"
@@ -10,37 +17,37 @@
     "@babel/highlight" "^7.16.7"
 
 "@babel/compat-data@^7.13.11", "@babel/compat-data@^7.16.4":
-  version "7.16.8"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/compat-data/-/compat-data-7.16.8.tgz#31560f9f29fdf1868de8cb55049538a1b9732a60"
-  integrity sha1-MVYPnyn98YaN6MtVBJU4oblzKmA=
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/compat-data/-/compat-data-7.17.0.tgz#86850b8597ea6962089770952075dcaabb8dba34"
+  integrity sha1-hoULhZfqaWIIl3CVIHXcqruNujQ=
 
 "@babel/core@^7.1.0", "@babel/core@^7.1.6", "@babel/core@^7.12.3", "@babel/core@^7.12.9", "@babel/core@^7.14.0", "@babel/core@^7.7.2", "@babel/core@^7.7.5", "@babel/core@^7.8.0":
-  version "7.16.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/core/-/core-7.16.7.tgz#db990f931f6d40cb9b87a0dc7d2adc749f1dcbcf"
-  integrity sha1-25kPkx9tQMubh6DcfSrcdJ8dy88=
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/core/-/core-7.17.0.tgz#16b8772b0a567f215839f689c5ded6bb20e864d5"
+  integrity sha1-Frh3KwpWfyFYOfaJxd7WuyDoZNU=
   dependencies:
+    "@ampproject/remapping" "^2.0.0"
     "@babel/code-frame" "^7.16.7"
-    "@babel/generator" "^7.16.7"
+    "@babel/generator" "^7.17.0"
     "@babel/helper-compilation-targets" "^7.16.7"
     "@babel/helper-module-transforms" "^7.16.7"
-    "@babel/helpers" "^7.16.7"
-    "@babel/parser" "^7.16.7"
+    "@babel/helpers" "^7.17.0"
+    "@babel/parser" "^7.17.0"
     "@babel/template" "^7.16.7"
-    "@babel/traverse" "^7.16.7"
-    "@babel/types" "^7.16.7"
+    "@babel/traverse" "^7.17.0"
+    "@babel/types" "^7.17.0"
     convert-source-map "^1.7.0"
     debug "^4.1.0"
     gensync "^1.0.0-beta.2"
     json5 "^2.1.2"
     semver "^6.3.0"
-    source-map "^0.5.0"
 
-"@babel/generator@^7.14.0", "@babel/generator@^7.16.7", "@babel/generator@^7.16.8", "@babel/generator@^7.7.2":
-  version "7.16.8"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/generator/-/generator-7.16.8.tgz#359d44d966b8cd059d543250ce79596f792f2ebe"
-  integrity sha1-NZ1E2Wa4zQWdVDJQznlZb3kvLr4=
+"@babel/generator@^7.14.0", "@babel/generator@^7.17.0", "@babel/generator@^7.7.2":
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/generator/-/generator-7.17.0.tgz#7bd890ba706cd86d3e2f727322346ffdbf98f65e"
+  integrity sha1-e9iQunBs2G0+L3JzIjRv/b+Y9l4=
   dependencies:
-    "@babel/types" "^7.16.8"
+    "@babel/types" "^7.17.0"
     jsesc "^2.5.1"
     source-map "^0.5.0"
 
@@ -70,9 +77,9 @@
     semver "^6.3.0"
 
 "@babel/helper-create-class-features-plugin@^7.16.7":
-  version "7.16.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.16.7.tgz#9c5b34b53a01f2097daf10678d65135c1b9f84ba"
-  integrity sha1-nFs0tToB8gl9rxBnjWUTXBufhLo=
+  version "7.17.1"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/helper-create-class-features-plugin/-/helper-create-class-features-plugin-7.17.1.tgz#9699f14a88833a7e055ce57dcd3ffdcd25186b21"
+  integrity sha1-lpnxSoiDOn4FXOV9zT/9zSUYayE=
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.16.7"
     "@babel/helper-environment-visitor" "^7.16.7"
@@ -83,12 +90,12 @@
     "@babel/helper-split-export-declaration" "^7.16.7"
 
 "@babel/helper-create-regexp-features-plugin@^7.16.7":
-  version "7.16.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/helper-create-regexp-features-plugin/-/helper-create-regexp-features-plugin-7.16.7.tgz#0cb82b9bac358eb73bfbd73985a776bfa6b14d48"
-  integrity sha1-DLgrm6w1jrc7+9c5had2v6axTUg=
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/helper-create-regexp-features-plugin/-/helper-create-regexp-features-plugin-7.17.0.tgz#1dcc7d40ba0c6b6b25618997c5dbfd310f186fe1"
+  integrity sha1-Hcx9QLoMa2slYYmXxdv9MQ8Yb+E=
   dependencies:
     "@babel/helper-annotate-as-pure" "^7.16.7"
-    regexpu-core "^4.7.1"
+    regexpu-core "^5.0.1"
 
 "@babel/helper-define-polyfill-provider@^0.3.1":
   version "0.3.1"
@@ -242,28 +249,28 @@
     "@babel/traverse" "^7.16.8"
     "@babel/types" "^7.16.8"
 
-"@babel/helpers@^7.16.7":
-  version "7.16.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/helpers/-/helpers-7.16.7.tgz#7e3504d708d50344112767c3542fc5e357fffefc"
-  integrity sha1-fjUE1wjVA0QRJ2fDVC/F41f//vw=
+"@babel/helpers@^7.17.0":
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/helpers/-/helpers-7.17.0.tgz#79cdf6c66a579f3a7b5e739371bc63ca0306886b"
+  integrity sha1-ec32xmpXnzp7XnOTcbxjygMGiGs=
   dependencies:
     "@babel/template" "^7.16.7"
-    "@babel/traverse" "^7.16.7"
-    "@babel/types" "^7.16.7"
+    "@babel/traverse" "^7.17.0"
+    "@babel/types" "^7.17.0"
 
 "@babel/highlight@^7.16.7":
-  version "7.16.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/highlight/-/highlight-7.16.7.tgz#81a01d7d675046f0d96f82450d9d9578bdfd6b0b"
-  integrity sha1-gaAdfWdQRvDZb4JFDZ2VeL39aws=
+  version "7.16.10"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/highlight/-/highlight-7.16.10.tgz#744f2eb81579d6eea753c227b0f570ad785aba88"
+  integrity sha1-dE8uuBV51u6nU8InsPVwrXhauog=
   dependencies:
     "@babel/helper-validator-identifier" "^7.16.7"
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0", "@babel/parser@^7.1.6", "@babel/parser@^7.14.0", "@babel/parser@^7.14.7", "@babel/parser@^7.16.7", "@babel/parser@^7.16.8", "@babel/parser@^7.7.0":
-  version "7.16.8"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/parser/-/parser-7.16.8.tgz#61c243a3875f7d0b0962b0543a33ece6ff2f1f17"
-  integrity sha1-YcJDo4dffQsJYrBUOjPs5v8vHxc=
+"@babel/parser@^7.1.0", "@babel/parser@^7.1.6", "@babel/parser@^7.14.0", "@babel/parser@^7.14.7", "@babel/parser@^7.16.7", "@babel/parser@^7.17.0", "@babel/parser@^7.7.0":
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/parser/-/parser-7.17.0.tgz#f0ac33eddbe214e4105363bb17c3341c5ffcc43c"
+  integrity sha1-8Kwz7dviFOQQU2O7F8M0HF/8xDw=
 
 "@babel/plugin-proposal-class-properties@^7.0.0", "@babel/plugin-proposal-class-properties@^7.1.0":
   version "7.16.7"
@@ -619,9 +626,9 @@
     regenerator-transform "^0.14.2"
 
 "@babel/plugin-transform-runtime@^7.0.0":
-  version "7.16.8"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.16.8.tgz#3339368701103edae708f0fba9e4bfb70a3e5872"
-  integrity sha1-Mzk2hwEQPtrnCPD7qeS/two+WHI=
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.17.0.tgz#0a2e08b5e2b2d95c4b1d3b3371a2180617455b70"
+  integrity sha1-Ci4IteKy2VxLHTszcaIYBhdFW3A=
   dependencies:
     "@babel/helper-module-imports" "^7.16.7"
     "@babel/helper-plugin-utils" "^7.16.7"
@@ -695,20 +702,20 @@
     "@babel/plugin-transform-typescript" "^7.16.7"
 
 "@babel/register@^7.0.0":
-  version "7.16.9"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/register/-/register-7.16.9.tgz#fcfb23cfdd9ad95c9771e58183de83b513857806"
-  integrity sha1-/Psjz92a2VyXceWBg96DtROFeAY=
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/register/-/register-7.17.0.tgz#8051e0b7cb71385be4909324f072599723a1f084"
+  integrity sha1-gFHgt8txOFvkkJMk8HJZlyOh8IQ=
   dependencies:
     clone-deep "^4.0.1"
     find-cache-dir "^2.0.0"
     make-dir "^2.1.0"
-    pirates "^4.0.0"
+    pirates "^4.0.5"
     source-map-support "^0.5.16"
 
 "@babel/runtime@^7.0.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.2.0", "@babel/runtime@^7.4.5", "@babel/runtime@^7.8.4":
-  version "7.16.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/runtime/-/runtime-7.16.7.tgz#03ff99f64106588c9c403c6ecb8c3bafbbdff1fa"
-  integrity sha1-A/+Z9kEGWIycQDxuy4w7r7vf8fo=
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/runtime/-/runtime-7.17.0.tgz#b8d142fc0f7664fb3d9b5833fd40dcbab89276c0"
+  integrity sha1-uNFC/A92ZPs9m1gz/UDcuriSdsA=
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -721,26 +728,26 @@
     "@babel/parser" "^7.16.7"
     "@babel/types" "^7.16.7"
 
-"@babel/traverse@^7.1.0", "@babel/traverse@^7.13.0", "@babel/traverse@^7.14.0", "@babel/traverse@^7.16.7", "@babel/traverse@^7.16.8", "@babel/traverse@^7.7.0", "@babel/traverse@^7.7.2", "@babel/traverse@^7.7.4":
-  version "7.16.8"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/traverse/-/traverse-7.16.8.tgz#bab2f2b09a5fe8a8d9cad22cbfe3ba1d126fef9c"
-  integrity sha1-urLysJpf6KjZytIsv+O6HRJv75w=
+"@babel/traverse@^7.1.0", "@babel/traverse@^7.13.0", "@babel/traverse@^7.14.0", "@babel/traverse@^7.16.7", "@babel/traverse@^7.16.8", "@babel/traverse@^7.17.0", "@babel/traverse@^7.7.0", "@babel/traverse@^7.7.2", "@babel/traverse@^7.7.4":
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/traverse/-/traverse-7.17.0.tgz#3143e5066796408ccc880a33ecd3184f3e75cd30"
+  integrity sha1-MUPlBmeWQIzMiAoz7NMYTz51zTA=
   dependencies:
     "@babel/code-frame" "^7.16.7"
-    "@babel/generator" "^7.16.8"
+    "@babel/generator" "^7.17.0"
     "@babel/helper-environment-visitor" "^7.16.7"
     "@babel/helper-function-name" "^7.16.7"
     "@babel/helper-hoist-variables" "^7.16.7"
     "@babel/helper-split-export-declaration" "^7.16.7"
-    "@babel/parser" "^7.16.8"
-    "@babel/types" "^7.16.8"
+    "@babel/parser" "^7.17.0"
+    "@babel/types" "^7.17.0"
     debug "^4.1.0"
     globals "^11.1.0"
 
-"@babel/types@^7.0.0", "@babel/types@^7.16.0", "@babel/types@^7.16.7", "@babel/types@^7.16.8", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.7.0":
-  version "7.16.8"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/types/-/types-7.16.8.tgz#0ba5da91dd71e0a4e7781a30f22770831062e3c1"
-  integrity sha1-C6Xakd1x4KTneBow8idwgxBi48E=
+"@babel/types@^7.0.0", "@babel/types@^7.16.0", "@babel/types@^7.16.7", "@babel/types@^7.16.8", "@babel/types@^7.17.0", "@babel/types@^7.3.0", "@babel/types@^7.3.3", "@babel/types@^7.7.0":
+  version "7.17.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@babel/types/-/types-7.17.0.tgz#a826e368bccb6b3d84acd76acad5c0d87342390b"
+  integrity sha1-qCbjaLzLaz2ErNdqytXA2HNCOQs=
   dependencies:
     "@babel/helper-validator-identifier" "^7.16.7"
     to-fast-properties "^2.0.0"
@@ -814,16 +821,16 @@
     jest-util "^26.6.2"
     slash "^3.0.0"
 
-"@jest/console@^27.4.6":
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/console/-/console-27.4.6.tgz#0742e6787f682b22bdad56f9db2a8a77f6a86107"
-  integrity sha1-B0LmeH9oKyK9rVb52yqKd/aoYQc=
+"@jest/console@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/console/-/console-27.5.0.tgz#82289a589ad5803555b50b64178128b7a8e45282"
+  integrity sha1-giiaWJrVgDVVtQtkF4Eot6jkUoI=
   dependencies:
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
     chalk "^4.0.0"
-    jest-message-util "^27.4.6"
-    jest-util "^27.4.2"
+    jest-message-util "^27.5.0"
+    jest-util "^27.5.0"
     slash "^3.0.0"
 
 "@jest/core@^26.6.3":
@@ -860,46 +867,46 @@
     slash "^3.0.0"
     strip-ansi "^6.0.0"
 
-"@jest/core@^27.4.7":
-  version "27.4.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/core/-/core-27.4.7.tgz#84eabdf42a25f1fa138272ed229bcf0a1b5e6913"
-  integrity sha1-hOq99Col8foTgnLtIpvPChteaRM=
+"@jest/core@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/core/-/core-27.5.0.tgz#27b383f497ff1671cc30fd5e22eba9d9b10c3031"
+  integrity sha1-J7OD9Jf/FnHMMP1eIuup2bEMMDE=
   dependencies:
-    "@jest/console" "^27.4.6"
-    "@jest/reporters" "^27.4.6"
-    "@jest/test-result" "^27.4.6"
-    "@jest/transform" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/console" "^27.5.0"
+    "@jest/reporters" "^27.5.0"
+    "@jest/test-result" "^27.5.0"
+    "@jest/transform" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
     ansi-escapes "^4.2.1"
     chalk "^4.0.0"
     emittery "^0.8.1"
     exit "^0.1.2"
-    graceful-fs "^4.2.4"
-    jest-changed-files "^27.4.2"
-    jest-config "^27.4.7"
-    jest-haste-map "^27.4.6"
-    jest-message-util "^27.4.6"
-    jest-regex-util "^27.4.0"
-    jest-resolve "^27.4.6"
-    jest-resolve-dependencies "^27.4.6"
-    jest-runner "^27.4.6"
-    jest-runtime "^27.4.6"
-    jest-snapshot "^27.4.6"
-    jest-util "^27.4.2"
-    jest-validate "^27.4.6"
-    jest-watcher "^27.4.6"
+    graceful-fs "^4.2.9"
+    jest-changed-files "^27.5.0"
+    jest-config "^27.5.0"
+    jest-haste-map "^27.5.0"
+    jest-message-util "^27.5.0"
+    jest-regex-util "^27.5.0"
+    jest-resolve "^27.5.0"
+    jest-resolve-dependencies "^27.5.0"
+    jest-runner "^27.5.0"
+    jest-runtime "^27.5.0"
+    jest-snapshot "^27.5.0"
+    jest-util "^27.5.0"
+    jest-validate "^27.5.0"
+    jest-watcher "^27.5.0"
     micromatch "^4.0.4"
     rimraf "^3.0.0"
     slash "^3.0.0"
     strip-ansi "^6.0.0"
 
 "@jest/create-cache-key-function@^27.0.1":
-  version "27.4.2"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/create-cache-key-function/-/create-cache-key-function-27.4.2.tgz#09b585f9dbafec0f56cfb0e4d4edfe2bec0e0768"
-  integrity sha1-CbWF+duv7A9Wz7Dk1O3+K+wOB2g=
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/create-cache-key-function/-/create-cache-key-function-27.5.0.tgz#0f713af7f9d533f3f6c31130c87cd668d1e5fd06"
+  integrity sha1-D3E69/nVM/P2wxEwyHzWaNHl/QY=
   dependencies:
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
 
 "@jest/environment@^26.6.2":
   version "26.6.2"
@@ -911,15 +918,15 @@
     "@types/node" "*"
     jest-mock "^26.6.2"
 
-"@jest/environment@^27.4.6":
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/environment/-/environment-27.4.6.tgz#1e92885d64f48c8454df35ed9779fbcf31c56d8b"
-  integrity sha1-HpKIXWT0jIRU3zXtl3n7zzHFbYs=
+"@jest/environment@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/environment/-/environment-27.5.0.tgz#a473bc76261aad7dfa3a1d8e35155953a5ba3436"
+  integrity sha1-pHO8diYarX36Oh2ONRVZU6W6NDY=
   dependencies:
-    "@jest/fake-timers" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/fake-timers" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
-    jest-mock "^27.4.6"
+    jest-mock "^27.5.0"
 
 "@jest/fake-timers@^26.6.2":
   version "26.6.2"
@@ -933,17 +940,17 @@
     jest-mock "^26.6.2"
     jest-util "^26.6.2"
 
-"@jest/fake-timers@^27.4.6":
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/fake-timers/-/fake-timers-27.4.6.tgz#e026ae1671316dbd04a56945be2fa251204324e8"
-  integrity sha1-4CauFnExbb0EpWlFvi+iUSBDJOg=
+"@jest/fake-timers@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/fake-timers/-/fake-timers-27.5.0.tgz#f9e07b4c723a535f7c532cfb403394fa40d88c8a"
+  integrity sha1-+eB7THI6U198Uyz7QDOU+kDYjIo=
   dependencies:
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     "@sinonjs/fake-timers" "^8.0.1"
     "@types/node" "*"
-    jest-message-util "^27.4.6"
-    jest-mock "^27.4.6"
-    jest-util "^27.4.2"
+    jest-message-util "^27.5.0"
+    jest-mock "^27.5.0"
+    jest-util "^27.5.0"
 
 "@jest/globals@^26.6.2":
   version "26.6.2"
@@ -954,14 +961,14 @@
     "@jest/types" "^26.6.2"
     expect "^26.6.2"
 
-"@jest/globals@^27.4.6":
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/globals/-/globals-27.4.6.tgz#3f09bed64b0fd7f5f996920258bd4be8f52f060a"
-  integrity sha1-Pwm+1ksP1/X5lpICWL1L6PUvBgo=
+"@jest/globals@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/globals/-/globals-27.5.0.tgz#16271323f79e3b0fe0842e9588241d202a6c2aff"
+  integrity sha1-FicTI/eeOw/ghC6ViCQdICpsKv8=
   dependencies:
-    "@jest/environment" "^27.4.6"
-    "@jest/types" "^27.4.2"
-    expect "^27.4.6"
+    "@jest/environment" "^27.5.0"
+    "@jest/types" "^27.5.0"
+    expect "^27.5.0"
 
 "@jest/reporters@^26.6.2":
   version "26.6.2"
@@ -995,31 +1002,31 @@
   optionalDependencies:
     node-notifier "^8.0.0"
 
-"@jest/reporters@^27.4.6":
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/reporters/-/reporters-27.4.6.tgz#b53dec3a93baf9b00826abf95b932de919d6d8dd"
-  integrity sha1-tT3sOpO6+bAIJqv5W5Mt6RnW2N0=
+"@jest/reporters@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/reporters/-/reporters-27.5.0.tgz#e7602e12656b5051bf4e784cbdd82d4ec1299e33"
+  integrity sha1-52AuEmVrUFG/TnhMvdgtTsEpnjM=
   dependencies:
     "@bcoe/v8-coverage" "^0.2.3"
-    "@jest/console" "^27.4.6"
-    "@jest/test-result" "^27.4.6"
-    "@jest/transform" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/console" "^27.5.0"
+    "@jest/test-result" "^27.5.0"
+    "@jest/transform" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
     chalk "^4.0.0"
     collect-v8-coverage "^1.0.0"
     exit "^0.1.2"
     glob "^7.1.2"
-    graceful-fs "^4.2.4"
+    graceful-fs "^4.2.9"
     istanbul-lib-coverage "^3.0.0"
     istanbul-lib-instrument "^5.1.0"
     istanbul-lib-report "^3.0.0"
     istanbul-lib-source-maps "^4.0.0"
     istanbul-reports "^3.1.3"
-    jest-haste-map "^27.4.6"
-    jest-resolve "^27.4.6"
-    jest-util "^27.4.2"
-    jest-worker "^27.4.6"
+    jest-haste-map "^27.5.0"
+    jest-resolve "^27.5.0"
+    jest-util "^27.5.0"
+    jest-worker "^27.5.0"
     slash "^3.0.0"
     source-map "^0.6.0"
     string-length "^4.0.1"
@@ -1035,13 +1042,13 @@
     graceful-fs "^4.2.4"
     source-map "^0.6.0"
 
-"@jest/source-map@^27.4.0":
-  version "27.4.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/source-map/-/source-map-27.4.0.tgz#2f0385d0d884fb3e2554e8f71f8fa957af9a74b6"
-  integrity sha1-LwOF0NiE+z4lVOj3H4+pV6+adLY=
+"@jest/source-map@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/source-map/-/source-map-27.5.0.tgz#f22a7e759b8807491f84719c01acf433b917c7a0"
+  integrity sha1-8ip+dZuIB0kfhHGcAaz0M7kXx6A=
   dependencies:
     callsites "^3.0.0"
-    graceful-fs "^4.2.4"
+    graceful-fs "^4.2.9"
     source-map "^0.6.0"
 
 "@jest/test-result@^26.6.2":
@@ -1054,13 +1061,13 @@
     "@types/istanbul-lib-coverage" "^2.0.0"
     collect-v8-coverage "^1.0.0"
 
-"@jest/test-result@^27.4.6":
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/test-result/-/test-result-27.4.6.tgz#b3df94c3d899c040f602cea296979844f61bdf69"
-  integrity sha1-s9+Uw9iZwED2As6ilpeYRPYb32k=
+"@jest/test-result@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/test-result/-/test-result-27.5.0.tgz#29e0ace33570c9dcbd47c67e954f77a7d7fff98e"
+  integrity sha1-KeCs4zVwydy9R8Z+lU93p9f/+Y4=
   dependencies:
-    "@jest/console" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/console" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/istanbul-lib-coverage" "^2.0.0"
     collect-v8-coverage "^1.0.0"
 
@@ -1075,15 +1082,15 @@
     jest-runner "^26.6.3"
     jest-runtime "^26.6.3"
 
-"@jest/test-sequencer@^27.4.6":
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/test-sequencer/-/test-sequencer-27.4.6.tgz#447339b8a3d7b5436f50934df30854e442a9d904"
-  integrity sha1-RHM5uKPXtUNvUJNN8whU5EKp2QQ=
+"@jest/test-sequencer@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/test-sequencer/-/test-sequencer-27.5.0.tgz#68beceb3de818dcb34fb3ea59be3c22c890bb6e5"
+  integrity sha1-aL7Os96Bjcs0+z6lm+PCLIkLtuU=
   dependencies:
-    "@jest/test-result" "^27.4.6"
-    graceful-fs "^4.2.4"
-    jest-haste-map "^27.4.6"
-    jest-runtime "^27.4.6"
+    "@jest/test-result" "^27.5.0"
+    graceful-fs "^4.2.9"
+    jest-haste-map "^27.5.0"
+    jest-runtime "^27.5.0"
 
 "@jest/transform@^26.6.2":
   version "26.6.2"
@@ -1106,21 +1113,21 @@
     source-map "^0.6.1"
     write-file-atomic "^3.0.0"
 
-"@jest/transform@^27.4.6":
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/transform/-/transform-27.4.6.tgz#153621940b1ed500305eacdb31105d415dc30231"
-  integrity sha1-FTYhlAse1QAwXqzbMRBdQV3DAjE=
+"@jest/transform@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/transform/-/transform-27.5.0.tgz#a4941e69ac51e8aa9a255ff4855b564c228c400b"
+  integrity sha1-pJQeaaxR6KqaJV/0hVtWTCKMQAs=
   dependencies:
     "@babel/core" "^7.1.0"
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     babel-plugin-istanbul "^6.1.1"
     chalk "^4.0.0"
     convert-source-map "^1.4.0"
     fast-json-stable-stringify "^2.0.0"
-    graceful-fs "^4.2.4"
-    jest-haste-map "^27.4.6"
-    jest-regex-util "^27.4.0"
-    jest-util "^27.4.2"
+    graceful-fs "^4.2.9"
+    jest-haste-map "^27.5.0"
+    jest-regex-util "^27.5.0"
+    jest-util "^27.5.0"
     micromatch "^4.0.4"
     pirates "^4.0.4"
     slash "^3.0.0"
@@ -1138,16 +1145,34 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@jest/types@^27.4.2":
-  version "27.4.2"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/types/-/types-27.4.2.tgz#96536ebd34da6392c2b7c7737d693885b5dd44a5"
-  integrity sha1-llNuvTTaY5LCt8dzfWk4hbXdRKU=
+"@jest/types@^27.5.0":
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jest/types/-/types-27.5.0.tgz#6ad04a5c5355fd9f46e5cf761850e0edb3c209dd"
+  integrity sha1-atBKXFNV/Z9G5c92GFDg7bPCCd0=
   dependencies:
     "@types/istanbul-lib-coverage" "^2.0.0"
     "@types/istanbul-reports" "^3.0.0"
     "@types/node" "*"
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
+
+"@jridgewell/resolve-uri@^3.0.3":
+  version "3.0.4"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jridgewell/resolve-uri/-/resolve-uri-3.0.4.tgz#b876e3feefb9c8d3aa84014da28b5e52a0640d72"
+  integrity sha1-uHbj/u+5yNOqhAFNooteUqBkDXI=
+
+"@jridgewell/sourcemap-codec@^1.4.10":
+  version "1.4.10"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.10.tgz#baf57b4e2a690d4f38560171f91783656b7f8186"
+  integrity sha1-uvV7TippDU84VgFx+ReDZWt/gYY=
+
+"@jridgewell/trace-mapping@^0.3.0":
+  version "0.3.2"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@jridgewell/trace-mapping/-/trace-mapping-0.3.2.tgz#e051581782a770c30ba219634f2019241c5d3cde"
+  integrity sha1-4FFYF4KncMMLohljTyAZJBxdPN4=
+  dependencies:
+    "@jridgewell/resolve-uri" "^3.0.3"
+    "@jridgewell/sourcemap-codec" "^1.4.10"
 
 "@react-native-community/cli-debugger-ui@^6.0.0-rc.0":
   version "6.0.0-rc.0"
@@ -1197,12 +1222,12 @@
     plist "^3.0.2"
     xcode "^2.0.0"
 
-"@react-native-community/cli-plugin-metro@^6.2.0":
-  version "6.2.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@react-native-community/cli-plugin-metro/-/cli-plugin-metro-6.2.0.tgz#143f459f1b6d595011e787ecfbe87621195de6ae"
-  integrity sha1-FD9FnxttWVAR54fs++h2IRld5q4=
+"@react-native-community/cli-plugin-metro@^6.4.0":
+  version "6.4.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@react-native-community/cli-plugin-metro/-/cli-plugin-metro-6.4.0.tgz#70b7908d6b548481f37ed58167f9460d325ae21c"
+  integrity sha1-cLeQjWtUhIHzftWBZ/lGDTJa4hw=
   dependencies:
-    "@react-native-community/cli-server-api" "^6.2.0"
+    "@react-native-community/cli-server-api" "^6.4.0"
     "@react-native-community/cli-tools" "^6.2.0"
     chalk "^4.1.2"
     metro "^0.66.1"
@@ -1213,10 +1238,10 @@
     metro-runtime "^0.66.1"
     readline "^1.3.0"
 
-"@react-native-community/cli-server-api@^6.2.0":
-  version "6.2.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@react-native-community/cli-server-api/-/cli-server-api-6.2.0.tgz#8dc399ef0e14e07c9942515b507292fb850f41f2"
-  integrity sha1-jcOZ7w4U4HyZQlFbUHKS+4UPQfI=
+"@react-native-community/cli-server-api@^6.4.0":
+  version "6.4.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@react-native-community/cli-server-api/-/cli-server-api-6.4.0.tgz#aa547839e54f9910d3671808e009489d2c2db0d9"
+  integrity sha1-qlR4OeVPmRDTZxgI4AlInSwtsNk=
   dependencies:
     "@react-native-community/cli-debugger-ui" "^6.0.0-rc.0"
     "@react-native-community/cli-tools" "^6.2.0"
@@ -1250,14 +1275,14 @@
     ora "^3.4.0"
 
 "@react-native-community/cli@^6.0.0":
-  version "6.3.1"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@react-native-community/cli/-/cli-6.3.1.tgz#b5194a3a008cd7c76c79aaa93ce605d314e5bfd2"
-  integrity sha1-tRlKOgCM18dseaqpPOYF0xTlv9I=
+  version "6.4.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@react-native-community/cli/-/cli-6.4.0.tgz#0b61a4b5f11293b0b79a0e78f80777387a9529a9"
+  integrity sha1-C2GktfESk7C3mg54+Ad3OHqVKak=
   dependencies:
     "@react-native-community/cli-debugger-ui" "^6.0.0-rc.0"
     "@react-native-community/cli-hermes" "^6.3.0"
-    "@react-native-community/cli-plugin-metro" "^6.2.0"
-    "@react-native-community/cli-server-api" "^6.2.0"
+    "@react-native-community/cli-plugin-metro" "^6.4.0"
+    "@react-native-community/cli-server-api" "^6.4.0"
     "@react-native-community/cli-tools" "^6.2.0"
     "@react-native-community/cli-types" "^6.0.0"
     appdirsjs "^1.2.4"
@@ -1374,6 +1399,17 @@
   integrity sha1-sWZeLEYaLNkvTBu/UNVFTeDUtCE=
   dependencies:
     defer-to-connect "^1.0.1"
+
+"@testing-library/react-hooks@^7.0.2":
+  version "7.0.2"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@testing-library/react-hooks/-/react-hooks-7.0.2.tgz#3388d07f562d91e7f2431a4a21b5186062ecfee0"
+  integrity sha1-M4jQf1YtkefyQxpKIbUYYGLs/uA=
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    "@types/react" ">=16.9.0"
+    "@types/react-dom" ">=16.9.0"
+    "@types/react-test-renderer" ">=16.9.0"
+    react-error-boundary "^3.1.0"
 
 "@tiptap/core@2.0.0-beta.148":
   version "2.0.0-beta.148"
@@ -1493,9 +1529,9 @@
   integrity sha1-7nceK6Sz3Fs3KTXVSf2WF780W4w=
 
 "@types/node@*":
-  version "17.0.9"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/node/-/node-17.0.9.tgz#0b7f161afb5b1cc12518d29b2cdc7175d5490628"
-  integrity sha1-C38WGvtbHMElGNKbLNxxddVJBig=
+  version "17.0.15"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/node/-/node-17.0.15.tgz#97779282c09c09577120a2162e71d8380003590a"
+  integrity sha1-l3eSgsCcCVdxIKIWLnHYOAADWQo=
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1537,9 +1573,9 @@
     "@types/prosemirror-view" "*"
 
 "@types/prosemirror-model@*", "@types/prosemirror-model@^1.13.2":
-  version "1.16.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/prosemirror-model/-/prosemirror-model-1.16.0.tgz#8b22c7431a4c93f7f550fc89c4b0e2d44d42c8b6"
-  integrity sha1-iyLHQxpMk/f1UPyJxLDi1E1CyLY=
+  version "1.16.1"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/prosemirror-model/-/prosemirror-model-1.16.1.tgz#0ce6c80cd81b398b8a11b1bf7cf695bff3160c9a"
+  integrity sha1-DObIDNgbOYuKEbG/fPaVv/MWDJo=
   dependencies:
     "@types/orderedmap" "*"
 
@@ -1577,7 +1613,7 @@
     "@types/prosemirror-state" "*"
     "@types/prosemirror-transform" "*"
 
-"@types/react-dom@^17.0.11":
+"@types/react-dom@>=16.9.0", "@types/react-dom@^17.0.11":
   version "17.0.11"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/react-dom/-/react-dom-17.0.11.tgz#e1eadc3c5e86bdb5f7684e00274ae228e7bcc466"
   integrity sha1-4ercPF6GvbX3aE4AJ0riKOe8xGY=
@@ -1585,23 +1621,23 @@
     "@types/react" "*"
 
 "@types/react-native@^0.66.9":
-  version "0.66.12"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/react-native/-/react-native-0.66.12.tgz#3afc5ad3a03601666a2c5893af6f2652bfaec651"
-  integrity sha1-Ovxa06A2AWZqLFiTr28mUr+uxlE=
+  version "0.66.15"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/react-native/-/react-native-0.66.15.tgz#d332d82b04635adabbd8e1976f9547ce8662300b"
+  integrity sha1-0zLYKwRjWtq72OGXb5VHzoZiMAs=
   dependencies:
     "@types/react" "*"
 
-"@types/react-test-renderer@^17.0.1":
+"@types/react-test-renderer@>=16.9.0", "@types/react-test-renderer@^17.0.1":
   version "17.0.1"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/react-test-renderer/-/react-test-renderer-17.0.1.tgz#3120f7d1c157fba9df0118dae20cb0297ee0e06b"
   integrity sha1-MSD30cFX+6nfARja4gywKX7g4Gs=
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^17.0.37":
-  version "17.0.38"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/react/-/react-17.0.38.tgz#f24249fefd89357d5fa71f739a686b8d7c7202bd"
-  integrity sha1-8kJJ/v2JNX1fpx9zmmhrjXxyAr0=
+"@types/react@*", "@types/react@>=16.9.0", "@types/react@^17.0.37":
+  version "17.0.39"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/@types/react/-/react-17.0.39.tgz#d0f4cde092502a6db00a1cded6e6bf2abb7633ce"
+  integrity sha1-0PTN4JJQKm2wChze1ua/Krt2M84=
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1729,12 +1765,12 @@ absolute-path@^0.0.0:
   integrity sha1-p4di+9rftSl76ZsV01p4Wy8JW/c=
 
 accepts@^1.3.7, accepts@~1.3.5, accepts@~1.3.7:
-  version "1.3.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/accepts/-/accepts-1.3.7.tgz#531bc726517a3b2b41f850021c6cc15eaab507cd"
-  integrity sha1-UxvHJlF6OytB+FACHGzBXqq1B80=
+  version "1.3.8"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/accepts/-/accepts-1.3.8.tgz#0bf0be125b67014adcb0b0921e62db7bffe16b2e"
+  integrity sha1-C/C+EltnAUrcsLCSHmLbe//hay4=
   dependencies:
-    mime-types "~2.1.24"
-    negotiator "0.6.2"
+    mime-types "~2.1.34"
+    negotiator "0.6.3"
 
 acorn-globals@^6.0.0:
   version "6.0.0"
@@ -2039,18 +2075,18 @@ babel-jest@^26.6.3:
     graceful-fs "^4.2.4"
     slash "^3.0.0"
 
-babel-jest@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/babel-jest/-/babel-jest-27.4.6.tgz#4d024e69e241cdf4f396e453a07100f44f7ce314"
-  integrity sha1-TQJOaeJBzfTzluRToHEA9E984xQ=
+babel-jest@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/babel-jest/-/babel-jest-27.5.0.tgz#c653985241af3c76f59d70d65a570860c2594a50"
+  integrity sha1-xlOYUkGvPHb1nXDWWlcIYMJZSlA=
   dependencies:
-    "@jest/transform" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/transform" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/babel__core" "^7.1.14"
     babel-plugin-istanbul "^6.1.1"
-    babel-preset-jest "^27.4.0"
+    babel-preset-jest "^27.5.0"
     chalk "^4.0.0"
-    graceful-fs "^4.2.4"
+    graceful-fs "^4.2.9"
     slash "^3.0.0"
 
 babel-plugin-dynamic-import-node@^2.3.3:
@@ -2081,10 +2117,10 @@ babel-plugin-jest-hoist@^26.6.2:
     "@types/babel__core" "^7.0.0"
     "@types/babel__traverse" "^7.0.6"
 
-babel-plugin-jest-hoist@^27.4.0:
-  version "27.4.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-27.4.0.tgz#d7831fc0f93573788d80dee7e682482da4c730d6"
-  integrity sha1-14MfwPk1c3iNgN7n5oJILaTHMNY=
+babel-plugin-jest-hoist@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-27.5.0.tgz#8fdf07835f2165a068de3ce95fd7749a89801b51"
+  integrity sha1-j98Hg18hZaBo3jzpX9d0momAG1E=
   dependencies:
     "@babel/template" "^7.3.3"
     "@babel/types" "^7.3.3"
@@ -2101,12 +2137,12 @@ babel-plugin-polyfill-corejs2@^0.3.0:
     semver "^6.1.1"
 
 babel-plugin-polyfill-corejs3@^0.5.0:
-  version "0.5.1"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/babel-plugin-polyfill-corejs3/-/babel-plugin-polyfill-corejs3-0.5.1.tgz#d66183bf10976ea677f4149a7fcc4d8df43d4060"
-  integrity sha1-1mGDvxCXbqZ39BSaf8xNjfQ9QGA=
+  version "0.5.2"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/babel-plugin-polyfill-corejs3/-/babel-plugin-polyfill-corejs3-0.5.2.tgz#aabe4b2fa04a6e038b688c5e55d44e78cd3a5f72"
+  integrity sha1-qr5LL6BKbgOLaIxeVdROeM06X3I=
   dependencies:
     "@babel/helper-define-polyfill-provider" "^0.3.1"
-    core-js-compat "^3.20.0"
+    core-js-compat "^3.21.0"
 
 babel-plugin-polyfill-regenerator@^0.3.0:
   version "0.3.1"
@@ -2179,12 +2215,12 @@ babel-preset-jest@^26.6.2:
     babel-plugin-jest-hoist "^26.6.2"
     babel-preset-current-node-syntax "^1.0.0"
 
-babel-preset-jest@^27.4.0:
-  version "27.4.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/babel-preset-jest/-/babel-preset-jest-27.4.0.tgz#70d0e676a282ccb200fbabd7f415db5fdf393bca"
-  integrity sha1-cNDmdqKCzLIA+6vX9BXbX985O8o=
+babel-preset-jest@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/babel-preset-jest/-/babel-preset-jest-27.5.0.tgz#4e308711c3d2ff1f45cf5d9a23646e37b621fc9f"
+  integrity sha1-TjCHEcPS/x9Fz12aI2RuN7Yh/J8=
   dependencies:
-    babel-plugin-jest-hoist "^27.4.0"
+    babel-plugin-jest-hoist "^27.5.0"
     babel-preset-current-node-syntax "^1.0.0"
 
 bail@^1.0.0:
@@ -2412,9 +2448,9 @@ camelcase@^6.0.0, camelcase@^6.2.0:
   integrity sha1-VoW5XrIJrJwMF3Rnd4ychN9Yupo=
 
 caniuse-lite@^1.0.30001286:
-  version "1.0.30001300"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/caniuse-lite/-/caniuse-lite-1.0.30001300.tgz#11ab6c57d3eb6f964cba950401fd00a146786468"
-  integrity sha1-EatsV9Prb5ZMupUEAf0AoUZ4ZGg=
+  version "1.0.30001309"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/caniuse-lite/-/caniuse-lite-1.0.30001309.tgz#e0ee78b9bec0704f67304b00ff3c5c0c768a9f62"
+  integrity sha1-4O54ub7AcE9nMEsA/zxcDHaKn2I=
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -2719,10 +2755,10 @@ copy-descriptor@^0.1.0:
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/copy-descriptor/-/copy-descriptor-0.1.1.tgz#676f6eb3c39997c2ee1ac3a924fd6124748f578d"
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
-core-js-compat@^3.20.0:
-  version "3.20.3"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/core-js-compat/-/core-js-compat-3.20.3.tgz#d71f85f94eb5e4bea3407412e549daa083d23bd6"
-  integrity sha1-1x+F+U615L6jQHQS5UnaoIPSO9Y=
+core-js-compat@^3.21.0:
+  version "3.21.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/core-js-compat/-/core-js-compat-3.21.0.tgz#bcc86aa5a589cee358e7a7fa0a4979d5a76c3885"
+  integrity sha1-vMhqpaWJzuNY56f6Ckl51adsOIU=
   dependencies:
     browserslist "^4.19.1"
     semver "7.0.0"
@@ -2962,10 +2998,10 @@ diff-sequences@^26.6.2:
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/diff-sequences/-/diff-sequences-26.6.2.tgz#48ba99157de1923412eed41db6b6d4aa9ca7c0b1"
   integrity sha1-SLqZFX3hkjQS7tQdtrbUqpynwLE=
 
-diff-sequences@^27.4.0:
-  version "27.4.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/diff-sequences/-/diff-sequences-27.4.0.tgz#d783920ad8d06ec718a060d00196dfef25b132a5"
-  integrity sha1-14OSCtjQbscYoGDQAZbf7yWxMqU=
+diff-sequences@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/diff-sequences/-/diff-sequences-27.5.0.tgz#a8ac0cb742b17d6f30a6c43e233893a2402c0729"
+  integrity sha1-qKwMt0KxfW8wpsQ+IziTokAsByk=
 
 doctrine@^2.1.0:
   version "2.1.0"
@@ -3021,9 +3057,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.4.17:
-  version "1.4.47"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/electron-to-chromium/-/electron-to-chromium-1.4.47.tgz#5d5535cdbca2b9264abee4d6ea121995e9554bbe"
-  integrity sha1-XVU1zbyiuSZKvuTW6hIZlelVS74=
+  version "1.4.65"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/electron-to-chromium/-/electron-to-chromium-1.4.65.tgz#c0820db06e268e0a2fd4dbce38fb5376d38ca449"
+  integrity sha1-wIINsG4mjgov1NvOOPtTdtOMpEk=
 
 emittery@^0.7.1:
   version "0.7.2"
@@ -3462,15 +3498,15 @@ expect@^26.6.2:
     jest-message-util "^26.6.2"
     jest-regex-util "^26.0.0"
 
-expect@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/expect/-/expect-27.4.6.tgz#f335e128b0335b6ceb4fcab67ece7cbd14c942e6"
-  integrity sha1-8zXhKLAzW2zrT8q2fs58vRTJQuY=
+expect@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/expect/-/expect-27.5.0.tgz#ea2fbebb483c274043098c34a53923a0aee493f0"
+  integrity sha1-6i++u0g8J0BDCYw0pTkjoK7kk/A=
   dependencies:
-    "@jest/types" "^27.4.2"
-    jest-get-type "^27.4.0"
-    jest-matcher-utils "^27.4.6"
-    jest-message-util "^27.4.6"
+    "@jest/types" "^27.5.0"
+    jest-get-type "^27.5.0"
+    jest-matcher-utils "^27.5.0"
+    jest-message-util "^27.5.0"
 
 extend-shallow@^2.0.1:
   version "2.0.1"
@@ -3652,9 +3688,9 @@ flatten@^1.0.2:
   integrity sha1-wSg6yfJ7Noq8HjbR/3sEUBowNWs=
 
 flow-parser@0.*:
-  version "0.169.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/flow-parser/-/flow-parser-0.169.0.tgz#4f77d61dd4241f8063f734ef1f71c684ec03ab52"
-  integrity sha1-T3fWHdQkH4Bj9zTvH3HGhOwDq1I=
+  version "0.171.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/flow-parser/-/flow-parser-0.171.0.tgz#5ffae78f050e43513abc86add9f19a97fcbabcdb"
+  integrity sha1-X/rnjwUOQ1E6vIat2fGal/y6vNs=
 
 flow-parser@^0.121.0:
   version "0.121.0"
@@ -3905,7 +3941,7 @@ got@^9.6.0:
     to-readable-stream "^1.0.0"
     url-parse-lax "^3.0.0"
 
-graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9, graceful-fs@^4.2.0, graceful-fs@^4.2.4:
+graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.1.9, graceful-fs@^4.2.0, graceful-fs@^4.2.4, graceful-fs@^4.2.9:
   version "4.2.9"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/graceful-fs/-/graceful-fs-4.2.9.tgz#041b05df45755e587a24942279b9d113146e1c96"
   integrity sha1-BBsF30V1Xlh6JJQiebnRExRuHJY=
@@ -4355,7 +4391,7 @@ is-ci@^2.0.0:
   dependencies:
     ci-info "^2.0.0"
 
-is-core-module@^2.2.0, is-core-module@^2.8.0:
+is-core-module@^2.2.0, is-core-module@^2.8.1:
   version "2.8.1"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/is-core-module/-/is-core-module-2.8.1.tgz#f59fdfca701d5879d0a6b100a40aa1560ce27211"
   integrity sha1-9Z/fynAdWHnQprEApAqhVgzichE=
@@ -4707,9 +4743,9 @@ istanbul-lib-source-maps@^4.0.0:
     source-map "^0.6.1"
 
 istanbul-reports@^3.0.2, istanbul-reports@^3.1.3:
-  version "3.1.3"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/istanbul-reports/-/istanbul-reports-3.1.3.tgz#4bcae3103b94518117930d51283690960b50d3c2"
-  integrity sha1-S8rjEDuUUYEXkw1RKDaQlgtQ08I=
+  version "3.1.4"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/istanbul-reports/-/istanbul-reports-3.1.4.tgz#1b6f068ecbc6c331040aab5741991273e609e40c"
+  integrity sha1-G28GjsvGwzEECqtXQZkSc+YJ5Aw=
   dependencies:
     html-escaper "^2.0.0"
     istanbul-lib-report "^3.0.0"
@@ -4723,36 +4759,36 @@ jest-changed-files@^26.6.2:
     execa "^4.0.0"
     throat "^5.0.0"
 
-jest-changed-files@^27.4.2:
-  version "27.4.2"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-changed-files/-/jest-changed-files-27.4.2.tgz#da2547ea47c6e6a5f6ed336151bd2075736eb4a5"
-  integrity sha1-2iVH6kfG5qX27TNhUb0gdXNutKU=
+jest-changed-files@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-changed-files/-/jest-changed-files-27.5.0.tgz#61e8d0a7394c1ee1cec4c2893e206e62b1566066"
+  integrity sha1-YejQpzlMHuHOxMKJPiBuYrFWYGY=
   dependencies:
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     execa "^5.0.0"
     throat "^6.0.1"
 
-jest-circus@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-circus/-/jest-circus-27.4.6.tgz#d3af34c0eb742a967b1919fbb351430727bcea6c"
-  integrity sha1-0680wOt0KpZ7GRn7s1FDBye86mw=
+jest-circus@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-circus/-/jest-circus-27.5.0.tgz#fcff8829ceb2c8ef4b4532ace7734d156c6664b9"
+  integrity sha1-/P+IKc6yyO9LRTKs53NNFWxmZLk=
   dependencies:
-    "@jest/environment" "^27.4.6"
-    "@jest/test-result" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/environment" "^27.5.0"
+    "@jest/test-result" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
     chalk "^4.0.0"
     co "^4.6.0"
     dedent "^0.7.0"
-    expect "^27.4.6"
+    expect "^27.5.0"
     is-generator-fn "^2.0.0"
-    jest-each "^27.4.6"
-    jest-matcher-utils "^27.4.6"
-    jest-message-util "^27.4.6"
-    jest-runtime "^27.4.6"
-    jest-snapshot "^27.4.6"
-    jest-util "^27.4.2"
-    pretty-format "^27.4.6"
+    jest-each "^27.5.0"
+    jest-matcher-utils "^27.5.0"
+    jest-message-util "^27.5.0"
+    jest-runtime "^27.5.0"
+    jest-snapshot "^27.5.0"
+    jest-util "^27.5.0"
+    pretty-format "^27.5.0"
     slash "^3.0.0"
     stack-utils "^2.0.3"
     throat "^6.0.1"
@@ -4776,21 +4812,21 @@ jest-cli@^26.6.3:
     prompts "^2.0.1"
     yargs "^15.4.1"
 
-jest-cli@^27.4.7:
-  version "27.4.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-cli/-/jest-cli-27.4.7.tgz#d00e759e55d77b3bcfea0715f527c394ca314e5a"
-  integrity sha1-0A51nlXXezvP6gcV9SfDlMoxTlo=
+jest-cli@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-cli/-/jest-cli-27.5.0.tgz#06557ad22818740fb28481089a574ba107a8b369"
+  integrity sha1-BlV60igYdA+yhIEImldLoQeos2k=
   dependencies:
-    "@jest/core" "^27.4.7"
-    "@jest/test-result" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/core" "^27.5.0"
+    "@jest/test-result" "^27.5.0"
+    "@jest/types" "^27.5.0"
     chalk "^4.0.0"
     exit "^0.1.2"
-    graceful-fs "^4.2.4"
+    graceful-fs "^4.2.9"
     import-local "^3.0.2"
-    jest-config "^27.4.7"
-    jest-util "^27.4.2"
-    jest-validate "^27.4.6"
+    jest-config "^27.5.0"
+    jest-util "^27.5.0"
+    jest-validate "^27.5.0"
     prompts "^2.0.1"
     yargs "^16.2.0"
 
@@ -4818,32 +4854,32 @@ jest-config@^26.6.3:
     micromatch "^4.0.2"
     pretty-format "^26.6.2"
 
-jest-config@^27.4.7:
-  version "27.4.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-config/-/jest-config-27.4.7.tgz#4f084b2acbd172c8b43aa4cdffe75d89378d3972"
-  integrity sha1-TwhLKsvRcsi0OqTN/+ddiTeNOXI=
+jest-config@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-config/-/jest-config-27.5.0.tgz#d96ccf8e26d3f2f3ae6543686c48449c201bb621"
+  integrity sha1-2WzPjibT8vOuZUNobEhEnCAbtiE=
   dependencies:
     "@babel/core" "^7.8.0"
-    "@jest/test-sequencer" "^27.4.6"
-    "@jest/types" "^27.4.2"
-    babel-jest "^27.4.6"
+    "@jest/test-sequencer" "^27.5.0"
+    "@jest/types" "^27.5.0"
+    babel-jest "^27.5.0"
     chalk "^4.0.0"
     ci-info "^3.2.0"
     deepmerge "^4.2.2"
     glob "^7.1.1"
-    graceful-fs "^4.2.4"
-    jest-circus "^27.4.6"
-    jest-environment-jsdom "^27.4.6"
-    jest-environment-node "^27.4.6"
-    jest-get-type "^27.4.0"
-    jest-jasmine2 "^27.4.6"
-    jest-regex-util "^27.4.0"
-    jest-resolve "^27.4.6"
-    jest-runner "^27.4.6"
-    jest-util "^27.4.2"
-    jest-validate "^27.4.6"
+    graceful-fs "^4.2.9"
+    jest-circus "^27.5.0"
+    jest-environment-jsdom "^27.5.0"
+    jest-environment-node "^27.5.0"
+    jest-get-type "^27.5.0"
+    jest-jasmine2 "^27.5.0"
+    jest-regex-util "^27.5.0"
+    jest-resolve "^27.5.0"
+    jest-runner "^27.5.0"
+    jest-util "^27.5.0"
+    jest-validate "^27.5.0"
     micromatch "^4.0.4"
-    pretty-format "^27.4.6"
+    pretty-format "^27.5.0"
     slash "^3.0.0"
 
 jest-diff@^26.6.2:
@@ -4856,15 +4892,15 @@ jest-diff@^26.6.2:
     jest-get-type "^26.3.0"
     pretty-format "^26.6.2"
 
-jest-diff@^27.0.0, jest-diff@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-diff/-/jest-diff-27.4.6.tgz#93815774d2012a2cbb6cf23f84d48c7a2618f98d"
-  integrity sha1-k4FXdNIBKiy7bPI/hNSMeiYY+Y0=
+jest-diff@^27.0.0, jest-diff@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-diff/-/jest-diff-27.5.0.tgz#34dc608a3b9159df178dd480b6d835b5e6b92082"
+  integrity sha1-NNxgijuRWd8XjdSAttg1tea5III=
   dependencies:
     chalk "^4.0.0"
-    diff-sequences "^27.4.0"
-    jest-get-type "^27.4.0"
-    pretty-format "^27.4.6"
+    diff-sequences "^27.5.0"
+    jest-get-type "^27.5.0"
+    pretty-format "^27.5.0"
 
 jest-docblock@^26.0.0:
   version "26.0.0"
@@ -4873,10 +4909,10 @@ jest-docblock@^26.0.0:
   dependencies:
     detect-newline "^3.0.0"
 
-jest-docblock@^27.4.0:
-  version "27.4.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-docblock/-/jest-docblock-27.4.0.tgz#06c78035ca93cbbb84faf8fce64deae79a59f69f"
-  integrity sha1-BseANcqTy7uE+vj85k3q55pZ9p8=
+jest-docblock@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-docblock/-/jest-docblock-27.5.0.tgz#096fa3a8b55d019a954ef7cc205c791bf94b2352"
+  integrity sha1-CW+jqLVdAZqVTvfMIFx5G/lLI1I=
   dependencies:
     detect-newline "^3.0.0"
 
@@ -4891,16 +4927,16 @@ jest-each@^26.6.2:
     jest-util "^26.6.2"
     pretty-format "^26.6.2"
 
-jest-each@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-each/-/jest-each-27.4.6.tgz#e7e8561be61d8cc6dbf04296688747ab186c40ff"
-  integrity sha1-5+hWG+YdjMbb8EKWaIdHqxhsQP8=
+jest-each@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-each/-/jest-each-27.5.0.tgz#7bd00a767df0fbec0caba3df0d2c0b3268a2ce84"
+  integrity sha1-e9AKdn3w++wMq6PfDSwLMmiizoQ=
   dependencies:
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     chalk "^4.0.0"
-    jest-get-type "^27.4.0"
-    jest-util "^27.4.2"
-    pretty-format "^27.4.6"
+    jest-get-type "^27.5.0"
+    jest-util "^27.5.0"
+    pretty-format "^27.5.0"
 
 jest-environment-jsdom@^26.6.2:
   version "26.6.2"
@@ -4915,17 +4951,17 @@ jest-environment-jsdom@^26.6.2:
     jest-util "^26.6.2"
     jsdom "^16.4.0"
 
-jest-environment-jsdom@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-environment-jsdom/-/jest-environment-jsdom-27.4.6.tgz#c23a394eb445b33621dfae9c09e4c8021dea7b36"
-  integrity sha1-wjo5TrRFszYh366cCeTIAh3qezY=
+jest-environment-jsdom@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-environment-jsdom/-/jest-environment-jsdom-27.5.0.tgz#6d22d9b76890e9b82c7e1062a15730efb3fb7361"
+  integrity sha1-bSLZt2iQ6bgsfhBioVcw77P7c2E=
   dependencies:
-    "@jest/environment" "^27.4.6"
-    "@jest/fake-timers" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/environment" "^27.5.0"
+    "@jest/fake-timers" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
-    jest-mock "^27.4.6"
-    jest-util "^27.4.2"
+    jest-mock "^27.5.0"
+    jest-util "^27.5.0"
     jsdom "^16.6.0"
 
 jest-environment-node@^26.6.2:
@@ -4940,27 +4976,27 @@ jest-environment-node@^26.6.2:
     jest-mock "^26.6.2"
     jest-util "^26.6.2"
 
-jest-environment-node@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-environment-node/-/jest-environment-node-27.4.6.tgz#ee8cd4ef458a0ef09d087c8cd52ca5856df90242"
-  integrity sha1-7ozU70WKDvCdCHyM1SylhW35AkI=
+jest-environment-node@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-environment-node/-/jest-environment-node-27.5.0.tgz#1ab357b4715bff88d48c8b62b8379002ff955dd1"
+  integrity sha1-GrNXtHFb/4jUjItiuDeQAv+VXdE=
   dependencies:
-    "@jest/environment" "^27.4.6"
-    "@jest/fake-timers" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/environment" "^27.5.0"
+    "@jest/fake-timers" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
-    jest-mock "^27.4.6"
-    jest-util "^27.4.2"
+    jest-mock "^27.5.0"
+    jest-util "^27.5.0"
 
 jest-get-type@^26.3.0:
   version "26.3.0"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-get-type/-/jest-get-type-26.3.0.tgz#e97dc3c3f53c2b406ca7afaed4493b1d099199e0"
   integrity sha1-6X3Dw/U8K0Bsp6+u1Ek7HQmRmeA=
 
-jest-get-type@^27.4.0:
-  version "27.4.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-get-type/-/jest-get-type-27.4.0.tgz#7503d2663fffa431638337b3998d39c5e928e9b5"
-  integrity sha1-dQPSZj//pDFjgzezmY05xeko6bU=
+jest-get-type@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-get-type/-/jest-get-type-27.5.0.tgz#861c24aa1b176be83c902292cb9618d580cac8a7"
+  integrity sha1-hhwkqhsXa+g8kCKSy5YY1YDKyKc=
 
 jest-haste-map@^26.5.2, jest-haste-map@^26.6.2:
   version "26.6.2"
@@ -4983,21 +5019,21 @@ jest-haste-map@^26.5.2, jest-haste-map@^26.6.2:
   optionalDependencies:
     fsevents "^2.1.2"
 
-jest-haste-map@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-haste-map/-/jest-haste-map-27.4.6.tgz#c60b5233a34ca0520f325b7e2cc0a0140ad0862a"
-  integrity sha1-xgtSM6NMoFIPMlt+LMCgFArQhio=
+jest-haste-map@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-haste-map/-/jest-haste-map-27.5.0.tgz#7cc3a920caf304c89fbfceb5d5717b929873f175"
+  integrity sha1-fMOpIMrzBMifv8611XF7kphz8XU=
   dependencies:
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     "@types/graceful-fs" "^4.1.2"
     "@types/node" "*"
     anymatch "^3.0.3"
     fb-watchman "^2.0.0"
-    graceful-fs "^4.2.4"
-    jest-regex-util "^27.4.0"
-    jest-serializer "^27.4.0"
-    jest-util "^27.4.2"
-    jest-worker "^27.4.6"
+    graceful-fs "^4.2.9"
+    jest-regex-util "^27.5.0"
+    jest-serializer "^27.5.0"
+    jest-util "^27.5.0"
+    jest-worker "^27.5.0"
     micromatch "^4.0.4"
     walker "^1.0.7"
   optionalDependencies:
@@ -5027,27 +5063,27 @@ jest-jasmine2@^26.6.3:
     pretty-format "^26.6.2"
     throat "^5.0.0"
 
-jest-jasmine2@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-jasmine2/-/jest-jasmine2-27.4.6.tgz#109e8bc036cb455950ae28a018f983f2abe50127"
-  integrity sha1-EJ6LwDbLRVlQriigGPmD8qvlASc=
+jest-jasmine2@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-jasmine2/-/jest-jasmine2-27.5.0.tgz#589d6574d1318d3fb41b3fc368344117ec417dcc"
+  integrity sha1-WJ1ldNExjT+0Gz/DaDRBF+xBfcw=
   dependencies:
-    "@jest/environment" "^27.4.6"
-    "@jest/source-map" "^27.4.0"
-    "@jest/test-result" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/environment" "^27.5.0"
+    "@jest/source-map" "^27.5.0"
+    "@jest/test-result" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
     chalk "^4.0.0"
     co "^4.6.0"
-    expect "^27.4.6"
+    expect "^27.5.0"
     is-generator-fn "^2.0.0"
-    jest-each "^27.4.6"
-    jest-matcher-utils "^27.4.6"
-    jest-message-util "^27.4.6"
-    jest-runtime "^27.4.6"
-    jest-snapshot "^27.4.6"
-    jest-util "^27.4.2"
-    pretty-format "^27.4.6"
+    jest-each "^27.5.0"
+    jest-matcher-utils "^27.5.0"
+    jest-message-util "^27.5.0"
+    jest-runtime "^27.5.0"
+    jest-snapshot "^27.5.0"
+    jest-util "^27.5.0"
+    pretty-format "^27.5.0"
     throat "^6.0.1"
 
 jest-leak-detector@^26.6.2:
@@ -5058,13 +5094,13 @@ jest-leak-detector@^26.6.2:
     jest-get-type "^26.3.0"
     pretty-format "^26.6.2"
 
-jest-leak-detector@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-leak-detector/-/jest-leak-detector-27.4.6.tgz#ed9bc3ce514b4c582637088d9faf58a33bd59bf4"
-  integrity sha1-7ZvDzlFLTFgmNwiNn69YozvVm/Q=
+jest-leak-detector@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-leak-detector/-/jest-leak-detector-27.5.0.tgz#c98c02e64eab4da9a8b91f058d2b7473272272ee"
+  integrity sha1-yYwC5k6rTamouR8FjSt0cycicu4=
   dependencies:
-    jest-get-type "^27.4.0"
-    pretty-format "^27.4.6"
+    jest-get-type "^27.5.0"
+    pretty-format "^27.5.0"
 
 jest-matcher-utils@^26.6.2:
   version "26.6.2"
@@ -5076,15 +5112,15 @@ jest-matcher-utils@^26.6.2:
     jest-get-type "^26.3.0"
     pretty-format "^26.6.2"
 
-jest-matcher-utils@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-matcher-utils/-/jest-matcher-utils-27.4.6.tgz#53ca7f7b58170638590e946f5363b988775509b8"
-  integrity sha1-U8p/e1gXBjhZDpRvU2O5iHdVCbg=
+jest-matcher-utils@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-matcher-utils/-/jest-matcher-utils-27.5.0.tgz#d2fc737224fb3bfa38eaa2393ac5bc953d5c5697"
+  integrity sha1-0vxzciT7O/o46qI5OsW8lT1cVpc=
   dependencies:
     chalk "^4.0.0"
-    jest-diff "^27.4.6"
-    jest-get-type "^27.4.0"
-    pretty-format "^27.4.6"
+    jest-diff "^27.5.0"
+    jest-get-type "^27.5.0"
+    pretty-format "^27.5.0"
 
 jest-message-util@^26.6.2:
   version "26.6.2"
@@ -5101,18 +5137,18 @@ jest-message-util@^26.6.2:
     slash "^3.0.0"
     stack-utils "^2.0.2"
 
-jest-message-util@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-message-util/-/jest-message-util-27.4.6.tgz#9fdde41a33820ded3127465e1a5896061524da31"
-  integrity sha1-n93kGjOCDe0xJ0ZeGliWBhUk2jE=
+jest-message-util@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-message-util/-/jest-message-util-27.5.0.tgz#654a781b38a305b1fd8120053c784c67bca00a52"
+  integrity sha1-ZUp4GzijBbH9gSAFPHhMZ7ygClI=
   dependencies:
     "@babel/code-frame" "^7.12.13"
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     "@types/stack-utils" "^2.0.0"
     chalk "^4.0.0"
-    graceful-fs "^4.2.4"
+    graceful-fs "^4.2.9"
     micromatch "^4.0.4"
-    pretty-format "^27.4.6"
+    pretty-format "^27.5.0"
     slash "^3.0.0"
     stack-utils "^2.0.3"
 
@@ -5124,12 +5160,12 @@ jest-mock@^26.6.2:
     "@jest/types" "^26.6.2"
     "@types/node" "*"
 
-jest-mock@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-mock/-/jest-mock-27.4.6.tgz#77d1ba87fbd33ccb8ef1f061697e7341b7635195"
-  integrity sha1-d9G6h/vTPMuO8fBhaX5zQbdjUZU=
+jest-mock@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-mock/-/jest-mock-27.5.0.tgz#1018656fe6bcd0f58fd1edca7f420169f6707c6e"
+  integrity sha1-EBhlb+a80PWP0e3Kf0IBafZwfG4=
   dependencies:
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
 
 jest-pnp-resolver@^1.2.2:
@@ -5142,10 +5178,10 @@ jest-regex-util@^26.0.0:
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-regex-util/-/jest-regex-util-26.0.0.tgz#d25e7184b36e39fd466c3bc41be0971e821fee28"
   integrity sha1-0l5xhLNuOf1GbDvEG+CXHoIf7ig=
 
-jest-regex-util@^27.4.0:
-  version "27.4.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-regex-util/-/jest-regex-util-27.4.0.tgz#e4c45b52653128843d07ad94aec34393ea14fbca"
-  integrity sha1-5MRbUmUxKIQ9B62UrsNDk+oU+8o=
+jest-regex-util@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-regex-util/-/jest-regex-util-27.5.0.tgz#26c26cf15a73edba13cb8930e261443d25ed8608"
+  integrity sha1-JsJs8Vpz7boTy4kw4mFEPSXthgg=
 
 jest-resolve-dependencies@^26.6.3:
   version "26.6.3"
@@ -5156,14 +5192,14 @@ jest-resolve-dependencies@^26.6.3:
     jest-regex-util "^26.0.0"
     jest-snapshot "^26.6.2"
 
-jest-resolve-dependencies@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-resolve-dependencies/-/jest-resolve-dependencies-27.4.6.tgz#fc50ee56a67d2c2183063f6a500cc4042b5e2327"
-  integrity sha1-/FDuVqZ9LCGDBj9qUAzEBCteIyc=
+jest-resolve-dependencies@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-resolve-dependencies/-/jest-resolve-dependencies-27.5.0.tgz#8e3b15589848995ddc9a39f49462dad5b7bc14a2"
+  integrity sha1-jjsVWJhImV3cmjn0lGLa1be8FKI=
   dependencies:
-    "@jest/types" "^27.4.2"
-    jest-regex-util "^27.4.0"
-    jest-snapshot "^27.4.6"
+    "@jest/types" "^27.5.0"
+    jest-regex-util "^27.5.0"
+    jest-snapshot "^27.5.0"
 
 jest-resolve@^26.6.2:
   version "26.6.2"
@@ -5179,18 +5215,18 @@ jest-resolve@^26.6.2:
     resolve "^1.18.1"
     slash "^3.0.0"
 
-jest-resolve@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-resolve/-/jest-resolve-27.4.6.tgz#2ec3110655e86d5bfcfa992e404e22f96b0b5977"
-  integrity sha1-LsMRBlXobVv8+pkuQE4i+WsLWXc=
+jest-resolve@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-resolve/-/jest-resolve-27.5.0.tgz#a8e95a68dfb4a59faa508d7b6d2c6a02dcabb712"
+  integrity sha1-qOlaaN+0pZ+qUI17bSxqAtyrtxI=
   dependencies:
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     chalk "^4.0.0"
-    graceful-fs "^4.2.4"
-    jest-haste-map "^27.4.6"
+    graceful-fs "^4.2.9"
+    jest-haste-map "^27.5.0"
     jest-pnp-resolver "^1.2.2"
-    jest-util "^27.4.2"
-    jest-validate "^27.4.6"
+    jest-util "^27.5.0"
+    jest-validate "^27.5.0"
     resolve "^1.20.0"
     resolve.exports "^1.1.0"
     slash "^3.0.0"
@@ -5221,31 +5257,30 @@ jest-runner@^26.6.3:
     source-map-support "^0.5.6"
     throat "^5.0.0"
 
-jest-runner@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-runner/-/jest-runner-27.4.6.tgz#1d390d276ec417e9b4d0d081783584cbc3e24773"
-  integrity sha1-HTkNJ27EF+m00NCBeDWEy8PiR3M=
+jest-runner@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-runner/-/jest-runner-27.5.0.tgz#b5747a4444b4d3faae019bd201943948882d26c3"
+  integrity sha1-tXR6RES00/quAZvSAZQ5SIgtJsM=
   dependencies:
-    "@jest/console" "^27.4.6"
-    "@jest/environment" "^27.4.6"
-    "@jest/test-result" "^27.4.6"
-    "@jest/transform" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/console" "^27.5.0"
+    "@jest/environment" "^27.5.0"
+    "@jest/test-result" "^27.5.0"
+    "@jest/transform" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
     chalk "^4.0.0"
     emittery "^0.8.1"
-    exit "^0.1.2"
-    graceful-fs "^4.2.4"
-    jest-docblock "^27.4.0"
-    jest-environment-jsdom "^27.4.6"
-    jest-environment-node "^27.4.6"
-    jest-haste-map "^27.4.6"
-    jest-leak-detector "^27.4.6"
-    jest-message-util "^27.4.6"
-    jest-resolve "^27.4.6"
-    jest-runtime "^27.4.6"
-    jest-util "^27.4.2"
-    jest-worker "^27.4.6"
+    graceful-fs "^4.2.9"
+    jest-docblock "^27.5.0"
+    jest-environment-jsdom "^27.5.0"
+    jest-environment-node "^27.5.0"
+    jest-haste-map "^27.5.0"
+    jest-leak-detector "^27.5.0"
+    jest-message-util "^27.5.0"
+    jest-resolve "^27.5.0"
+    jest-runtime "^27.5.0"
+    jest-util "^27.5.0"
+    jest-worker "^27.5.0"
     source-map-support "^0.5.6"
     throat "^6.0.1"
 
@@ -5282,31 +5317,31 @@ jest-runtime@^26.6.3:
     strip-bom "^4.0.0"
     yargs "^15.4.1"
 
-jest-runtime@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-runtime/-/jest-runtime-27.4.6.tgz#83ae923818e3ea04463b22f3597f017bb5a1cffa"
-  integrity sha1-g66SOBjj6gRGOyLzWX8Be7Whz/o=
+jest-runtime@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-runtime/-/jest-runtime-27.5.0.tgz#2497116742b9e7cc1e5381a9ded36602b8b0c78c"
+  integrity sha1-JJcRZ0K558weU4Gp3tNmAriwx4w=
   dependencies:
-    "@jest/environment" "^27.4.6"
-    "@jest/fake-timers" "^27.4.6"
-    "@jest/globals" "^27.4.6"
-    "@jest/source-map" "^27.4.0"
-    "@jest/test-result" "^27.4.6"
-    "@jest/transform" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/environment" "^27.5.0"
+    "@jest/fake-timers" "^27.5.0"
+    "@jest/globals" "^27.5.0"
+    "@jest/source-map" "^27.5.0"
+    "@jest/test-result" "^27.5.0"
+    "@jest/transform" "^27.5.0"
+    "@jest/types" "^27.5.0"
     chalk "^4.0.0"
     cjs-module-lexer "^1.0.0"
     collect-v8-coverage "^1.0.0"
     execa "^5.0.0"
     glob "^7.1.3"
-    graceful-fs "^4.2.4"
-    jest-haste-map "^27.4.6"
-    jest-message-util "^27.4.6"
-    jest-mock "^27.4.6"
-    jest-regex-util "^27.4.0"
-    jest-resolve "^27.4.6"
-    jest-snapshot "^27.4.6"
-    jest-util "^27.4.2"
+    graceful-fs "^4.2.9"
+    jest-haste-map "^27.5.0"
+    jest-message-util "^27.5.0"
+    jest-mock "^27.5.0"
+    jest-regex-util "^27.5.0"
+    jest-resolve "^27.5.0"
+    jest-snapshot "^27.5.0"
+    jest-util "^27.5.0"
     slash "^3.0.0"
     strip-bom "^4.0.0"
 
@@ -5318,13 +5353,13 @@ jest-serializer@^26.6.2:
     "@types/node" "*"
     graceful-fs "^4.2.4"
 
-jest-serializer@^27.4.0:
-  version "27.4.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-serializer/-/jest-serializer-27.4.0.tgz#34866586e1cae2388b7d12ffa2c7819edef5958a"
-  integrity sha1-NIZlhuHK4jiLfRL/oseBnt71lYo=
+jest-serializer@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-serializer/-/jest-serializer-27.5.0.tgz#439a110df27f97a40c114a429b708c2ada15a81f"
+  integrity sha1-Q5oRDfJ/l6QMEUpCm3CMKtoVqB8=
   dependencies:
     "@types/node" "*"
-    graceful-fs "^4.2.4"
+    graceful-fs "^4.2.9"
 
 jest-snapshot@^26.6.2:
   version "26.6.2"
@@ -5348,32 +5383,32 @@ jest-snapshot@^26.6.2:
     pretty-format "^26.6.2"
     semver "^7.3.2"
 
-jest-snapshot@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-snapshot/-/jest-snapshot-27.4.6.tgz#e2a3b4fff8bdce3033f2373b2e525d8b6871f616"
-  integrity sha1-4qO0//i9zjAz8jc7LlJdi2hx9hY=
+jest-snapshot@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-snapshot/-/jest-snapshot-27.5.0.tgz#c5c4c084f5e10036f31e7647de1a6f28c07681fc"
+  integrity sha1-xcTAhPXhADbzHnZH3hpvKMB2gfw=
   dependencies:
     "@babel/core" "^7.7.2"
     "@babel/generator" "^7.7.2"
     "@babel/plugin-syntax-typescript" "^7.7.2"
     "@babel/traverse" "^7.7.2"
     "@babel/types" "^7.0.0"
-    "@jest/transform" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/transform" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/babel__traverse" "^7.0.4"
     "@types/prettier" "^2.1.5"
     babel-preset-current-node-syntax "^1.0.0"
     chalk "^4.0.0"
-    expect "^27.4.6"
-    graceful-fs "^4.2.4"
-    jest-diff "^27.4.6"
-    jest-get-type "^27.4.0"
-    jest-haste-map "^27.4.6"
-    jest-matcher-utils "^27.4.6"
-    jest-message-util "^27.4.6"
-    jest-util "^27.4.2"
+    expect "^27.5.0"
+    graceful-fs "^4.2.9"
+    jest-diff "^27.5.0"
+    jest-get-type "^27.5.0"
+    jest-haste-map "^27.5.0"
+    jest-matcher-utils "^27.5.0"
+    jest-message-util "^27.5.0"
+    jest-util "^27.5.0"
     natural-compare "^1.4.0"
-    pretty-format "^27.4.6"
+    pretty-format "^27.5.0"
     semver "^7.3.2"
 
 jest-util@^26.6.2:
@@ -5388,16 +5423,16 @@ jest-util@^26.6.2:
     is-ci "^2.0.0"
     micromatch "^4.0.2"
 
-jest-util@^27.0.0, jest-util@^27.4.2:
-  version "27.4.2"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-util/-/jest-util-27.4.2.tgz#ed95b05b1adfd761e2cda47e0144c6a58e05a621"
-  integrity sha1-7ZWwWxrf12HizaR+AUTGpY4FpiE=
+jest-util@^27.0.0, jest-util@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-util/-/jest-util-27.5.0.tgz#0b9540d91b0de65d288f235fa9899e6eeeab8d35"
+  integrity sha1-C5VA2RsN5l0ojyNfqYmebu6rjTU=
   dependencies:
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
     chalk "^4.0.0"
     ci-info "^3.2.0"
-    graceful-fs "^4.2.4"
+    graceful-fs "^4.2.9"
     picomatch "^2.2.3"
 
 jest-validate@^26.5.2, jest-validate@^26.6.2:
@@ -5412,17 +5447,17 @@ jest-validate@^26.5.2, jest-validate@^26.6.2:
     leven "^3.1.0"
     pretty-format "^26.6.2"
 
-jest-validate@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-validate/-/jest-validate-27.4.6.tgz#efc000acc4697b6cf4fa68c7f3f324c92d0c4f1f"
-  integrity sha1-78AArMRpe2z0+mjH8/MkyS0MTx8=
+jest-validate@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-validate/-/jest-validate-27.5.0.tgz#b3df32372d2c832fa5a5e31ee2c37f94f79f7f1f"
+  integrity sha1-s98yNy0sgy+lpeMe4sN/lPeffx8=
   dependencies:
-    "@jest/types" "^27.4.2"
+    "@jest/types" "^27.5.0"
     camelcase "^6.2.0"
     chalk "^4.0.0"
-    jest-get-type "^27.4.0"
+    jest-get-type "^27.5.0"
     leven "^3.1.0"
-    pretty-format "^27.4.6"
+    pretty-format "^27.5.0"
 
 jest-watcher@^26.6.2:
   version "26.6.2"
@@ -5437,17 +5472,17 @@ jest-watcher@^26.6.2:
     jest-util "^26.6.2"
     string-length "^4.0.1"
 
-jest-watcher@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-watcher/-/jest-watcher-27.4.6.tgz#673679ebeffdd3f94338c24f399b85efc932272d"
-  integrity sha1-ZzZ56+/90/lDOMJPOZuF78kyJy0=
+jest-watcher@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-watcher/-/jest-watcher-27.5.0.tgz#ca11c3b9115c92a8fd2fd9e2def296d45206f1ca"
+  integrity sha1-yhHDuRFckqj9L9ni3vKW1FIG8co=
   dependencies:
-    "@jest/test-result" "^27.4.6"
-    "@jest/types" "^27.4.2"
+    "@jest/test-result" "^27.5.0"
+    "@jest/types" "^27.5.0"
     "@types/node" "*"
     ansi-escapes "^4.2.1"
     chalk "^4.0.0"
-    jest-util "^27.4.2"
+    jest-util "^27.5.0"
     string-length "^4.0.1"
 
 jest-worker@^26.0.0, jest-worker@^26.6.2:
@@ -5459,10 +5494,10 @@ jest-worker@^26.0.0, jest-worker@^26.6.2:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jest-worker@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-worker/-/jest-worker-27.4.6.tgz#5d2d93db419566cb680752ca0792780e71b3273e"
-  integrity sha1-XS2T20GVZstoB1LKB5J4DnGzJz4=
+jest-worker@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest-worker/-/jest-worker-27.5.0.tgz#99ee77e4d06168107c27328bd7f54e74c3a48d59"
+  integrity sha1-me535NBhaBB8JzKL1/VOdMOkjVk=
   dependencies:
     "@types/node" "*"
     merge-stream "^2.0.0"
@@ -5478,13 +5513,13 @@ jest@^26.6.3:
     jest-cli "^26.6.3"
 
 jest@^27.4.7:
-  version "27.4.7"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest/-/jest-27.4.7.tgz#87f74b9026a1592f2da05b4d258e57505f28eca4"
-  integrity sha1-h/dLkCahWS8toFtNJY5XUF8o7KQ=
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/jest/-/jest-27.5.0.tgz#2c04ff88754e42e9fc5240840b91f9a9a8990875"
+  integrity sha1-LAT/iHVOQun8UkCEC5H5qaiZCHU=
   dependencies:
-    "@jest/core" "^27.4.7"
+    "@jest/core" "^27.5.0"
     import-local "^3.0.2"
-    jest-cli "^27.4.7"
+    jest-cli "^27.5.0"
 
 jetifier@^1.6.2:
   version "1.6.8"
@@ -5492,9 +5527,9 @@ jetifier@^1.6.2:
   integrity sha1-6IBoaXh1y9qYwyRykCxNN1Ykd5g=
 
 joi@^17.2.1:
-  version "17.5.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/joi/-/joi-17.5.0.tgz#7e66d0004b5045d971cf416a55fb61d33ac6e011"
-  integrity sha1-fmbQAEtQRdlxz0FqVfth0zrG4BE=
+  version "17.6.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/joi/-/joi-17.6.0.tgz#0bb54f2f006c09a96e75ce687957bd04290054b2"
+  integrity sha1-C7VPLwBsCaludc5oeVe9BCkAVLI=
   dependencies:
     "@hapi/hoek" "^9.0.0"
     "@hapi/topo" "^5.0.0"
@@ -6254,7 +6289,7 @@ mime-db@1.51.0, "mime-db@>= 1.43.0 < 2":
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/mime-db/-/mime-db-1.51.0.tgz#d9ff62451859b18342d960850dc3cfb77e63fb0c"
   integrity sha1-2f9iRRhZsYNC2WCFDcPPt35j+ww=
 
-mime-types@^2.1.12, mime-types@^2.1.27, mime-types@~2.1.24:
+mime-types@^2.1.12, mime-types@^2.1.27, mime-types@~2.1.34:
   version "2.1.34"
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/mime-types/-/mime-types-2.1.34.tgz#5a712f9ec1503511a945803640fafe09d3793c24"
   integrity sha1-WnEvnsFQNRGpRYA2QPr+CdN5PCQ=
@@ -6292,9 +6327,9 @@ min-indent@^1.0.0:
   integrity sha1-pj9oFnOzBXH76LwlaGrnRu76mGk=
 
 minimatch@^3.0.2, minimatch@^3.0.4:
-  version "3.0.4"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
-  integrity sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=
+  version "3.0.5"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/minimatch/-/minimatch-3.0.5.tgz#4da8f1290ee0f0f8e83d60ca69f8f134068604a3"
+  integrity sha1-TajxKQ7g8PjoPWDKafjxNAaGBKM=
   dependencies:
     brace-expansion "^1.1.7"
 
@@ -6369,10 +6404,10 @@ natural-compare@^1.4.0:
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=
 
-negotiator@0.6.2:
-  version "0.6.2"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/negotiator/-/negotiator-0.6.2.tgz#feacf7ccf525a77ae9634436a64883ffeca346fb"
-  integrity sha1-/qz3zPUlp3rpY0Q2pkiD/+yjRvs=
+negotiator@0.6.3:
+  version "0.6.3"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/negotiator/-/negotiator-0.6.3.tgz#58e323a72fedc0d6f9cd4d31fe49f51479590ccd"
+  integrity sha1-WOMjpy/twNb5zU0x/kn1FHlZDM0=
 
 neo-async@^2.5.0:
   version "2.6.2"
@@ -6912,10 +6947,10 @@ pify@^4.0.1:
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha1-SyzSXFDVmHNcUCkiJP2MbfQeMjE=
 
-pirates@^4.0.0, pirates@^4.0.1, pirates@^4.0.4:
-  version "4.0.4"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/pirates/-/pirates-4.0.4.tgz#07df81e61028e402735cdd49db701e4885b4e6e6"
-  integrity sha1-B9+B5hAo5AJzXN1J23AeSIW05uY=
+pirates@^4.0.1, pirates@^4.0.4, pirates@^4.0.5:
+  version "4.0.5"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/pirates/-/pirates-4.0.5.tgz#feec352ea5c3268fb23a37c702ab1699f35a5f3b"
+  integrity sha1-/uw1LqXDJo+yOjfHAqsWmfNaXzs=
 
 pkg-dir@^3.0.0:
   version "3.0.0"
@@ -6986,10 +7021,10 @@ pretty-format@^26.5.2, pretty-format@^26.6.2:
     ansi-styles "^4.0.0"
     react-is "^17.0.1"
 
-pretty-format@^27.0.0, pretty-format@^27.4.6:
-  version "27.4.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/pretty-format/-/pretty-format-27.4.6.tgz#1b784d2f53c68db31797b2348fa39b49e31846b7"
-  integrity sha1-G3hNL1PGjbMXl7I0j6ObSeMYRrc=
+pretty-format@^27.0.0, pretty-format@^27.5.0:
+  version "27.5.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/pretty-format/-/pretty-format-27.5.0.tgz#71e1af7a4b587d259fa4668dcd3e94af077767cb"
+  integrity sha1-ceGvektYfSWfpGaNzT6Urwd3Z8s=
   dependencies:
     ansi-regex "^5.0.1"
     ansi-styles "^5.0.0"
@@ -7049,9 +7084,9 @@ property-information@^5.0.0:
     xtend "^4.0.0"
 
 prosemirror-commands@^1.1.12:
-  version "1.2.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/prosemirror-commands/-/prosemirror-commands-1.2.0.tgz#d83e25a9a6422fedda26496b79cb297c05d63fdf"
-  integrity sha1-2D4lqaZCL+3aJklrecspfAXWP98=
+  version "1.2.1"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/prosemirror-commands/-/prosemirror-commands-1.2.1.tgz#eae0cb714df695260659b78ff5d201d3a037e50d"
+  integrity sha1-6uDLcU32lSYGWbeP9dIB06A35Q0=
   dependencies:
     prosemirror-model "^1.0.0"
     prosemirror-state "^1.0.0"
@@ -7089,9 +7124,9 @@ prosemirror-state@^1.0.0, prosemirror-state@^1.3.4:
     prosemirror-transform "^1.0.0"
 
 prosemirror-transform@^1.0.0, prosemirror-transform@^1.1.0, prosemirror-transform@^1.3.3:
-  version "1.3.3"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/prosemirror-transform/-/prosemirror-transform-1.3.3.tgz#5f6712b0577a119cc418686fe7588b6dd9b7464d"
-  integrity sha1-X2cSsFd6EZzEGGhv51iLbdm3Rk0=
+  version "1.3.4"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/prosemirror-transform/-/prosemirror-transform-1.3.4.tgz#1d1997009b7b145c2aa2773f7f670c8a3d4cb46f"
+  integrity sha1-HRmXAJt7FFwqonc/f2cMij1MtG8=
   dependencies:
     prosemirror-model "^1.0.0"
 
@@ -7180,9 +7215,9 @@ react-colorful@^4.4.3:
   integrity sha1-OOfFtwdbv2PTzOItjGGkOaWLdWE=
 
 react-devtools-core@^4.13.0:
-  version "4.22.1"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-devtools-core/-/react-devtools-core-4.22.1.tgz#b276d42f860bedc373c9b3c0f5f96734318dd453"
-  integrity sha1-snbUL4YL7cNzybPA9flnNDGN1FM=
+  version "4.23.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-devtools-core/-/react-devtools-core-4.23.0.tgz#dff9d12202a472ef62632203d6de3877dc6e58be"
+  integrity sha1-3/nRIgKkcu9iYyID1t44d9xuWL4=
   dependencies:
     shell-quote "^1.6.1"
     ws "^7"
@@ -7196,6 +7231,13 @@ react-dom@16.13.1:
     object-assign "^4.1.1"
     prop-types "^15.6.2"
     scheduler "^0.19.1"
+
+react-error-boundary@^3.1.0:
+  version "3.1.4"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/react-error-boundary/-/react-error-boundary-3.1.4.tgz#255db92b23197108757a888b01e5b729919abde0"
+  integrity sha1-JV25KyMZcQh1eoiLAeW3KZGaveA=
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 react-i18next@^7.0.0:
   version "7.13.0"
@@ -7419,10 +7461,10 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
-regenerate-unicode-properties@^9.0.0:
-  version "9.0.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/regenerate-unicode-properties/-/regenerate-unicode-properties-9.0.0.tgz#54d09c7115e1f53dc2314a974b32c1c344efe326"
-  integrity sha1-VNCccRXh9T3CMUqXSzLBw0Tv4yY=
+regenerate-unicode-properties@^10.0.1:
+  version "10.0.1"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/regenerate-unicode-properties/-/regenerate-unicode-properties-10.0.1.tgz#7f442732aa7934a3740c779bb9b3340dccc1fb56"
+  integrity sha1-f0QnMqp5NKN0DHebubM0DczB+1Y=
   dependencies:
     regenerate "^1.4.2"
 
@@ -7464,15 +7506,15 @@ regexpp@^3.0.0, regexpp@^3.1.0:
   resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/regexpp/-/regexpp-3.2.0.tgz#0425a2768d8f23bad70ca4b90461fa2f1213e1b2"
   integrity sha1-BCWido2PI7rXDKS5BGH6LxIT4bI=
 
-regexpu-core@^4.7.1:
-  version "4.8.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/regexpu-core/-/regexpu-core-4.8.0.tgz#e5605ba361b67b1718478501327502f4479a98f0"
-  integrity sha1-5WBbo2G2excYR4UBMnUC9EeamPA=
+regexpu-core@^5.0.1:
+  version "5.0.1"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/regexpu-core/-/regexpu-core-5.0.1.tgz#c531122a7840de743dcf9c83e923b5560323ced3"
+  integrity sha1-xTESKnhA3nQ9z5yD6SO1VgMjztM=
   dependencies:
     regenerate "^1.4.2"
-    regenerate-unicode-properties "^9.0.0"
-    regjsgen "^0.5.2"
-    regjsparser "^0.7.0"
+    regenerate-unicode-properties "^10.0.1"
+    regjsgen "^0.6.0"
+    regjsparser "^0.8.2"
     unicode-match-property-ecmascript "^2.0.0"
     unicode-match-property-value-ecmascript "^2.0.0"
 
@@ -7490,15 +7532,15 @@ registry-url@^5.0.0:
   dependencies:
     rc "^1.2.8"
 
-regjsgen@^0.5.2:
-  version "0.5.2"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/regjsgen/-/regjsgen-0.5.2.tgz#92ff295fb1deecbf6ecdab2543d207e91aa33733"
-  integrity sha1-kv8pX7He7L9uzaslQ9IH6RqjNzM=
+regjsgen@^0.6.0:
+  version "0.6.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/regjsgen/-/regjsgen-0.6.0.tgz#83414c5354afd7d6627b16af5f10f41c4e71808d"
+  integrity sha1-g0FMU1Sv19ZiexavXxD0HE5xgI0=
 
-regjsparser@^0.7.0:
-  version "0.7.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/regjsparser/-/regjsparser-0.7.0.tgz#a6b667b54c885e18b52554cb4960ef71187e9968"
-  integrity sha1-prZntUyIXhi1JVTLSWDvcRh+mWg=
+regjsparser@^0.8.2:
+  version "0.8.4"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/regjsparser/-/regjsparser-0.8.4.tgz#8a14285ffcc5de78c5b95d62bbf413b6bc132d5f"
+  integrity sha1-ihQoX/zF3njFuV1iu/QTtrwTLV8=
   dependencies:
     jsesc "~0.5.0"
 
@@ -7626,11 +7668,11 @@ resolve.exports@^1.1.0:
   integrity sha1-XOhCuUsFFGwOAwdphdHQ5+SMkMk=
 
 resolve@^1.10.0, resolve@^1.12.0, resolve@^1.14.2, resolve@^1.18.1, resolve@^1.20.0:
-  version "1.21.0"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/resolve/-/resolve-1.21.0.tgz#b51adc97f3472e6a5cf4444d34bc9d6b9037591f"
-  integrity sha1-tRrcl/NHLmpc9ERNNLyda5A3WR8=
+  version "1.22.0"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/resolve/-/resolve-1.22.0.tgz#5e0b8c67c15df57a89bdbabe603a002f21731198"
+  integrity sha1-XguMZ8Fd9XqJvbq+YDoALyFzEZg=
   dependencies:
-    is-core-module "^2.8.0"
+    is-core-module "^2.8.1"
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
@@ -7827,9 +7869,9 @@ scheduler@^0.20.2:
     object-assign "^4.1.1"
 
 scroll-into-view-if-needed@^2.2.28:
-  version "2.2.28"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.28.tgz#5a15b2f58a52642c88c8eca584644e01703d645a"
-  integrity sha1-WhWy9YpSZCyIyOylhGROAXA9ZFo=
+  version "2.2.29"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/scroll-into-view-if-needed/-/scroll-into-view-if-needed-2.2.29.tgz#551791a84b7e2287706511f8c68161e4990ab885"
+  integrity sha1-VReRqEt+IodwZRH4xoFh5JkKuIU=
   dependencies:
     compute-scroll-into-view "^1.0.17"
 
@@ -7987,9 +8029,9 @@ side-channel@^1.0.4:
     object-inspect "^1.9.0"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
-  version "3.0.6"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/signal-exit/-/signal-exit-3.0.6.tgz#24e630c4b0f03fea446a2bd299e62b4a6ca8d0af"
-  integrity sha1-JOYwxLDwP+pEaivSmeYrSmyo0K8=
+  version "3.0.7"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
+  integrity sha1-qaF2f4r4QVURTqq9c/mSc8j1mtk=
 
 simple-plist@^1.0.0:
   version "1.3.0"
@@ -8025,9 +8067,9 @@ sliced@^1.0.1:
   integrity sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
 
 smooth-scroll-into-view-if-needed@^1.1.32:
-  version "1.1.32"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.32.tgz#57718cb2caa5265ade3e96006dfcf28b2fdcfca0"
-  integrity sha1-V3GMssqlJlrePpYAbfzyiy/c/KA=
+  version "1.1.33"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/smooth-scroll-into-view-if-needed/-/smooth-scroll-into-view-if-needed-1.1.33.tgz#2c7b88c82784c69030cb0489b9df584e94e01533"
+  integrity sha1-LHuIyCeExpAwywSJud9YTpTgFTM=
   dependencies:
     scroll-into-view-if-needed "^2.2.28"
 
@@ -8735,9 +8777,9 @@ typedarray@^0.0.6:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 typescript@^4.5.4:
-  version "4.5.4"
-  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/typescript/-/typescript-4.5.4.tgz#a17d3a0263bf5c8723b9c52f43c5084edf13c2e8"
-  integrity sha1-oX06AmO/XIcjucUvQ8UITt8Twug=
+  version "4.5.5"
+  resolved "https://repo.dev.wixpress.com/artifactory/api/npm/npm-repos/typescript/-/typescript-4.5.5.tgz#d8c953832d28924a9e3d37c73d729c846c5896f3"
+  integrity sha1-2MlTgy0okkqePTfHPXKchGxYlvM=
 
 typescript@~4.3.5:
   version "4.3.5"

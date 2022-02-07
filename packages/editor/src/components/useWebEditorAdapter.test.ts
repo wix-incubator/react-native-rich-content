@@ -32,6 +32,12 @@ describe('useWebEditorAdapter', () => {
 
     beforeEach(() => {
         jest.resetAllMocks();
+        jest.mock('../web-assets/src/dist/rce-web.html', ()=> 'test-file-stub');
+        jest.mock('../utils/web-editor-adapter-utils.ts', () => ({
+            getSource: () => '',
+            getOriginWhiteList: () => [''],
+            getScriptToEvaluate: () => '',
+        }));
         useWebEditorAdapterMock = require('./useWebEditorAdapter').useWebEditorAdapter;
         callbacksMock = {
             onDraftEntityFocusChange: jest.fn(),
@@ -47,7 +53,7 @@ describe('useWebEditorAdapter', () => {
             onWebEditorDidMount: callbacksMock.onWebEditorDidMount
         }));
         act(() => invokeHandleMessage(EDITOR_EVENTS.WEB_EDITOR_DID_MOUNT, result.current.handleMessage));
-        expect(callbacksMock.onWebEditorDidMount).toBeCalledWith(testData);
+        expect(callbacksMock.onWebEditorDidMount).toBeCalled();
         expect(callbacksMock.onDraftEntityFocusChange).not.toBeCalled();
         expect(callbacksMock.onRceStateChange).not.toBeCalled();
     });
