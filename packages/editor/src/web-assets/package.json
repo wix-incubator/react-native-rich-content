@@ -7,6 +7,8 @@
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/preset-env": "^7.11.0",
+    "@testing-library/react-hooks": "^7.0.2",
+    "@types/jest": "^27.4.0",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
     "@types/react-native": "^0.66.9",
@@ -33,7 +35,8 @@
   },
   "scripts": {
     "build-rce-web-adapter": "webpack --mode=production",
-    "build": "node ./scripts/prepare-build && npm run build-rce-web-adapter && node ./scripts/bundle-web-assets.js"
+    "build": "node ./scripts/prepare-build && npm run build-rce-web-adapter && node ./scripts/bundle-web-assets.js",
+    "test": "jest"
   },
   "peerDependencies": {
     "react": "16.13.1"
