@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
-const DIST_DIR = path.join(__dirname, 'src', 'intermediates');
+const DIST_DIR = path.join(__dirname, 'intermediates');
 const DEV_PORT = 33500;
 
 const initHtmlPlugin = () => new HtmlWebpackPlugin();

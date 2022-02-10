@@ -2,7 +2,8 @@
   "name": "@react-native-rich-content/editor",
   "version": "0.0.0",
   "private": true,
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "sideEffects": false,
   "peerDependencies": {
     "react": "*",
@@ -17,10 +18,13 @@
     "@react-native-rich-content/common": "*",
     "@testing-library/react-hooks": "^7.0.2",
     "typescript": "^4.5.4",
-    "wix-rich-content-common": "8.65.7"
+    "wix-rich-content-common": "8.65.7",
+    "copyfiles": "^2.4.1"
   },
   "scripts": {
     "preinstall": "yarn --cwd src/web-assets install",
-    "build": "cd ./src/web-assets && npm run build"
+    "build-web-assets": "npm --prefix ./src/web-assets run build",
+    "copy-web-assets": "copyfiles -u 3 ./src/web-assets/dist/* ./dist/web-assets",
+    "build": "npm run build-web-assets && npm run copy-web-assets"
   }
 }

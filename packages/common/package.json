@@ -1,7 +1,8 @@
 {
   "name": "@react-native-rich-content/common",
   "version": "1.0.0",
-  "main": "./src/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@types/jest": "^27.4.0",

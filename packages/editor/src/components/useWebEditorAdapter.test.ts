@@ -1,7 +1,7 @@
 import { useWebEditorAdapter} from "./useWebEditorAdapter";
 import {renderHook, act} from '@testing-library/react-hooks/native';
 import { Content } from "@react-native-rich-content/common";
-import { EDITOR_EVENTS } from "../web-assets/src/constants";
+import { EDITOR_EVENTS } from "../web-assets/constants";
 
 describe('useWebEditorAdapter', () => {
     let useWebEditorAdapterMock: typeof useWebEditorAdapter;
@@ -32,7 +32,7 @@ describe('useWebEditorAdapter', () => {
 
     beforeEach(() => {
         jest.resetAllMocks();
-        jest.mock('../web-assets/src/dist/rce-web.html', () => 'test-file-stub');
+        jest.mock('../web-assets/dist/rce-web.html', () => 'test-file-stub');
         jest.mock('../utils/web-editor-adapter-utils.ts', () => ({
             getSource: () => '',
             getOriginWhiteList: () => [''],
