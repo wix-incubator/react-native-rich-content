@@ -26,6 +26,7 @@ const InlineWrapper = ({ children, style, key }: any) => <Text key={key} style={
 export const createRenderers = (plugins: ViewerPlugin<any>[]): Renderers => {
     const entities: Renderers['entities'] = {};
     const blocks: Renderers['blocks'] = {
+        //@ts-ignore
         unstyled: (children) => children.map(child => <View><Text>{child}</Text></View>),
     };
     plugins.forEach((plugin) => {

@@ -1,6 +1,6 @@
 const assets = {
-    html: require('./dist/rce-web.html'),
-    js: require('./dist/rce-web.js'),
+    html: require('./rce-web.html'),
+    js: require('./rce-web.js'),
 };
 
 export function getHtmlAsset() {

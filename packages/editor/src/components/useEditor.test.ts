@@ -16,7 +16,7 @@ describe('useWebEditorAdapter', () => {
     const testData = {blockKey: 'blockKey', type: 'testType', data: 'data'};
     beforeEach(() => {
         jest.resetAllMocks();
-        jest.mock('../web-assets/src/dist/rce-web.html', () => 'test-file-stub');
+        jest.mock('../web-assets/dist/rce-web.html', () => 'test-file-stub');
         jest.mock('../utils/web-editor-adapter-utils.ts', () => ({
             getSource: () => '',
             getOriginWhiteList: () => [''],
