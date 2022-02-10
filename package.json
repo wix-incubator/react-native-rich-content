@@ -29,7 +29,7 @@
     "ios:start": "yarn workspace @react-native-rich-content/rnative ios",
     "android:start": "yarn workspace @react-native-rich-content/rnative android",
     "reset": "git clean -dfX",
-    "build": "yarn workspace @react-native-rich-content/editor build && yarn workspace @react-native-rich-content/plugin-image build",
+    "build": "tsc --build && yarn workspace @react-native-rich-content/editor build && yarn workspace @react-native-rich-content/plugin-image build",
     "test": "jest"
   }
 }

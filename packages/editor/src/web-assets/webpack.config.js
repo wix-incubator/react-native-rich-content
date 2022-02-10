@@ -47,7 +47,7 @@ module.exports = (_env, argv) => {
               options: {
                 compilerOptions: {
                   outDir: DIST_DIR
-                }
+                },
               }
             }
           ],

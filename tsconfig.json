@@ -1,28 +1,21 @@
 {
   "display": "react-native-rich-content",
-  "compilerOptions": {
-    "composite": false,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": false,
-    "isolatedModules": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "strict": true,
-    "incremental": false,
-    "target": "esnext",
-    "module": "commonjs",
-    "lib": ["es2017", "DOM"],
-    "allowJs": true,
-    "jsx": "react-native",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "noEmit": true
-  },
-  "exclude": ["node_modules"],
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/common"
+    },
+    {
+      "path": "./packages/editor"
+    },
+    {
+      "path": "./packages/plugin-image"
+    },
+    {
+      "path": "./packages/toolbar"
+    },
+    {
+      "path": "./packages/viewer"
+    },
+  ]
 }

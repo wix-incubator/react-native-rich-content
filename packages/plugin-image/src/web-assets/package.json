@@ -2,7 +2,8 @@
   "name": "@react-native-rich-content/plugin-image-web-assets",
   "version": "0.0.0",
   "private": true,
-  "main": "./index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "sideEffects": false,
   "devDependencies": {
     "@babel/plugin-transform-react-jsx": "^7.10.4",

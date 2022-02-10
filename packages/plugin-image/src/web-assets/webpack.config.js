@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
-const DIST_DIR = path.join(__dirname, 'src', 'intermediates');
+const DIST_DIR = path.join(__dirname, 'intermediates');
 const DEV_PORT = 33500;
 
 const initHtmlPlugin = () => new HtmlWebpackPlugin();
@@ -19,7 +19,7 @@ module.exports = (_env, argv) => {
     entry: './src/create-plugin.ts',
     output: {
       path: DIST_DIR,
-      filename: 'bundled-rce-web.js',
+      filename: 'bundled-plugin-image.js',
       library: 'WIX_IMAGE_PLUGIN',
       libraryTarget: 'umd',
     },
@@ -41,7 +41,16 @@ module.exports = (_env, argv) => {
         {
           test: /\.(ts|tsx)$/,
           exclude: /node_modules/,
-          use: ["ts-loader"],
+          use: [
+            {
+              loader: 'ts-loader',
+              options: {
+                compilerOptions: {
+                  outDir: DIST_DIR,
+                },
+              }
+            }
+          ],
       },
         {
           test: /\.js$/,

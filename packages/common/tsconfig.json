@@ -1,32 +1,10 @@
 {
-  "display": "editor",
+  "display": "common",
+  "extends": "../../tsconfig.native.json",
   "compilerOptions": {
-    "composite": true,
-    "declaration": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "inlineSources": false,
-    "isolatedModules": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "preserveWatchOutput": true,
-    "strict": true,
-    "incremental": true,
-    "target": "esnext",
-    "module": "commonjs",
-    "lib": ["es2017"],
-    "allowJs": true,
-    "jsx": "react-native",
-    "moduleResolution": "node",
-
-    "allowSyntheticDefaultImports": true,
-
-    "skipLibCheck": true,
-    "resolveJsonModule": true,
     "outDir": "./dist",
     "rootDir": "./src"
   },
   "include": ["src"],
-  "exclude": ["node_modules", "src/__test__/**/*", "**/*.test.ts"],
+  "exclude": ["node_modules", "**/*.test.ts"],
 }

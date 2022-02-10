@@ -1,0 +1,8 @@
+{
+    "display": "native",
+    "extends": "./tsconfig.base.json",
+    "compilerOptions": {
+        "lib": ["es2017"],
+        "jsx": "react",
+    }
+}
