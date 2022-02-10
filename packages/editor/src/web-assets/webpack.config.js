@@ -41,7 +41,16 @@ module.exports = (_env, argv) => {
         {
           test: /\.(ts|tsx)$/,
           exclude: /node_modules/,
-          use: ["ts-loader"],
+          use: [
+            {
+              loader: 'ts-loader',
+              options: {
+                compilerOptions: {
+                  outDir: DIST_DIR
+                }
+              }
+            }
+          ],
       },
         {
           test: /\.js$/,

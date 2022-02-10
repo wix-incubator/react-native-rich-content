@@ -28,7 +28,7 @@
     "ios:pods": "yarn workspace @react-native-rich-content/rnative pods",
     "ios:start": "yarn workspace @react-native-rich-content/rnative ios",
     "android:start": "yarn workspace @react-native-rich-content/rnative android",
-    "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock",
+    "reset": "git clean -dfX",
     "build": "yarn workspace @react-native-rich-content/editor build && yarn workspace @react-native-rich-content/plugin-image build",
     "test": "jest"
   }
