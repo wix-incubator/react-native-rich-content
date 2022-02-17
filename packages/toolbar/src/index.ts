@@ -1,2 +1,2 @@
-export {Toolbar} from './components/Toolbar';
-export type {ToolbarItem} from './types';
+export { Toolbar } from './components/Toolbar';
+export type { ToolbarItem } from './types';

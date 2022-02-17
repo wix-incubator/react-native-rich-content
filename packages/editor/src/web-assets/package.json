@@ -36,7 +36,7 @@
   },
   "scripts": {
     "build-rce-web-adapter": "webpack --mode=production",
-    "build": "node ./scripts/prepare-build && npm run build-rce-web-adapter && node ./scripts/bundle-web-assets.js",
+    "build": "node ./scripts/prepare-build && yarn build-rce-web-adapter && node ./scripts/bundle-web-assets.js",
     "test": "jest"
   },
   "peerDependencies": {

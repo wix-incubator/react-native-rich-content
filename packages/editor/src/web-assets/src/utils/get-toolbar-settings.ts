@@ -1,15 +1,16 @@
-import {TOOLBARS} from 'wix-rich-content-editor-common';
-import {ToolbarType, GetToolbarSettings, ToolbarSettingsFunctions} from 'wix-rich-content-common'
+import { TOOLBARS } from 'wix-rich-content-editor-common';
+import { ToolbarType, GetToolbarSettings, ToolbarSettingsFunctions } from 'wix-rich-content-common';
+
 const noop = () => false;
 const hiddenToolbar = (name: ToolbarType): ToolbarSettingsFunctions => ({
   name,
   shouldCreate: () => ({
     desktop: false,
-    mobile: {ios: false, android: false},
+    mobile: { ios: false, android: false },
   }),
   getVisibilityFn: () => ({
     desktop: noop,
-    mobile: {ios: noop, android: noop},
+    mobile: { ios: noop, android: noop },
   }),
 });
 

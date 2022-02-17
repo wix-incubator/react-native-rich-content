@@ -1,1 +1,1 @@
-declare module "wix-redraft";
+declare module 'wix-redraft';

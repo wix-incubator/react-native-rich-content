@@ -1,9 +1,22 @@
-import React, {useCallback, useMemo, useRef, MutableRefObject, Component} from 'react';
-import {Text, TextStyle, ImageSourcePropType, ImageProps, TouchableOpacityProps, ViewProps, Dimensions, View, TouchableOpacity, Image} from 'react-native';
-import {ImageData} from '../types';
-import {getImageSize} from '../utils/size-utils';
-import {getImageCaption, shouldEnableImageExpand, isImageLoading} from '../utils/draft-utils';
-import {defaultSourceTransformer} from '../utils/source-transformer';
+import React, {
+  useCallback, useMemo, useRef, MutableRefObject, Component,
+} from 'react';
+import {
+  Text,
+  TextStyle,
+  ImageSourcePropType,
+  ImageProps,
+  TouchableOpacityProps,
+  ViewProps,
+  Dimensions,
+  View,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
+import { ImageData } from '../types';
+import { getImageSize } from '../utils/size-utils';
+import { getImageCaption, shouldEnableImageExpand, isImageLoading } from '../utils/draft-utils';
+import { defaultSourceTransformer } from '../utils/source-transformer';
 
 export interface ImageViewerProps {
   containerStyle?: TouchableOpacityProps['style'] & ViewProps['style'];
@@ -19,7 +32,7 @@ export interface ImageViewerProps {
 
 const screenSize = Dimensions.get('window');
 
-export const ImageViewer = ({
+export function ImageViewer({
   data,
   onPress,
   containerStyle,
@@ -29,26 +42,27 @@ export const ImageViewer = ({
   sourceTransformer = defaultSourceTransformer,
   accessibilityLabel,
   testID,
-}: ImageViewerProps) => {
+}: ImageViewerProps) {
   const imageRef = useRef(null);
   const containerRef = useRef(null);
 
   const imageSize = getImageSize(data.src || null, screenSize.width);
 
   const imageStyleWithSize = useMemo(() => ([
-    imageStyle, {width: undefined, height: imageSize.height},
+    imageStyle, { width: undefined, height: imageSize.height },
   ]), [imageStyle, imageSize.height]);
 
   const reffedOnPress = useCallback(() => {
     if (onPress) {
       onPress(data, containerRef.current, imageRef.current);
     }
-  }, [onPress, containerRef, imageRef]);
+  }, [onPress, containerRef, imageRef, data]);
 
   const source = useMemo(() => sourceTransformer(data), [data, sourceTransformer]);
 
   const caption = getImageCaption(data);
-  const ContainerComponent = (shouldEnableImageExpand(data) ? TouchableOpacity : View) as typeof TouchableOpacity;
+  const ContainerComponent = (shouldEnableImageExpand(data)
+    ? TouchableOpacity : View) as typeof TouchableOpacity;
   const isLoading = isImageLoading(data);
 
   return (isLoading && LoaderComponent) ? (
@@ -56,7 +70,8 @@ export const ImageViewer = ({
       style={imageSize}
     />
   ) : (
-    <ContainerComponent style={containerStyle}
+    <ContainerComponent
+      style={containerStyle}
       onPress={reffedOnPress}
       activeOpacity={0.85}
       ref={containerRef}
@@ -66,7 +81,6 @@ export const ImageViewer = ({
       <Image
         style={imageStyleWithSize}
         resizeMode="cover"
-
         ref={imageRef}
         source={source}
       />
@@ -77,4 +91,4 @@ export const ImageViewer = ({
       )}
     </ContainerComponent>
   );
-};
+}

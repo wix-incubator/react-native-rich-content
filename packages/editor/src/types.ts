@@ -1,7 +1,7 @@
-import { WebEditorProps } from './web-assets';
-import {ViewStyle} from 'react-native';
+import { ViewStyle } from 'react-native';
 import { InlineStyle } from 'wix-rich-content-common';
 import { AtomicPlugin, Content } from '@react-native-rich-content/common';
+import { WebEditorProps } from './web-assets';
 
 export interface WebEditorAdapterProps{
   content: WebEditorProps['content'];
@@ -22,4 +22,4 @@ export interface EditorProps {
   onNonAtomicFocus?: () => void;
   onInlineStylesChange?: (inlineStyles: InlineStyle[]) => void;
   onAtomicFocus?: () => void;
-};
+}

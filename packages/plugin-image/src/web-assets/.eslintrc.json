@@ -1,0 +1,6 @@
+{
+    "env": {
+        "browser": true
+    },
+    "root": false
+}

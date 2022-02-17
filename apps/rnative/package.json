@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "pods": "cd ios && pod install",
     "remove-local-react-instance": "rm -rf ./node_modules/react",
-    "postinstall": "npm run remove-local-react-instance"
+    "postinstall": "yarn remove-local-react-instance"
   },
   "dependencies": {
     "@react-native-rich-content/editor": "*",
