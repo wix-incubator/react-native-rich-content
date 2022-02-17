@@ -1,4 +1,4 @@
-import {FC, ReactNode} from 'react';
+import { FC, ReactNode } from 'react';
 import { InlineStyle } from 'wix-rich-content-common';
 
 export interface Size {
@@ -14,12 +14,14 @@ export type EditorRef = {
 
 export type ToolbarConfig = any; // TODO
 
-export type CreatePluginEntity<RequiredEntityData, EntityType> = (data: RequiredEntityData) => EntityType;
+export type CreatePluginEntity<RequiredEntityData, EntityType> = (
+  data: RequiredEntityData
+  ) => EntityType;
 
 export interface AtomicPlugin extends AtomicPluginConfig {
   scriptString: string;
   scriptWindowEntry: string;
-};
+}
 
 export interface AtomicPluginConfig {
   id: string;
@@ -30,7 +32,7 @@ interface ViewerPluginComponentProps<DataType> {
     data: DataType;
     key: string | number;
     children: ReactNode;
-};
+}
 
 export type ViewerPlugin<DataType> = {
     component: FC<ViewerPluginComponentProps<DataType>>;
@@ -42,4 +44,6 @@ export interface Content {
   entityMap: Object;
 }
 
-export type ViewerPluginCreator<ConfigType, DataType> = (config: ConfigType) => ViewerPlugin<DataType>;
+export type ViewerPluginCreator<ConfigType, DataType> = (
+  config: ConfigType
+  ) => ViewerPlugin<DataType>;

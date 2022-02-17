@@ -1,4 +1,4 @@
-import {RceApi} from '../types';
+import { RceApi } from '../types';
 
 declare global {
     interface Window {
@@ -10,13 +10,15 @@ declare global {
 }
 
 export const postWebviewMessage = (messageObject: {type: string, data?: Object}) => {
-    window.ReactNativeWebView.postMessage(JSON.stringify(messageObject))
+  window.ReactNativeWebView.postMessage(JSON.stringify(messageObject));
 };
 
-export const setRceApi = (api: RceApi) => window.rceApi = api;
+export const setRceApi = (api: RceApi) => {
+  window.rceApi = api;
+};
 
 export const setPrimaryColor = (primaryColor?: string) => {
-    if (primaryColor) {
-        document.documentElement.style.setProperty('--theme-color',primaryColor,);
-    }
-}
+  if (primaryColor) {
+    document.documentElement.style.setProperty('--theme-color', primaryColor);
+  }
+};

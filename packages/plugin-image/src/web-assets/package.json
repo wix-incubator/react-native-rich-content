@@ -30,6 +30,6 @@
   },
   "scripts": {
     "build-plugin": "webpack --mode=production",
-    "build": "node ./scripts/prepare-build && npm run build-plugin && node ./scripts/bundle-web-assets.js"
+    "build": "node ./scripts/prepare-build && yarn build-plugin && node ./scripts/bundle-web-assets.js"
   }
 }

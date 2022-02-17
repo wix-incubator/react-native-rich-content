@@ -1,5 +1,5 @@
-import { createEditorAtomicPlugin } from "@react-native-rich-content/common";
-import { getJsScriptStringAsset } from "./web-assets";
+import { createEditorAtomicPlugin } from '@react-native-rich-content/common';
+import { getJsScriptStringAsset } from './web-assets';
 
 const scriptString = getJsScriptStringAsset();
 

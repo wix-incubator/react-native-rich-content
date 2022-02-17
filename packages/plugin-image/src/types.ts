@@ -39,6 +39,5 @@ export type CreateImageEntityProps = {
 
 export type ImageEntity = {
   data: ImageData,
-  pluginType: string, 
+  pluginType: string,
 }
-
