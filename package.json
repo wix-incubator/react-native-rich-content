@@ -27,7 +27,9 @@
   "scripts": {
     "ios:pods": "yarn workspace @react-native-rich-content/rnative pods",
     "ios:start": "yarn workspace @react-native-rich-content/rnative ios",
-    "android:start": "yarn workspace @react-native-rich-content/rnative android",
+    "ios:start-watch": "yarn workspace @react-native-rich-content/rnative ios && tsc --build --watch",
+    "android:start": "yarn workspace @react-native-rich-content/rnative ios",
+    "android:start-watch": "yarn workspace @react-native-rich-content/rnative android && tsc --build --watch",
     "reset": "git clean -dfX",
     "build": "tsc --build && yarn workspace @react-native-rich-content/editor build && yarn workspace @react-native-rich-content/plugin-image build",
     "test": "jest"
