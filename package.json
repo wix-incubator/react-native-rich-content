@@ -45,6 +45,7 @@
     "build": "tsc --build && yarn workspace @react-native-rich-content/editor build && yarn workspace @react-native-rich-content/plugin-image build",
     "test:lint": "eslint 'packages/**/*.{ts,tsx}'",
     "test:unit": "jest",
-    "test": "yarn test:lint && yarn test:unit"
+    "test": "yarn test:lint && yarn test:unit",
+    "setup": "yarn reset && yarn install && yarn build && yarn ios:pods"
   }
 }
