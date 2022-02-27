@@ -8,7 +8,7 @@ const App = () => {
   const [content, setContent] = useState<Content>({blocks: [], entityMap: {}});
   return (
     <ScrollView style={styles.root}>
-      <Text style={{fontFamily: 'BlackChancery'}}>Editor:</Text>
+      <Text>Editor:</Text>
       <ConsumerEditor content={content} setContent={setContent} />
       <Text>Viewer:</Text>
       <ConsumerViewer content={content} />

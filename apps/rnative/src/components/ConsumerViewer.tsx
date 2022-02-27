@@ -11,13 +11,21 @@ interface ConsumerViewerProps {
 }
 
 export const ConsumerViewer = ({content}: ConsumerViewerProps) => (
-  <Viewer plugins={viewerPlugins} content={content} style={styles.viewer} />
+  <Viewer
+    plugins={viewerPlugins}
+    content={content}
+    style={styles.root}
+    textStyle={styles.text}
+  />
 );
 
 const styles = StyleSheet.create({
-  viewer: {
+  root: {
     marginBottom: 60,
     height: 500,
     width: '100%',
+  },
+  text: {
+    fontFamily: 'BlackChancery',
   },
 });

@@ -1,5 +1,5 @@
 import React, { ReactNode, ReactElement } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, TextProps } from 'react-native';
 import { ViewerPlugin } from '@react-native-rich-content/common';
 import { createStylesRenderer } from 'wix-redraft';
 
@@ -26,11 +26,12 @@ function InlineWrapper({ children, style, key }: any) {
   return <Text key={key} style={style}>{children}</Text>;
 }
 
-export const createRenderers = (plugins: ViewerPlugin<any>[]): Renderers => {
+export const createRenderers = (plugins: ViewerPlugin<any>[], textStyle?: TextProps['style']): Renderers => {
   const entities: Renderers['entities'] = {};
   const blocks: Renderers['blocks'] = {
     // @ts-ignore
-    unstyled: (children) => children.map((child) => <View><Text>{child}</Text></View>),
+    // eslint-disable-next-line max-len
+    unstyled: (children) => children.map((child) => <View><Text style={textStyle}>{child}</Text></View>),
   };
   plugins.forEach((plugin) => {
     const Component = plugin.component;
