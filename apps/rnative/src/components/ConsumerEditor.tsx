@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Editor} from '@react-native-rich-content/editor';
+import {Editor, EditorProps} from '@react-native-rich-content/editor';
 import {Toolbar} from '@react-native-rich-content/toolbar';
 import {Content} from '@react-native-rich-content/common';
 import {useConsumerEditor} from './useConsumerEditor';
@@ -30,11 +30,31 @@ export const ConsumerEditor = ({content, setContent}: ConsumerEditorProps) => {
         onNonAtomicFocus={onNonAtomicFocus}
         onAtomicFocus={onAtomicFocus}
         onInlineStylesChange={onInlineStylesChange}
+        theme={theme}
+        fontsToLoad={fontsToLoad}
       />
       <Toolbar items={toolbarItems} />
     </View>
   );
 };
+
+const theme: EditorProps['theme'] = {
+  customStyles: {
+    p: {
+      fontFamily: 'BlackChancery',
+    },
+  },
+};
+
+const fontsToLoad: EditorProps['fontsToLoad'] = [
+  {
+    fontFamily: 'BlackChancery',
+    src: {
+      format: 'truetype',
+      url: 'BlackChancery.ttf',
+    },
+  },
+];
 
 const styles = StyleSheet.create({
   editor: {

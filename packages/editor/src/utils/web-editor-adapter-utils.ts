@@ -17,12 +17,12 @@ const getUriOrigin = (uri?: string) => {
 export const getOriginWhiteList = () => {
   const html = getHtmlAsset();
   const htmlUriObj = Image.resolveAssetSource(html);
-  return [getUriOrigin(htmlUriObj.uri)];
+  return [getUriOrigin(htmlUriObj.uri), 'file://'];
 };
 
-export const getSource = (): {html: string} => {
+export const getSource = (): {html: string, baseUrl: string} => {
   const jsAsset = getJsAsset();
-  return { html: jsAsset.html.toString() };
+  return { html: jsAsset.html.toString(), baseUrl: './' };
 };
 
 const createGetPluginsFunctionString = (plugins: AtomicPlugin[]) => {
@@ -37,14 +37,18 @@ const createGetPluginsFunctionString = (plugins: AtomicPlugin[]) => {
   return `[${pluginsCreatorArray.join(',')}]`;
 };
 
-export const getScriptToEvaluate = (content: WebEditorProps['content'], primaryColor: WebEditorProps['primaryColor'], plugins: AtomicPlugin[], extraProps: WebEditorProps['extraProps']): string => {
+export const getScriptToEvaluate = (content: WebEditorProps['content'], primaryColor: WebEditorProps['primaryColor'], plugins: AtomicPlugin[], extraProps: WebEditorProps['extraProps'], theme: WebEditorProps['theme'], fontsToLoad: WebEditorProps['fontsToLoad']): string => {
   const contentString = content ? `JSON.parse(${JSON.stringify(JSON.stringify(content))})` : 'undefined';
+  const themeString = theme ? JSON.stringify(theme) : 'undefined';
+  const fontsToLoadString = fontsToLoad ? JSON.stringify(fontsToLoad) : 'undefined';
   return `try {
       window.__EDITOR_CONTENT__ = ${contentString}
       const props = {
         content: __EDITOR_CONTENT__,
         extraProps: ${JSON.stringify(extraProps)},
         primaryColor: \`${primaryColor}\`,
+        theme: ${themeString},
+        fontsToLoad: ${fontsToLoadString},
         pluginsCreators: ${createGetPluginsFunctionString(plugins)}
       };
       window.WebRce.renderEditor(document.getElementById('root'), props);

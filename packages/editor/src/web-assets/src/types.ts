@@ -14,5 +14,15 @@ export interface WebEditorProps {
     content?: Content;
     primaryColor?: string;
     pluginsCreators: PluginCreator[];
-    extraProps?: Omit<RicosEditorProps, 'toolbarSettings' | 'isMobile' | 'plugins' | 'ref' | 'content' | 'onChange' | 'onAtomicBlockFocus'>;
+    theme?: RicosEditorProps['theme']
+    extraProps?: Omit<RicosEditorProps, 'toolbarSettings' | 'isMobile' | 'plugins' | 'ref' | 'content' | 'onChange' | 'onAtomicBlockFocus' | 'cssOverride'>;
+    fontsToLoad?: FontData[];
 }
+
+export type FontData = {
+    fontFamily: string;
+    src: {
+      url: string;
+      format: string;
+    };
+};

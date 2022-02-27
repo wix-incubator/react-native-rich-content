@@ -1,6 +1,7 @@
 import {useRef, useState, useEffect, useCallback} from 'react';
 import {ToolbarItem} from '@react-native-rich-content/toolbar';
 import {EditorRef, AtomicPlugin} from '@react-native-rich-content/common';
+//import {EditorProps} from '@react-native-rich-content/editor';
 import {InlineStyle} from 'wix-rich-content-common';
 import {createEditorPlugins} from '../plugins/create-editor-plugins';
 import {getToolbarItems} from '../toolbar-items/get-toolbar-items';

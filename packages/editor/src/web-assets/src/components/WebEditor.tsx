@@ -7,13 +7,14 @@ import { useWebEditor } from './useWebEditor';
 import { WebEditorProps } from '../types';
 
 export function WebEditor({
-  content, primaryColor, extraProps, pluginsCreators = [],
+  content, primaryColor, extraProps, pluginsCreators = [], theme, fontsToLoad,
 }: WebEditorProps) {
   const {
     toolbarSettings, editorRef, handleChange, onAtomicBlockFocus, plugins,
-  } = useWebEditor(pluginsCreators, primaryColor);
+  } = useWebEditor(pluginsCreators, primaryColor, fontsToLoad);
   return (
     <RicosEditor
+      theme={theme}
       toolbarSettings={toolbarSettings}
       isMobile
       plugins={plugins}

@@ -2,6 +2,7 @@ export const EDITOR_METHODS = {
   INSERT_PLUGIN_ENTITY: 'insertPluginEntity',
   DELETE_PLUGIN_ENTITY: 'deletePluginEntity',
   TOGGLE_INLINE_STYLE: 'toggleInlineStyle',
+  LOAD_FONTS: 'loadFonts',
 };
 
 export const EDITOR_EVENTS = {

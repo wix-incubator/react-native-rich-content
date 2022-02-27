@@ -15,6 +15,8 @@ export const useWebEditorAdapter = (props: Omit<WebEditorAdapterProps, 'style'>)
     onRceStateChange,
     onWebEditorDidMount,
     plugins,
+    theme,
+    fontsToLoad,
   } = props;
   const webviewRef = useRef<{injectJavaScript:(str: string) => void}>(null);
   const handleMessage = useCallback((event: {nativeEvent: {data: string}}) => {
@@ -42,7 +44,14 @@ export const useWebEditorAdapter = (props: Omit<WebEditorAdapterProps, 'style'>)
     webviewRef,
     originWhiteList,
     source,
-    scriptToEvaluate: getScriptToEvaluate(content, primaryColor, plugins, extraProps),
+    scriptToEvaluate: getScriptToEvaluate(
+      content,
+      primaryColor,
+      plugins,
+      extraProps,
+      theme,
+      fontsToLoad,
+    ),
     handleMessage,
   };
 };
