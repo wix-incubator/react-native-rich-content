@@ -6,13 +6,19 @@ import { getActiveInlineStyles } from '../utils/inline-styles';
 import { useConstructor } from './useConstructor';
 import { EDITOR_EVENTS } from '../constants';
 import { getToolbarSettings } from '../utils/get-toolbar-settings';
-import { postWebviewMessage, setRceApi, setPrimaryColor } from '../utils/global-utils';
+import {
+  postWebviewMessage, setRceApi, setPrimaryColor, loadFonts,
+} from '../utils/global-utils';
 import { createRceApi } from '../utils/create-rce-api';
-import { PluginCreator } from '../types';
+import { PluginCreator, FontData } from '../types';
 
 const toolbarSettings = { getToolbarSettings };
 
-export const useWebEditor = (pluginCreators: PluginCreator[], primaryColor?: string) => {
+export const useWebEditor = (
+  pluginCreators: PluginCreator[],
+  primaryColor?: string,
+  fontsToLoad?: FontData[],
+) => {
   const editorRef = useRef<RicosEditorType>(null);
 
   const handleChange = useCallback((content?) => {
@@ -37,6 +43,9 @@ export const useWebEditor = (pluginCreators: PluginCreator[], primaryColor?: str
   }, []);
 
   useConstructor(() => {
+    if (fontsToLoad) {
+      loadFonts(fontsToLoad);
+    }
     setPrimaryColor(primaryColor);
     const api = createRceApi(editorRef, handleChange, updateEntityFocusData);
     setRceApi(api);

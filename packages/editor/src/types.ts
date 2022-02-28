@@ -12,6 +12,8 @@ export interface WebEditorAdapterProps{
   onRceStateChange?: (data: any) => void;
   onDraftEntityFocusChange?: (data: any) => void;
   onWebEditorDidMount?: () => void;
+  theme?: WebEditorProps['theme'];
+  fontsToLoad?: WebEditorProps['fontsToLoad'];
 }
 
 export interface EditorProps {
@@ -22,4 +24,6 @@ export interface EditorProps {
   onNonAtomicFocus?: () => void;
   onInlineStylesChange?: (inlineStyles: InlineStyle[]) => void;
   onAtomicFocus?: () => void;
+  theme?: WebEditorProps['theme'];
+  fontsToLoad?: WebEditorProps['fontsToLoad'];
 }

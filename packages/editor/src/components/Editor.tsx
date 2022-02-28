@@ -5,7 +5,9 @@ import { EditorProps } from '../types';
 import { useEditor } from './useEditor';
 
 export const Editor = React.forwardRef((props: EditorProps, ref) => {
-  const { content, style, plugins } = props;
+  const {
+    content, style, plugins, theme, fontsToLoad,
+  } = props;
   const {
     webEditorAdapterRef,
     getEditorRefApi,
@@ -23,6 +25,8 @@ export const Editor = React.forwardRef((props: EditorProps, ref) => {
         onRceStateChange={onRceStateChange}
         onDraftEntityFocusChange={onDraftEntityFocusChange}
         plugins={plugins}
+        theme={theme}
+        fontsToLoad={fontsToLoad}
       />
     </View>
   );

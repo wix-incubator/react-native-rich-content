@@ -24,6 +24,7 @@ export const WebEditorAdapter = React.forwardRef((props: WebEditorAdapterProps, 
 
   return (
     <WebView
+      useWebKit
       style={[styles.webview, style]}
       ref={webviewRef}
       originWhitelist={originWhiteList}
