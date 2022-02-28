@@ -1,4 +1,4 @@
-import { Image } from 'react-native';
+import { Image, Platform } from 'react-native';
 import { AtomicPlugin } from '@react-native-rich-content/common';
 import { getHtmlAsset, getJsAsset, WebEditorProps } from '../web-assets';
 
@@ -17,12 +17,15 @@ const getUriOrigin = (uri?: string) => {
 export const getOriginWhiteList = () => {
   const html = getHtmlAsset();
   const htmlUriObj = Image.resolveAssetSource(html);
-  return [getUriOrigin(htmlUriObj.uri), 'file://'];
+  return [getUriOrigin(htmlUriObj.uri), '*'];
 };
 
 export const getSource = (): {html: string, baseUrl: string} => {
   const jsAsset = getJsAsset();
-  return { html: jsAsset.html.toString(), baseUrl: './' };
+  return {
+    html: jsAsset.html.toString(),
+    baseUrl: Platform.OS === 'ios' ? './' : 'file:///android_asset/',
+  };
 };
 
 const createGetPluginsFunctionString = (plugins: AtomicPlugin[]) => {

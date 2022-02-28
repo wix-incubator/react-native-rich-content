@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Platform} from 'react-native';
 import {Editor, EditorProps} from '@react-native-rich-content/editor';
 import {Toolbar} from '@react-native-rich-content/toolbar';
 import {Content} from '@react-native-rich-content/common';
@@ -51,7 +51,8 @@ const fontsToLoad: EditorProps['fontsToLoad'] = [
     fontFamily: 'BlackChancery',
     src: {
       format: 'truetype',
-      url: 'BlackChancery.ttf',
+      url:
+        Platform.OS === 'ios' ? 'BlackChancery.ttf' : 'fonts/BlackChancery.ttf',
     },
   },
 ];
