@@ -3,6 +3,7 @@ import { View, ViewProps, TextProps } from 'react-native';
 import redraft from 'wix-redraft';
 import { ViewerPlugin } from '@react-native-rich-content/common';
 import { createRenderers } from './draft-utils/create-renderers';
+import { PreviewConfig } from './preview';
 
 export interface ViewerProps {
     plugins: ViewerPlugin<any>[]; // TODO declare it better
@@ -11,7 +12,8 @@ export interface ViewerProps {
         entityMap: Object;
     },
     style?: ViewProps['style'];
-    textStyle?: TextProps['style']
+    textStyle?: TextProps['style'];
+    previewConfig?: PreviewConfig;
 }
 
 export function Viewer({
