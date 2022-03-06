@@ -43,11 +43,14 @@ export const createImageViewerPlugin: ViewerPluginCreator<ImageViewerPluginConfi
       containerStyle={containerStyle}
     />
   ),
-  previewThumbnail: ({ data, style }) => (
-    <ImagePreviewThumbnail
-      data={data}
-      style={style}
-      sourceTransformer={sourceTransformer}
-    />
-  ),
+  previewThumbnail: {
+    component: ({ data, style }) => (
+      <ImagePreviewThumbnail
+        data={data}
+        style={style}
+        sourceTransformer={sourceTransformer}
+      />
+    ),
+    shouldDisplay: () => true,
+  },
 });

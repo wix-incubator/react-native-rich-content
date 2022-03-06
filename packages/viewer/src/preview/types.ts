@@ -8,4 +8,6 @@ export type PreviewConfig = {
     expandButtonText: string;
     expandButtonProps: Object;
     collapseButtonText: string;
+    previewMaxContentBlocks: number;
+    showMediaPreview: boolean;
 };
