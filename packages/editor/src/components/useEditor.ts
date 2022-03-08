@@ -31,7 +31,9 @@ export const useEditor = (props: Omit<EditorProps, 'style' | 'content'>) => {
         content: Content,
         activeInlineStyles: InlineStyle[]
     }) => {
-    onContentChange?.(rceState.content);
+    if (rceState.content && onContentChange) {
+      onContentChange?.(rceState.content);
+    }
     onInlineStylesChange?.(rceState.activeInlineStyles);
   }, [onContentChange, onInlineStylesChange]);
 

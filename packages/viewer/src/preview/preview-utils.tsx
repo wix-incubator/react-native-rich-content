@@ -1,22 +1,33 @@
 /* eslint-disable no-restricted-syntax */
+import React from 'react';
 import { Content, ViewerPlugin } from '@react-native-rich-content/common';
 import { truncateContent as ricosTruncateContent } from 'ricos-content/libs/truncateContent';
-import { PreviewConfig } from './types';
+import { PreviewConfig, PreviewData, ThumbnailRenderer } from './types';
 
 export const EXPANDED_STATE = 0;
 export const DEFAULT_MAX_BLOCKS = 3;
 export const READ_MORE_TEXT = 'See More';
 
-const getEntitiesThatCanBeShownAsPreviewThumbnail = (
+const getThumbnailRenderers = (
   content: Content,
   plugins: ViewerPlugin<unknown>[],
 ) => {
   const entitiesList = Object.values(content.entityMap);
-  const canEntityBeShownAsPreview = (entity: any) => {
+  const thumbnailRenderers: ThumbnailRenderer[] = [];
+  entitiesList.forEach((entity: unknown) => {
+    // @ts-ignore
     const relevantPlugin = plugins.find((plugin) => plugin.entityType === entity.type);
-    return relevantPlugin?.previewThumbnail?.shouldDisplay(entity) || false;
-  };
-  return entitiesList.filter(canEntityBeShownAsPreview);
+    // eslint-disable-next-line max-len
+    const entityCanBeDisplayedAsThumbnail = !!relevantPlugin?.previewThumbnail?.shouldDisplay(entity);
+    if (entityCanBeDisplayedAsThumbnail) {
+      const Thumbnail = relevantPlugin?.previewThumbnail?.component!;
+      const renderer: ThumbnailRenderer = ({ style }) => (
+        <Thumbnail style={style} entity={entity} />
+      );
+      thumbnailRenderers.push(renderer);
+    }
+  });
+  return thumbnailRenderers;
 };
 
 export const isNonMediaBlock = (
@@ -113,29 +124,31 @@ export const getPreviewData = (
   previewConfig: PreviewConfig,
   content: Content,
   plugins: ViewerPlugin<unknown>[],
-) => {
+): PreviewData | null => {
   const {
     showMediaPreview,
     previewWhenContentLengthExceeds: maxPreviewContentLength,
     previewMaxContentBlocks: maxContentBlocks,
+    MediaPreviewComponent
   } = previewConfig;
-  if (maxPreviewContentLength) {
+  if (!maxPreviewContentLength) {
     return null;
   }
   const maxBlocks = maxContentBlocks || DEFAULT_MAX_BLOCKS;
-  const mediaList = getEntitiesThatCanBeShownAsPreviewThumbnail(content, plugins);
+  const thumbnailRenderers = getThumbnailRenderers(content, plugins);
   const truncateMethod = showMediaPreview ? showMediaTruncate(plugins) : noMediaTruncate;
   const {
     content: truncatedContent,
     isTruncated,
   } = truncateMethod(maxPreviewContentLength, maxBlocks, content);
     // @ts-ignore
-  if (!isTruncated || (!isSignificantContent(truncatedContent) && mediaList.length <= 1)) {
+  if (!isTruncated || (!isSignificantContent(truncatedContent) && thumbnailRenderers.length <= 1)) {
     return null;
   }
 
   return {
-    mediaList,
+    thumbnailRenderers,
     truncatedContent,
+    MediaPreviewComponent,
   };
 };

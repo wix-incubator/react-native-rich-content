@@ -44,9 +44,10 @@ export const createImageViewerPlugin: ViewerPluginCreator<ImageViewerPluginConfi
     />
   ),
   previewThumbnail: {
-    component: ({ data, style }) => (
+    component: ({ entity, style }) => (
       <ImagePreviewThumbnail
-        data={data}
+      // @ts-ignore
+        data={entity.data}
         style={style}
         sourceTransformer={sourceTransformer}
       />

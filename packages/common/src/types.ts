@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react';
 import { StyleProp, ImageStyle } from 'react-native';
-import { InlineStyle } from 'wix-rich-content-common';
-import { DraftContent } from 'wix-rich-content-common';
+import { InlineStyle, DraftContent } from 'wix-rich-content-common';
+
 export interface Size {
   height: number;
   width: number;
@@ -38,7 +38,7 @@ interface ViewerPluginComponentProps<DataType> {
 export type ViewerPlugin<DataType> = {
     component: FC<ViewerPluginComponentProps<DataType>>;
     previewThumbnail?: {
-      component: PreviewThumbnailComponent<DataType>;
+      component: PreviewThumbnailComponent;
       shouldDisplay: (data: DataType) => boolean;
     }
     entityType: string;
@@ -52,9 +52,9 @@ export type ViewerPluginCreator<ConfigType, DataType> = (
   config: ConfigType
   ) => ViewerPlugin<DataType>;
 
-interface PreviewThumbnailProps<Entity> {
-  data: Entity;
+interface PreviewThumbnailProps {
+  entity: Object;
   style?: StyleProp<ImageStyle>;
 }
 
-export type PreviewThumbnailComponent<Entity> = FC<PreviewThumbnailProps<Entity>>;
+export type PreviewThumbnailComponent = FC<PreviewThumbnailProps>;
