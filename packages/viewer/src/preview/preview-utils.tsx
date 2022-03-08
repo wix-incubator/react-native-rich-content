@@ -129,7 +129,7 @@ export const getPreviewData = (
     showMediaPreview,
     previewWhenContentLengthExceeds: maxPreviewContentLength,
     previewMaxContentBlocks: maxContentBlocks,
-    MediaPreviewComponent
+    MediaPreviewComponent,
   } = previewConfig;
   if (!maxPreviewContentLength) {
     return null;
