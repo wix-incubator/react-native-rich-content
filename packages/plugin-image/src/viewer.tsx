@@ -1,6 +1,7 @@
 import React from 'react';
 import { ViewerPluginCreator } from '@react-native-rich-content/common';
 import { ImageViewer, ImageViewerProps } from './components/ImageViewer';
+import { ImagePreviewThumbnail } from './components/ImagePreviewThumbnail';
 import { ImageData } from './types';
 
 const DEFAULT_ENTITY_TYPE = 'wix-draft-plugin-image';
@@ -42,4 +43,15 @@ export const createImageViewerPlugin: ViewerPluginCreator<ImageViewerPluginConfi
       containerStyle={containerStyle}
     />
   ),
+  previewThumbnail: {
+    component: ({ entity, style }) => (
+      <ImagePreviewThumbnail
+      // @ts-ignore
+        data={entity.data}
+        style={style}
+        sourceTransformer={sourceTransformer}
+      />
+    ),
+    shouldDisplay: () => true,
+  },
 });

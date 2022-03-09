@@ -18,7 +18,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   root: {
-    height: 500,
+    height: 1000,
     width: 500,
     paddingTop: 100,
   },

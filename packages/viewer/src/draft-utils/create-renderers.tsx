@@ -3,7 +3,7 @@ import { Text, View, TextProps } from 'react-native';
 import { ViewerPlugin } from '@react-native-rich-content/common';
 import { createStylesRenderer } from 'wix-redraft';
 
-type Renderers = {
+export type Renderers = {
     blocks: Record<string, (children: ReactNode) => ReactElement>
     entities: Record<string, (children: ReactNode, data: any, { key }
         : {key:string}) => ReactElement>;
