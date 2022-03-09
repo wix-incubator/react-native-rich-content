@@ -4,9 +4,7 @@ import { Content, ViewerPlugin } from '@react-native-rich-content/common';
 import { truncateContent as ricosTruncateContent } from 'ricos-content/libs/truncateContent';
 import { PreviewConfig, PreviewData, ThumbnailRenderer } from './types';
 
-export const EXPANDED_STATE = 0;
-export const DEFAULT_MAX_BLOCKS = 3;
-export const READ_MORE_TEXT = 'See More';
+const DEFAULT_MAX_BLOCKS = 3;
 
 const getThumbnailRenderers = (
   content: Content,

@@ -4,7 +4,12 @@ import {
 import { Content, ViewerPlugin } from '@react-native-rich-content/common';
 import { getPreviewData } from './preview-utils';
 import { PreviewConfig } from './types';
-import { PREVIEW_STATUS } from './constants';
+import { PREVIEW_STATUS, DEFAULT_COLLAPSE_TEXT, DEFAULT_EXPAND_TEXT } from './constants';
+
+type ExpandOrCollapseButton = {
+  text: string;
+  onPress: () => void;
+}
 
 export const usePreview = (
   content: Content,
@@ -28,21 +33,30 @@ export const usePreview = (
     }
   }, [previewData, previewStatus]);
 
-  const expandOrCollapseButton = useMemo(() => {
-    if (previewStatus === PREVIEW_STATUS.NONE) {
-      return null;
-    }
-    return {
-      text: previewStatus === PREVIEW_STATUS.EXPANDED ? 'collapse' : 'expand',
-      onPress: () => {
-        if (previewStatus === PREVIEW_STATUS.EXPANDED) {
+  const expandOrCollapseButton: ExpandOrCollapseButton | null = useMemo(() => {
+    if (previewStatus === PREVIEW_STATUS.EXPANDED && previewConfig?.showCollapseSeeLessButton) {
+      return {
+        text: previewConfig?.collapseButtonText || DEFAULT_COLLAPSE_TEXT,
+        onPress: () => {
           setPreviewStatus(PREVIEW_STATUS.HIDDEN);
-        } else {
+          previewConfig?.onPreviewPress?.();
+        },
+      };
+    } if (
+      previewStatus === PREVIEW_STATUS.HIDDEN
+      && previewConfig?.showPreviewSeeMoreButton
+    ) {
+      return {
+        text: previewConfig?.expandButtonText || DEFAULT_EXPAND_TEXT,
+        onPress: () => {
           setPreviewStatus(PREVIEW_STATUS.EXPANDED);
-        }
-      },
-    };
-  }, [previewStatus]);
+          previewConfig?.onPreviewPress?.();
+        },
+      };
+    }
+    return null;
+  }, [previewStatus, previewConfig]);
+
   const thumbnailRenderers = useMemo(() => previewData?.thumbnailRenderers || [], [previewData]);
   const shouldShowPreview = previewStatus === PREVIEW_STATUS.HIDDEN;
   const possiblyTruncatedContent = shouldShowPreview ? previewData?.truncatedContent! : content;

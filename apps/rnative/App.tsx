@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState} from 'react';
 import {StyleSheet, Text, ScrollView} from 'react-native';
 import {Content} from '@react-native-rich-content/common';
 import {ConsumerEditor} from './src/components/ConsumerEditor';
