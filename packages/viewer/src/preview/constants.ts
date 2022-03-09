@@ -1,0 +1,5 @@
+export enum PREVIEW_STATUS {
+  EXPANDED,
+  HIDDEN,
+  NONE,
+}

@@ -1,9 +1,10 @@
 import React, { useMemo } from 'react';
-import { View, ViewProps, TextProps } from 'react-native';
+import {
+  View, ViewProps, TextProps, Text,
+} from 'react-native';
 import { ViewerPlugin } from '@react-native-rich-content/common';
 import { createRenderers } from '../draft-utils/create-renderers';
-import { PreviewConfig } from '../preview';
-import { getPreviewData } from '../preview/preview-utils';
+import { PreviewConfig, usePreview } from '../preview';
 import { DraftContent } from './DraftContent';
 import { Preview } from './Preview';
 
@@ -21,24 +22,36 @@ export interface ViewerProps {
 export function Viewer({
   plugins, content, style, textStyle, previewConfig,
 }: ViewerProps) {
+  const {
+    possiblyTruncatedContent, shouldShowPreview, expandOrCollapseButton, thumbnailRenderers,
+  } = usePreview(content, plugins, previewConfig);
   const renderers = useMemo(() => createRenderers(plugins, textStyle), [plugins, textStyle]);
-  const previewData = previewConfig ? getPreviewData(previewConfig, content, plugins) : null;
   return (
     <View
       style={style}
     >
-      { previewData
+      { shouldShowPreview
         ? (
           <Preview
             renderers={renderers}
-            previewData={previewData}
+            content={possiblyTruncatedContent}
+            thumbnailRenderers={thumbnailRenderers}
+            MediaPreviewComponent={previewConfig?.MediaPreviewComponent}
           />
         )
         : (
           <DraftContent
             renderers={renderers}
-            content={content}
+            content={possiblyTruncatedContent}
           />
+        )}
+      {expandOrCollapseButton
+        && (
+        <Text
+          onPress={expandOrCollapseButton.onPress}
+        >
+          {expandOrCollapseButton.text}
+        </Text>
         )}
     </View>
   );

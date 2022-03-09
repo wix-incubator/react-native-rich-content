@@ -13,6 +13,11 @@ const previewConfig = {
   previewWhenContentLengthExceeds: 2,
   previewMaxNumberOfBlocks: 2,
   MediaPreviewComponent: MediaPreview,
+  expandButtonText: 'expand',
+  collapseButtonText: 'collapse',
+  onPreviewPress: () => console.log('Preview Pressed!'),
+  showPreviewSeeMoreButton: true,
+  showCollapseSeeLessButton: true,
 };
 
 interface ConsumerViewerProps {

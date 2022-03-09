@@ -22,6 +22,7 @@ const getThumbnailRenderers = (
     if (entityCanBeDisplayedAsThumbnail) {
       const Thumbnail = relevantPlugin?.previewThumbnail?.component!;
       const renderer: ThumbnailRenderer = ({ style }) => (
+        // @ts-ignore
         <Thumbnail style={style} entity={entity} />
       );
       thumbnailRenderers.push(renderer);
@@ -129,7 +130,6 @@ export const getPreviewData = (
     showMediaPreview,
     previewWhenContentLengthExceeds: maxPreviewContentLength,
     previewMaxContentBlocks: maxContentBlocks,
-    MediaPreviewComponent,
   } = previewConfig;
   if (!maxPreviewContentLength) {
     return null;
@@ -149,6 +149,5 @@ export const getPreviewData = (
   return {
     thumbnailRenderers,
     truncatedContent,
-    MediaPreviewComponent,
   };
 };

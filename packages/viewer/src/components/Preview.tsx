@@ -1,24 +1,26 @@
+import { Content } from '@react-native-rich-content/common';
 import React from 'react';
 import { View, ViewProps } from 'react-native';
 import { Renderers } from '../draft-utils/create-renderers';
-import { PreviewData } from '../preview';
+import { MediaPreviewComponentType, ThumbnailRenderer } from '../preview';
 import { DraftContent } from './DraftContent';
 
 export interface PreviewProps {
     renderers: Renderers;
-    previewData: PreviewData;
+    content: Content;
+    MediaPreviewComponent?: MediaPreviewComponentType;
+    thumbnailRenderers: ThumbnailRenderer[];
     style?: ViewProps['style'];
 }
 
 export function Preview({
-  renderers, previewData, style,
+  renderers, MediaPreviewComponent, thumbnailRenderers, content, style,
 }: PreviewProps) {
-  const { truncatedContent, thumbnailRenderers, MediaPreviewComponent } = previewData;
   return (
     <View
       style={style}
     >
-      <DraftContent renderers={renderers} content={truncatedContent} />
+      <DraftContent renderers={renderers} content={content} />
       {MediaPreviewComponent
       && <MediaPreviewComponent thumbnails={thumbnailRenderers} />}
     </View>

@@ -4,7 +4,7 @@ import { StyleProp, ImageStyle } from 'react-native';
 
 export type ThumbnailRenderer = FC<{style: StyleProp<ImageStyle> | undefined}>;
 
-export type MediaPreviewComponent = FC<{thumbnails: ThumbnailRenderer[]}>;
+export type MediaPreviewComponentType = FC<{thumbnails: ThumbnailRenderer[]}>;
 
 export type PreviewConfig = {
     showPreviewSeeMoreButton: boolean;
@@ -18,11 +18,10 @@ export type PreviewConfig = {
     collapseButtonText: string;
     previewMaxContentBlocks: number;
     showMediaPreview: boolean;
-    MediaPreviewComponent?: MediaPreviewComponent;
+    MediaPreviewComponent?: MediaPreviewComponentType;
 };
 
 export type PreviewData = {
     thumbnailRenderers: ThumbnailRenderer[];
     truncatedContent: Content;
-    MediaPreviewComponent?: MediaPreviewComponent;
 };
