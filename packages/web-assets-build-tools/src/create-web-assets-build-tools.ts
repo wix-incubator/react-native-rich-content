@@ -3,7 +3,7 @@ import { generateIntermediatesDirectory } from './prepare-build';
 import { generateWebpackConfig } from './webpackConfig';
 
 export const createWebAssetsBuildTools = ({
-  intermediatesPath, filename, isDevMode, entry, distPath, library, fieldName, fileTransformer
+  intermediatesPath, filename, isDevMode, entry, distPath, library, fieldName, fileTransformer,
 }: {
     intermediatesPath: string;
     filename: string;
