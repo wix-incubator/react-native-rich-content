@@ -1,6 +1,3 @@
-const fs = require('fs');
-const execSync = require('child_process').execSync;
-const {intermediatesPath} = require('./build-path-helpers');
+const { prepareBuild } = require('../buildTools.js');
 
-execSync(`rm -rf ${intermediatesPath}`);
-fs.mkdirSync(intermediatesPath);
+prepareBuild();
