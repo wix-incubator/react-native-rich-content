@@ -11,7 +11,7 @@
     "preserveWatchOutput": true,
     "incremental": true,
     "module": "ES2015",
-    "allowJs": false,
+    "allowJs": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,

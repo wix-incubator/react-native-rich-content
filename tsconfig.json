@@ -17,5 +17,8 @@
     {
       "path": "./packages/viewer"
     },
+    {
+      "path": "./packages/web-assets-build-tools"
+    },
   ]
 }

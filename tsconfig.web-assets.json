@@ -4,5 +4,8 @@
     "compilerOptions": {
         "lib": ["es2017", "dom"],
         "jsx": "react",
-    }
+    },
+    "references": [
+        {"path": "packages/web-assets-build-tools"}
+      ],
 }
