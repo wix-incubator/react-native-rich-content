@@ -8,6 +8,7 @@ const buildTools = createWebAssetsBuildTools({
   filename: 'bundled-plugin-image.js',
   library: 'WIX_IMAGE_PLUGIN',
   entry: resolve('./src/create-plugin.ts'),
+  fieldName: 'scriptString',
 });
 
 module.exports = buildTools;

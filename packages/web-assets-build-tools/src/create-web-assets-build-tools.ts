@@ -3,7 +3,7 @@ import { generateIntermediatesDirectory } from './prepare-build';
 import { generateWebpackConfig } from './webpackConfig';
 
 export const createWebAssetsBuildTools = ({
-  intermediatesPath, filename, isDevMode, entry, distPath, library,
+  intermediatesPath, filename, isDevMode, entry, distPath, library, fieldName, fileTransformer
 }: {
     intermediatesPath: string;
     filename: string;
@@ -11,11 +11,15 @@ export const createWebAssetsBuildTools = ({
     entry: string;
     distPath: string;
     library: string;
+    fieldName: string;
+    fileTransformer?: (file: Buffer) => string;
 }) => ({
   bundleWebAssets: () => generateJavascriptFile({
     intermediatesPath,
     filename,
     distPath,
+    fieldName,
+    fileTransformer,
   }),
   prepareBuild: () => generateIntermediatesDirectory(intermediatesPath),
   getWebpackConfig: () => generateWebpackConfig({
