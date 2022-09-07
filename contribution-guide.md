@@ -11,7 +11,7 @@ Build typescript and then build the web-assets of the editor and the plugins.
 
 ## `Adding a plugin`
 
-### `Create a new folder with the plugin's name in packages`
+- Create a new folder with the plugin's name in packages
 ### `Handle web assets`
 - Create path in the new package: src/web-assets/src.
 - In src/web-assets/src, create a ts file that exports a function called createPlugin. The function should return a web plugin for the editor.
