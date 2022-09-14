@@ -15,6 +15,14 @@ Build typescript and then build the web-assets of the editor and the plugins.
 #### `Handle web assets`
 - Create path in the new package: src/web-assets/src.
 - In src/web-assets/src, create a ts file that exports a function called createPlugin. The function should return a web plugin for the editor.
+```jsx
+import { pluginImage } from 'wix-rich-content-plugin-image';
+import 'wix-rich-content-plugin-image/dist/styles.min.css';
+
+export function createPlugin() {
+  return pluginImage();
+}
+```
 - In src/web-assets/src, create index.ts. In it, require './{BUNDLED_SCRIPT_FILE_NAME_OF_CHOICE}' and export a getter of the field {CHOSEN_FIELD_NAME} of it.  The path shouldn't exist, but it will after the compilation to the dist folder.
 - In src/web-assets. Create a js file for build configuration. export the return value of @react-native-rich-content/web-assets-build-tools's createWebAssetsBuildTools with the config:
   intermediatesPath: {ABSOLUTE_PATH_TO_INTERMEDIATES_FOLDER},
