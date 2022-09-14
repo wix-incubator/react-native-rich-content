@@ -155,9 +155,9 @@ export const createEditorImagePlugin = createEditorAtomicPlugin(scriptString, sc
     {
       "path": "./packages/editor"
     },
-    ***{
+    {
       "path": "./packages/plugin-image"
-    },***
+    },
     {
       "path": "./packages/toolbar"
     },
@@ -176,7 +176,7 @@ export const createEditorImagePlugin = createEditorAtomicPlugin(scriptString, sc
 ...
   "scripts": {
 ...
-    "build": "tsc --build && yarn workspace @react-native-rich-content/editor build ***&& yarn workspace @react-native-rich-content/plugin-image build***",
+    "build": "tsc --build && yarn workspace @react-native-rich-content/editor build && yarn workspace @react-native-rich-content/plugin-image build",
 ...
   }
  ...
